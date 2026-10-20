@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr Sohil Momin — Projects</title>
+<meta name="description" content="Projects and open-source work by Dr Sohil Momin. Automatically updated from GitHub.">
+<meta name="author" content="Dr Sohil Momin">
+<meta name="theme-color" content="#0d1117">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Dr Sohil Momin — Projects">
+<meta property="og:description" content="Projects and open-source work, automatically updated from GitHub.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drsamonline.github.io/">
+<link rel="icon" href="https://github.com/drsamonline.png?size=64">
+<!--
+  Content-Security-Policy: the page may only call the public GitHub API and
+  load images over HTTPS. No other network access is permitted.
+-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src https: data:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<style>
+:root{
+  --bg:#f6f8fa; --panel:#ffffff; --panel-2:#f6f8fa; --text:#1f2328; --dim:#59636e;
+  --border:#d1d9e0; --accent:#0969da; --accent-soft:#ddf4ff; --shadow:0 1px 3px rgba(31,35,40,.08),0 8px 24px rgba(31,35,40,.06);
+  --radius:14px; --chip:#eaeef2;
+}
+[data-theme="dark"]{
+  --bg:#0d1117; --panel:#151b23; --panel-2:#1c232c; --text:#e6edf3; --dim:#9198a1;
+  --border:#30363d; --accent:#4493f8; --accent-soft:#121d2f; --shadow:0 1px 3px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+  --chip:#21262d;
+}
+@media (prefers-color-scheme: dark){
+  [data-theme="auto"]{
+    --bg:#0d1117; --panel:#151b23; --panel-2:#1c232c; --text:#e6edf3; --dim:#9198a1;
+    --border:#30363d; --accent:#4493f8; --accent-soft:#121d2f; --shadow:0 1px 3px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+    --chip:#21262d;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--text); min-height:100vh;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* header */
+header.top{
+  border-bottom:1px solid var(--border);
+  background:
+    radial-gradient(1100px 260px at 15% -40%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%),
+    var(--panel);
+}
+.head-inner{display:flex;gap:22px;align-items:center;flex-wrap:wrap;padding:38px 0 30px}
+.avatar{width:96px;height:96px;border-radius:50%;border:3px solid var(--panel);box-shadow:var(--shadow);background:var(--panel-2);flex:0 0 auto}
+.head-text{flex:1 1 320px;min-width:240px}
+h1{margin:0 0 2px;font-size:1.7rem;letter-spacing:-.02em}
+.handle{color:var(--dim);font-size:.95rem;margin:0 0 8px}
+.bio{margin:0 0 12px;color:var(--dim);max-width:60ch}
+.head-links{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:10px;
+  border:1px solid var(--border);background:var(--panel-2);color:var(--text);
+  font-size:.875rem;font-weight:600;cursor:pointer;
+}
+.btn:hover{background:var(--chip);text-decoration:none}
+.btn.primary{background:var(--accent);border-color:transparent;color:#fff}
+.btn.primary:hover{filter:brightness(1.08)}
+.stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px}
+.stat b{display:block;font-size:1.25rem;line-height:1.2}
+.stat span{color:var(--dim);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+
+/* controls */
+.controls{
+  position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border);
+}
+.controls-inner{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:12px 0}
+.controls input[type=search],.controls select{
+  padding:9px 12px;border-radius:10px;border:1px solid var(--border);background:var(--panel);
+  color:var(--text);font-size:.9rem;font-family:inherit;min-width:0;
+}
+.controls input[type=search]{flex:1 1 240px}
+.controls select{flex:0 0 auto}
+.controls .spacer{flex:1 1 auto}
+.count{color:var(--dim);font-size:.85rem;white-space:nowrap}
+.switch{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;color:var(--dim);cursor:pointer;user-select:none}
+.switch input{accent-color:var(--accent);width:16px;height:16px}
+@media (max-width:620px){
+  .controls-inner{padding:10px 0}
+  .controls input[type=search]{flex:1 1 100%}
+  .controls select{flex:1 1 auto}
+  .controls .spacer{display:none}
+  .count{flex:1 1 auto}
+  .head-inner{gap:16px;padding:26px 0 22px}
+  .avatar{width:76px;height:76px}
+  h1{font-size:1.45rem}
+}
+
+/* notice */
+.notice{
+  display:none;align-items:center;gap:10px;margin:16px 0 0;padding:11px 14px;border-radius:12px;
+  border:1px solid var(--border);background:var(--panel);color:var(--dim);font-size:.87rem;
+}
+.notice.show{display:flex}
+.notice .dot{width:8px;height:8px;border-radius:50%;background:#d29922;flex:0 0 auto}
+
+/* grid */
+main{padding:26px 0 60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.card{
+  display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  transition:transform .16s ease,border-color .16s ease;
+}
+.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb, var(--accent) 45%, var(--border))}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+
+.thumb-wrap{position:relative;aspect-ratio:1200/630;background:var(--panel-2);overflow:hidden;display:block}
+.thumb{width:100%;height:100%;object-fit:cover;display:block}
+.thumb-wrap.no-img{display:flex;align-items:center;justify-content:center}
+.thumb-wrap.no-img::after{
+  content:attr(data-name);font-weight:700;font-size:1.05rem;text-align:center;padding:0 18px;
+  color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.35);
+}
+.thumb-wrap[data-lang]::before{content:"";position:absolute;inset:0;z-index:-1}
+.badge-featured{
+  position:absolute;top:10px;left:10px;z-index:2;background:var(--accent);color:#fff;
+  font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:4px 8px;border-radius:999px;
+}
+.card-body{padding:15px 16px 6px;flex:1}
+.card-title{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-size:1.02rem;font-weight:700;letter-spacing:-.01em}
+.card-title a{color:var(--text)}
+.card-title a:hover{color:var(--accent);text-decoration:none}
+.card-desc{margin:0;color:var(--dim);font-size:.875rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
+.meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:12px 0 0;font-size:.78rem;color:var(--dim)}
+.meta .item{display:inline-flex;align-items:center;gap:5px}
+.lang-dot{width:10px;height:10px;border-radius:50%;display:inline-block;background:#8b949e}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 0}
+.chip{font-size:.72rem;padding:3px 9px;border-radius:999px;background:var(--chip);color:var(--dim);white-space:nowrap}
+.card-foot{display:flex;gap:8px;padding:14px 16px 16px;margin-top:auto}
+.card-foot .btn{flex:1 1 0;justify-content:center;font-size:.82rem;padding:8px 10px}
+
+/* skeletons */
+.sk{border-radius:var(--radius);background:var(--panel);border:1px solid var(--border);overflow:hidden}
+.sk .a{aspect-ratio:1200/630;background:linear-gradient(100deg,var(--panel-2) 30%,var(--chip) 50%,var(--panel-2) 70%);background-size:200% 100%;animation:sh 1.3s infinite}
+.sk .b{height:14px;margin:16px;border-radius:6px;background:var(--panel-2)}
+.sk .b.s{width:55%}
+@keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@media (prefers-reduced-motion:reduce){.sk .a{animation:none}}
+
+.empty{text-align:center;padding:70px 20px;color:var(--dim)}
+footer{border-top:1px solid var(--border);background:var(--panel);padding:26px 0;color:var(--dim);font-size:.83rem}
+.foot-inner{display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:center}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap head-inner">
+    <img class="avatar" id="avatar" src="https://github.com/drsamonline.png?size=200" alt="" width="96" height="96">
+    <div class="head-text">
+      <h1 id="name">Dr Sohil Momin</h1>
+      <p class="handle" id="handle">@drsamonline</p>
+      <p class="bio" id="bio">Doctor, Poet, Social Worker.</p>
+      <div class="head-links">
+        <a class="btn primary" id="gh-link" href="https://github.com/drsamonline" rel="me noopener">GitHub profile</a>
+        <a class="btn" href="https://github.com/drsamonline?tab=repositories">All repositories</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="stat-repos">—</b><span>Public repos</span></div>
+        <div class="stat"><b id="stat-followers">—</b><span>Followers</span></div>
+        <div class="stat"><b id="stat-stars">—</b><span>Total stars</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="wrap controls-inner">
+    <label class="sr-only" for="q">Search projects</label>
+    <input id="q" type="search" placeholder="Search projects…" autocomplete="off">
+    <label class="sr-only" for="lang">Filter by language</label>
+    <select id="lang"><option value="">All languages</option></select>
+    <label class="sr-only" for="sort">Sort</label>
+    <select id="sort">
+      <option value="updated">Recently updated</option>
+      <option value="stars">Most stars</option>
+      <option value="name">Name (A–Z)</option>
+    </select>
+    <label class="switch" id="forks-wrap" hidden><input type="checkbox" id="forks"> Include forks</label>
+    <span class="spacer"></span>
+    <span class="count" id="count" aria-live="polite"></span>
+    <button class="btn" id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="notice" id="notice"><span class="dot"></span><span id="notice-text"></span></div>
+  <div class="grid" id="grid" aria-busy="true"></div>
+  <div class="empty" id="empty" hidden>No projects match that filter.</div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>Automatically generated from the public GitHub API — new repositories appear here on their own.</span>
+    <span id="updated">—</span>
+  </div>
+</footer>
+
+<noscript>
+  <div class="wrap" style="padding:24px 20px">
+    <p>This page builds itself from the GitHub API and needs JavaScript. You can browse the repositories directly at
+    <a href="https://github.com/drsamonline?tab=repositories">github.com/drsamonline</a>.</p>
+  </div>
+</noscript>
+
+<script>
+(function () {
+"use strict";
+
+/* ------------------------------------------------------------------
+   Configuration — change USER and everything follows automatically.
+   ------------------------------------------------------------------ */
+var USER = "drsamonline";
+var REPOS_API = "https://api.github.com/users/" + USER + "/repos?per_page=100&sort=updated&type=owner";
+var PROFILE_API = "https://api.github.com/users/" + USER;
+
+/* Repositories never to show on this page (the site itself, profile repo). */
+var EXCLUDE = ["drsamonline.github.io", ".github"];
+
+/* Optional: names listed here are pinned to the top of the "Recently updated"
+   view. Leave empty for a fully automatic page. e.g. ["conqueror-os"] */
+var FEATURED = [];
+
+/* Cache the API result in the browser for this long, to stay well inside
+   GitHub's unauthenticated rate limit (60 requests/hour per visitor). */
+var CACHE_KEY = "gh-portfolio-v1:" + USER;
+var CACHE_TTL = 10 * 60 * 1000;
+
+/* Snapshot baked in at build time, used only if the API is unreachable
+   or rate-limited, so the page is never empty. */
+var FALLBACK = {"repos":[{"name":"conqueror-os","description":"A private, offline resilience workspace in a single HTML file \u2014 read, reflect, journal, track and review. No server, no account, no dependencies.","language":"HTML","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-20T06:03:35Z","pushed_at":"2026-10-20T05:52:47Z","html_url":"https://github.com/drsamonline/conqueror-os","homepage":"https://drsamonline.github.io/conqueror-os/","topics":["habits","journal","local-first","no-dependencies","offline-first","privacy","resilience","single-file","spaced-repetition","vanilla-js"],"fork":false,"archived":false,"default_branch":"main","license":{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"size":0,"owner":"drsamonline"},{"name":"AethelgardVN","description":"Visual Novel based on Aethelgard: Chronicles of Fate RPG with Base Engine","language":"JavaScript","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-20T06:03:32Z","pushed_at":"2026-10-19T10:14:03Z","html_url":"https://github.com/drsamonline/AethelgardVN","homepage":"","topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"size":60,"owner":"drsamonline"},{"name":"NEO","description":null,"language":"Makefile","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-20T06:03:05Z","pushed_at":"2026-09-24T04:15:21Z","html_url":"https://github.com/drsamonline/NEO","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"master","license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"size":327773,"owner":"drsamonline"},{"name":"Aethelgard-Engine","description":"Aethelgard-Engine base Engine for Aethlgard RPG Game","language":"JavaScript","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-17T11:28:44Z","pushed_at":"2026-10-17T11:28:40Z","html_url":"https://github.com/drsamonline/Aethelgard-Engine","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"size":12023,"owner":"drsamonline"},{"name":"lexora","description":"LEXORA \u2014 Layered Exact-text Repository & Adaptive Compression Architecture","language":"Python","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-17T10:23:47Z","pushed_at":"2026-10-17T10:23:42Z","html_url":"https://github.com/drsamonline/lexora","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"size":1002,"owner":"drsamonline"},{"name":"blinkcode-ai","description":"BlinkCode AI \u2014 single-shot optical file transfer PWA (compression -> SpectraCode -> camera -> restore)","language":"JavaScript","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-12T11:44:31Z","pushed_at":"2026-09-05T04:42:47Z","html_url":"https://github.com/drsamonline/blinkcode-ai","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"size":108,"owner":"drsamonline"},{"name":"TTB","description":"TinyToolBox with 590 functionalities in one small extension for chrome","language":"JavaScript","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-12T11:44:30Z","pushed_at":"2026-09-20T16:07:37Z","html_url":"https://github.com/drsamonline/TTB","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"size":61,"owner":"drsamonline"},{"name":"CLDR","description":"Command Run Utility - Performance over Bloat","language":"Makefile","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-12T11:44:25Z","pushed_at":"2026-09-29T10:30:04Z","html_url":"https://github.com/drsamonline/CLDR","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"size":194933,"owner":"drsamonline"},{"name":"All4ONE","description":"\ud83e\uddf0 551 portable Windows tools in ONE free .exe \u2014 file ops, hashing, PDF/Office batch, image/video/audio, network diagnostics, registry helpers, disk cleaner, security audits. Zero installs, zero telemetry, MIT licensed. CLI + GUI.","language":"Python","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-12T11:44:24Z","pushed_at":"2026-10-01T11:59:54Z","html_url":"https://github.com/drsamonline/All4ONE","homepage":"https://github.com/drsamonline/All4ONE/releases/latest","topics":["batch-processing","cli-tool","disk-cleaner","ffmpeg","file-manager","hashing","network-diagnostics","offline-tools","open-source","pdf-tools","portable-app","productivity","python","security-tools","single-exe","sysadmin","tkinter-gui","toolbox","utilities","windows"],"fork":false,"archived":false,"default_branch":"main","license":{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"size":18458,"owner":"drsamonline"},{"name":"SmartNotes","description":"Turn raw thoughts into organized action.","language":"TypeScript","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-12T11:44:23Z","pushed_at":"2026-10-07T11:05:03Z","html_url":"https://github.com/drsamonline/SmartNotes","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"size":112341,"owner":"drsamonline"},{"name":"The_Browser","description":null,"language":"C++","stargazers_count":1,"forks_count":0,"updated_at":"2026-10-12T11:44:22Z","pushed_at":"2026-10-07T14:16:05Z","html_url":"https://github.com/drsamonline/The_Browser","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"size":167749,"owner":"drsamonline"},{"name":"ULTIMATE-WINDOWS-OPTIMIZER","description":"OPTIMIZE DEBLOAT TWEAK TO THE LEVEL PHYSICALLY POSSIBLE ANY WINDOWS 10/11 INSTALLATION","language":"PowerShell","stargazers_count":1,"forks_count":0,"updated_at":"2026-09-05T04:25:18Z","pushed_at":"2026-09-05T04:25:17Z","html_url":"https://github.com/drsamonline/ULTIMATE-WINDOWS-OPTIMIZER","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"size":156,"owner":"drsamonline"},{"name":"Matneo","description":"AI-powered digital products and automation platform.","language":"HTML","stargazers_count":1,"forks_count":0,"updated_at":"2026-07-21T08:19:40Z","pushed_at":"2026-07-21T08:19:05Z","html_url":"https://github.com/drsamonline/Matneo","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":null,"size":836,"owner":"drsamonline"},{"name":"smartbill-app","description":"A fast, serverless, single-page billing and invoicing application built with Vue.js, tailored for Indian businesses. Features local IndexedDB storage and GST support.","language":"HTML","stargazers_count":1,"forks_count":0,"updated_at":"2026-07-04T16:29:46Z","pushed_at":"2026-09-05T04:38:45Z","html_url":"https://github.com/drsamonline/smartbill-app","homepage":null,"topics":[],"fork":false,"archived":false,"default_branch":"main","license":{"key":"other","name":"Other","spdx_id":"NOASSERTION","url":null,"node_id":"MDc6TGljZW5zZTA="},"size":37,"owner":"drsamonline"}],"profile":{"login":"drsamonline","name":"Dr Sohil Momin","bio":"Doctor, Poet, Social Worker","avatar_url":"https://avatars.githubusercontent.com/u/231817722?v=4","html_url":"https://github.com/drsamonline","public_repos":14,"followers":4,"following":7,"location":null,"blog":"","twitter_username":null}};
+
+var LANG_COLORS = {
+  "JavaScript": "#f1e05a", "TypeScript": "#3178c6", "Python": "#3572A5", "HTML": "#e34c26",
+  "CSS": "#563d7c", "SCSS": "#c6538c", "C++": "#f34b7d", "C": "#555555", "C#": "#178600",
+  "Java": "#b07219", "Go": "#00ADD8", "Rust": "#dea584", "Ruby": "#701516", "PHP": "#4F5D95",
+  "Shell": "#89e051", "PowerShell": "#012456", "Makefile": "#427819", "Vue": "#41b883",
+  "Svelte": "#ff3e00", "Kotlin": "#A97BFF", "Swift": "#F05138", "Dart": "#00B4AB",
+  "Jupyter Notebook": "#DA5B0B", "Batchfile": "#C1F12E", "Lua": "#000080", "R": "#198CE7",
+  "Perl": "#0298c3", "Scala": "#c22d40", "Elixir": "#6e4a7e", "Haskell": "#5e5086",
+  "Zig": "#ec915c", "Assembly": "#6E4C13", "TeX": "#3D6117", "Dockerfile": "#384d54",
+  "Objective-C": "#438eff", "Nim": "#ffc200", "Clojure": "#db5855", "Groovy": "#4298b8"
+};
+
+/* ------------------------------------------------------------------ */
+var $ = function (s) { return document.querySelector(s); };
+var grid = $("#grid");
+var ALL = [];
+var view = { q: "", lang: "", sort: "updated", forks: false };
+
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g, function (m) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m];
+  });
+}
+function langColor(l) { return LANG_COLORS[l] || "#8b949e"; }
+function shade(hex) {
+  var h = String(hex || "#8b949e").replace("#", "");
+  if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+  var n = parseInt(h, 16);
+  if (isNaN(n)) n = 0x8b949e;
+  var r = Math.max(0, ((n >> 16) & 255) - 55), g = Math.max(0, ((n >> 8) & 255) - 55), b = Math.max(0, (n & 255) - 55);
+  return "rgb(" + r + "," + g + "," + b + ")";
+}
+function num(n) { n = n || 0; return n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1) + "k" : String(n); }
+function relTime(iso) {
+  var t = new Date(iso).getTime();
+  if (isNaN(t)) return "";
+  var d = Math.max(0, Date.now() - t), min = 60000, hr = 60 * min, day = 24 * hr, mo = 30 * day, yr = 365 * day;
+  if (d < hr) return Math.max(1, Math.round(d / min)) + "m ago";
+  if (d < day) return Math.round(d / hr) + "h ago";
+  if (d < mo) return Math.round(d / day) + "d ago";
+  if (d < yr) return Math.round(d / mo) + "mo ago";
+  return Math.round(d / yr) + "y ago";
+}
+
+function getJSON(url) {
+  return fetch(url, { headers: { "Accept": "application/vnd.github+json" } }).then(function (r) {
+    if (!r.ok) { var e = new Error("HTTP " + r.status); e.status = r.status; throw e; }
+    return r.json();
+  });
+}
+function fetchRepos() {
+  var all = [], page = 1;
+  function step() {
+    return getJSON(REPOS_API + "&page=" + page).then(function (batch) {
+      all = all.concat(batch);
+      if (batch.length === 100 && page < 5) { page++; return step(); }
+      return all;
+    });
+  }
+  return step();
+}
+function readCache() {
+  try {
+    var raw = sessionStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+    var c = JSON.parse(raw);
+    if (!c || Date.now() - c.ts > CACHE_TTL) return null;
+    return c;
+  } catch (_) { return null; }
+}
+function writeCache(repos, profile) {
+  try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), repos: repos, profile: profile })); } catch (_) {}
+}
+
+function clean(repos) {
+  return (repos || []).filter(function (r) { return r && r.name && EXCLUDE.indexOf(r.name) === -1; })
+    .map(function (r) {
+      return {
+        name: r.name,
+        description: r.description,
+        language: r.language,
+        stars: r.stargazers_count || 0,
+        forks: r.forks_count || 0,
+        updated: r.pushed_at || r.updated_at,
+        url: r.html_url,
+        homepage: r.homepage,
+        topics: r.topics || [],
+        fork: !!r.fork,
+        archived: !!r.archived,
+        license: (r.license && r.license.spdx_id && r.license.spdx_id !== "NOASSERTION") ? r.license.spdx_id : null,
+        owner: (r.owner && r.owner.login) || USER
+      };
+    });
+}
+
+function filtered() {
+  var q = view.q.trim().toLowerCase();
+  var list = ALL.filter(function (r) {
+    if (!view.forks && r.fork) return false;
+    if (view.lang && (r.language || "") !== view.lang) return false;
+    if (q) {
+      var hay = (r.name + " " + (r.description || "") + " " + r.topics.join(" ")).toLowerCase();
+      if (hay.indexOf(q) === -1) return false;
+    }
+    return true;
+  });
+  var isFeat = function (r) { return FEATURED.indexOf(r.name) !== -1; };
+  list.sort(function (a, b) {
+    if (view.sort === "stars") return (b.stars - a.stars) || a.name.localeCompare(b.name);
+    if (view.sort === "name") return a.name.localeCompare(b.name);
+    var f = (isFeat(b) ? 1 : 0) - (isFeat(a) ? 1 : 0);
+    if (f) return f;
+    return new Date(b.updated) - new Date(a.updated);
+  });
+  return list;
+}
+
+function card(r) {
+  var color = langColor(r.language);
+  var og = "https://opengraph.githubassets.com/1/" + encodeURIComponent(r.owner) + "/" + encodeURIComponent(r.name);
+  var meta = [];
+  if (r.language) meta.push('<span class="item"><span class="lang-dot" style="background:' + color + '"></span>' + esc(r.language) + '</span>');
+  if (r.stars) meta.push('<span class="item">\u2605 ' + num(r.stars) + '</span>');
+  if (r.forks) meta.push('<span class="item">\u2442 ' + num(r.forks) + '</span>');
+  if (r.license) meta.push('<span class="item">' + esc(r.license) + '</span>');
+  if (r.updated) meta.push('<span class="item">Updated ' + relTime(r.updated) + '</span>');
+
+  var chips = r.topics.slice(0, 4).map(function (t) { return '<span class="chip">' + esc(t) + '</span>'; }).join("");
+  var feat = FEATURED.indexOf(r.name) !== -1 ? '<span class="badge-featured">Featured</span>' : "";
+  var arch = r.archived ? ' <span class="chip">archived</span>' : "";
+
+  var live = "";
+  if (r.homepage) {
+    var label = /releases|download/i.test(r.homepage) ? "Download" : "Live demo";
+    live = '<a class="btn" href="' + esc(r.homepage) + '" target="_blank" rel="noopener">' + label + '</a>';
+  }
+
+  return '<article class="card">' +
+    '<a class="thumb-wrap" data-name="' + esc(r.name) + '" href="' + esc(r.url) + '" target="_blank" rel="noopener" ' +
+      'tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,' + color + ',' + shade(color) + ')">' +
+      feat + '<img class="thumb" loading="lazy" decoding="async" alt="" src="' + og + '">' +
+    '</a>' +
+    '<div class="card-body">' +
+      '<h2 class="card-title"><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.name) + '</a>' + arch + '</h2>' +
+      '<p class="card-desc">' + esc(r.description || "No description yet.") + '</p>' +
+      (meta.length ? '<div class="meta">' + meta.join("") + '</div>' : "") +
+      (chips ? '<div class="chips">' + chips + '</div>' : "") +
+    '</div>' +
+    '<div class="card-foot">' +
+      '<a class="btn" href="' + esc(r.url) + '" target="_blank" rel="noopener">Code</a>' + live +
+    '</div>' +
+  '</article>';
+}
+
+function render() {
+  var list = filtered();
+  $("#count").textContent = list.length + (list.length === 1 ? " project" : " projects");
+  $("#empty").hidden = list.length !== 0;
+  grid.setAttribute("aria-busy", "false");
+  grid.innerHTML = list.map(card).join("");
+}
+function skeletons() {
+  var out = "";
+  for (var i = 0; i < 6; i++) {
+    out += '<div class="sk"><div class="a"></div><div class="b"></div><div class="b s"></div></div>';
+  }
+  grid.innerHTML = out;
+}
+function applyProfile(p) {
+  if (!p) return;
+  if (p.name) $("#name").textContent = p.name;
+  if (p.login) $("#handle").textContent = "@" + p.login;
+  if (p.bio) $("#bio").textContent = p.bio;
+  if (p.avatar_url) $("#avatar").src = p.avatar_url;
+  if (p.html_url) $("#gh-link").href = p.html_url;
+  if (p.public_repos != null) $("#stat-repos").textContent = String(p.public_repos);
+  if (p.followers != null) $("#stat-followers").textContent = num(p.followers);
+}
+function showStars() {
+  var s = ALL.reduce(function (a, r) { return a + (r.stars || 0); }, 0);
+  $("#stat-stars").textContent = num(s);
+}
+function fillLanguages() {
+  var seen = {};
+  ALL.forEach(function (r) { if (r.language) seen[r.language] = 1; });
+  var langs = Object.keys(seen).sort();
+  $("#lang").innerHTML = '<option value="">All languages</option>' + langs.map(function (l) {
+    return '<option value="' + esc(l) + '">' + esc(l) + '</option>';
+  }).join("");
+}
+function notice(msg) {
+  var n = $("#notice");
+  if (!msg) { n.classList.remove("show"); return; }
+  $("#notice-text").innerHTML = msg;
+  n.classList.add("show");
+}
+
+function hydrate(repos, profile) {
+  ALL = clean(repos);
+  applyProfile(profile);
+  fillLanguages();
+  showStars();
+  $("#forks-wrap").hidden = !ALL.some(function (r) { return r.fork; });
+  render();
+}
+
+function load() {
+  var cached = readCache();
+  if (cached) {
+    hydrate(cached.repos, cached.profile);
+    notice("Showing a cached copy — refreshing in the background\u2026");
+  } else {
+    skeletons();
+  }
+  Promise.all([fetchRepos(), getJSON(PROFILE_API)]).then(function (res) {
+    hydrate(res[0], res[1]);
+    writeCache(res[0], res[1]);
+    $("#updated").textContent = "Live from GitHub \u00b7 " + ALL.length + " repositories";
+    notice("");
+  }).catch(function (err) {
+    if (ALL.length) {
+      notice("Live refresh failed (" + esc(err.message) + ") \u2014 showing the last known list.");
+      return;
+    }
+    hydrate(FALLBACK.repos, FALLBACK.profile);
+    $("#updated").textContent = "Offline snapshot";
+    notice(err.status === 403
+      ? "GitHub\u2019s public API rate limit was reached. Showing a built-in snapshot; the live list returns within the hour."
+      : "Could not reach the GitHub API (" + esc(err.message) + "). Showing a built-in snapshot.");
+  });
+}
+
+/* Thumbnails: if the OpenGraph image is unavailable, drop the <img> so the
+   language-coloured gradient (with the repo name) shows instead. */
+grid.addEventListener("error", function (e) {
+  var t = e.target;
+  if (t && t.tagName === "IMG" && t.className.indexOf("thumb") !== -1) {
+    var w = t.closest(".thumb-wrap");
+    if (w) w.classList.add("no-img");
+    t.remove();
+  }
+}, true);
+
+/* Controls */
+$("#q").addEventListener("input", function (e) { view.q = e.target.value; render(); });
+$("#lang").addEventListener("change", function (e) { view.lang = e.target.value; render(); });
+$("#sort").addEventListener("change", function (e) { view.sort = e.target.value; render(); });
+$("#forks").addEventListener("change", function (e) { view.forks = e.target.checked; render(); });
+
+/* Theme */
+var THEMES = ["auto", "light", "dark"];
+var themeBtn = $("#theme");
+function applyTheme(t) {
+  document.documentElement.setAttribute("data-theme", t);
+  themeBtn.textContent = "Theme: " + t;
+  try { localStorage.setItem("gh-portfolio-theme", t); } catch (_) {}
+}
+themeBtn.addEventListener("click", function () {
+  var cur = document.documentElement.getAttribute("data-theme") || "auto";
+  applyTheme(THEMES[(THEMES.indexOf(cur) + 1) % THEMES.length]);
+});
+try {
+  var saved = localStorage.getItem("gh-portfolio-theme");
+  if (saved) applyTheme(saved); else applyTheme("auto");
+} catch (_) { applyTheme("auto"); }
+
+load();
+})();
+
+</script>
+</body>
+</html>
