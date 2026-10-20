@@ -61,4 +61,9 @@ python3 -m http.server 8080
 
 ## License
 
-MIT © 2026 Dr Sohil Momin
+MIT © 2026 Dr Sohil Momin — this covers the page's code.
+
+The written content shown here (project descriptions, the profile text and any
+original prose) belongs to its author and is **© 2026 Dr Sohil Momin, all rights
+reserved**. Repository descriptions are pulled from the GitHub API and remain
+the property of their respective authors.
