@@ -1,0 +1,98 @@
+name: Refresh project snapshot
+
+# Regenerates the embedded JSON snapshot in index.html from the GitHub API so the
+# fallback data stays fresh even if the live fetch is ever rate-limited.
+on:
+  schedule:
+    - cron: "17 3 * * 1"   # every Monday, 03:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write          # least privilege: only enough to commit the refreshed snapshot
+
+concurrency:
+  group: refresh-hub
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Regenerate the embedded snapshot
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, urllib.request
+
+          OWNER = "drsamonline"
+          API = f"https://api.github.com/users/{OWNER}/repos?per_page=100&sort=updated"
+          EXCLUDE = {"drsamonline", "drsamonline.github.io"}
+
+          req = urllib.request.Request(API, headers={
+              "Accept": "application/vnd.github+json",
+              "User-Agent": "drsamonline-hub-refresh",
+              "Authorization": "Bearer " + os.environ.get("GH_TOKEN", ""),
+          })
+          with urllib.request.urlopen(req, timeout=60) as r:
+              repos = json.load(r)
+
+          snap = []
+          for x in repos:
+              if x.get("fork") or x["name"].lower() in EXCLUDE:
+                  continue
+              snap.append({
+                  "name": x["name"],
+                  "description": x.get("description") or "",
+                  "homepage": x.get("homepage") or "",
+                  "language": x.get("language") or "",
+                  "stargazers_count": x.get("stargazers_count") or 0,
+                  "pushed_at": x.get("pushed_at") or "",
+                  "archived": bool(x.get("archived")),
+                  "fork": bool(x.get("fork")),
+                  "topics": x.get("topics") or [],
+              })
+          snap.sort(key=lambda s: s["pushed_at"], reverse=True)
+          payload = json.dumps(snap, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
+          block = ("<!--REPO_SNAPSHOT_START-->\n"
+                   '<script id="repo-snapshot" type="application/json">' + payload + "</script>\n"
+                   "<!--REPO_SNAPSHOT_END-->")
+
+          path = "index.html"
+          src = open(path, encoding="utf-8").read()
+          new = re.sub(r"<!--REPO_SNAPSHOT_START-->.*?<!--REPO_SNAPSHOT_END-->", block, src, count=1, flags=re.S)
+          if new == src:
+              print("Snapshot already up to date.")
+          else:
+              open(path, "w", encoding="utf-8").write(new)
+              print(f"Snapshot refreshed: {len(snap)} repositories.")
+          PY
+
+      - name: Verify the screenshot service returns an image
+        continue-on-error: true
+        run: |
+          url="https://image.thum.io/get/width/1000/crop/640/noanimate/https://drsamonline.github.io/All4ONE/"
+          code=$(curl -s -L --max-time 90 -o /tmp/shot.bin -w '%{http_code}' "$url" || echo 000)
+          ctype=$(file -b --mime-type /tmp/shot.bin 2>/dev/null || echo unknown)
+          bytes=$(wc -c < /tmp/shot.bin 2>/dev/null || echo 0)
+          echo "thum.io -> HTTP $code | type=$ctype | bytes=$bytes"
+          case "$ctype" in
+            image/*) echo "OK: screenshot service returned an image ($ctype, $bytes bytes)";;
+            *) echo "::warning::screenshot service did not return an image"; exit 1;;
+          esac
+
+      - name: Commit the refreshed snapshot
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No snapshot change to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "chore: refresh embedded project snapshot"
+          git push

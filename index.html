@@ -35,7 +35,7 @@
 <meta name="twitter:image" content="https://socialify.git.ci/drsamonline/All4ONE/image?name=1&owner=1&description=1&language=1&theme=Dark&font=Inter">
 <meta name="twitter:image:alt" content="Dr. Sohil Momin — open-source project showcase">
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https: data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; font-src https: data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https: data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; font-src https: data:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 
 <script type="application/ld+json">
 {
@@ -822,6 +822,24 @@ footer{border-top:1px solid var(--line);padding:46px 0 34px;margin-top:24px;
   .reveal{opacity:1;transform:none}
   .blob{animation:none}
 }
+
+/* ---------- live screenshots & dynamic bits ---------- */
+.src-note{margin:-2px 0 18px;color:var(--faint);font-size:.82rem}
+.shot{position:relative;display:block;width:100%;aspect-ratio:1000/640;border-radius:13px;overflow:hidden;
+  margin:0 0 15px;background:linear-gradient(150deg,#131730,#0a0d1c);border:1px solid var(--line);
+  box-shadow:0 10px 30px -18px rgba(0,0,0,.9)}
+.shot .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  background:radial-gradient(circle at 28% 18%,rgba(124,92,255,.30),transparent 62%),radial-gradient(circle at 76% 84%,rgba(34,211,238,.20),transparent 62%)}
+.shot .ph b{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;color:#e7ebf7;opacity:.92}
+.shot .ph span{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
+  max-width:82%;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#0a0d1c;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.shot:hover img{transform:scale(1.035)}
+.feat-card .shot{margin-bottom:16px}
+.card .card-meta .upd{font-size:.74rem;color:var(--faint);font-weight:600}
+.card .card-meta .rel.arch{color:var(--amber);border-color:rgba(251,191,36,.4)}
+@media (prefers-reduced-motion:reduce){.shot:hover img{transform:none}}
 </style>
 </head>
 <body>
@@ -859,7 +877,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 34px;margin-top:24px;
   <span class="eyebrow"><span class="dot"></span> Open source · offline-first · built in India</span>
   <h1 class="title">Building tools that<br><span class="grad">outlive the cloud.</span></h1>
   <p class="role">Dr. Sohil Momin, <em>BHMS</em> — homeopathic physician &amp; builder of open-source, offline-first software for medicine, learning and play.</p>
-  <p class="lead">Thirty-seven projects, one obsession: software that runs anywhere, needs nothing, and belongs to the person using it. From a 551-tool Windows kit and an experimental browser engine to classical homeopathic materia medica, browser games and single-file clinical apps — everything here is free to explore, most of it free to use.</p>
+  <p class="lead"><span id="heroCount">37</span> projects, one obsession: software that runs anywhere, needs nothing, and belongs to the person using it. From a 551-tool Windows kit and an experimental browser engine to classical homeopathic materia medica, browser games and single-file clinical apps — everything here is free to explore, most of it free to use.</p>
   <div class="hero-ctas">
     <a class="btn primary" href="#projects"><span class="ic"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg></span> Explore the projects</a>
     <a class="btn" href="#featured"><span class="ic"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 2 4 13.2h6.1L9.8 22 20 10.4h-6.3L13.5 2Z"/></svg></span> See the flagships</a>
@@ -867,10 +885,10 @@ footer{border-top:1px solid var(--line);padding:46px 0 34px;margin-top:24px;
   </div>
 
   <div class="stats">
-    <div class="stat-box"><div class="n">37</div><div class="l">Projects</div></div>
-    <div class="stat-box"><div class="n">6</div><div class="l">Categories</div></div>
-    <div class="stat-box"><div class="n">25</div><div class="l">Live demos</div></div>
-    <div class="stat-box"><div class="n">10</div><div class="l">Releases</div></div>
+    <div class="stat-box"><div class="n" id="statProjects">37</div><div class="l">Projects</div></div>
+    <div class="stat-box"><div class="n" id="statCats">6</div><div class="l">Categories</div></div>
+    <div class="stat-box"><div class="n" id="statDemos">25</div><div class="l">Live demos</div></div>
+    <div class="stat-box"><div class="n" id="statUpdated">&mdash;</div><div class="l">Last updated</div></div>
   </div>
 </section>
 
@@ -881,88 +899,21 @@ footer{border-top:1px solid var(--line);padding:46px 0 34px;margin-top:24px;
     <h2>The projects that started it all</h2>
     <p>Four builds that define the range — a portable Windows toolkit, a ruthless optimiser, a modern homeopathic materia medica, and a retro shooter that fits in one file.</p>
   </div>
-  <div class="feat-grid">
-        <article class="feat-card" data-cat="desktop">
-          <div class="feat-glow" aria-hidden="true"></div>
-          <div class="feat-head">
-            <span class="kicker"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5c.5 3.6 1.4 4.5 5 5-3.6.5-4.5 1.4-5 5-.5-3.6-1.4-4.5-5-5 3.6-.5 4.5-1.4 5-5Zm6.5 11c.3 1.9.8 2.4 2.7 2.7-1.9.3-2.4.8-2.7 2.7-.3-1.9-.8-2.4-2.7-2.7 1.9-.3 2.4-.8 2.7-2.7Z"/></svg></span>Windows toolkit</span>
-            <span class="lang"><i style="background:#3572A5"></i>Python</span>
-          </div>
-          <h3 class="feat-name">All4ONE</h3>
-          <p class="feat-tag">551 tools · one file</p>
-          <p class="desc">551 portable Windows tools in one free .exe — zero install, zero telemetry.</p>
-          <div class="feat-badges">
-            <img loading="lazy" alt="" src="https://img.shields.io/github/stars/drsamonline/All4ONE?style=flat-square&labelColor=0b1020&color=7c5cff" onerror="this.style.display='none'">
-            <img loading="lazy" alt="" src="https://img.shields.io/github/last-commit/drsamonline/All4ONE?style=flat-square&labelColor=0b1020&color=22d3ee" onerror="this.style.display='none'">
-          </div>
-          <div class="links"><a class="lnk" href="https://drsamonline.github.io/All4ONE/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/All4ONE" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/All4ONE/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-        </article>
-        <article class="feat-card" data-cat="desktop">
-          <div class="feat-glow" aria-hidden="true"></div>
-          <div class="feat-head">
-            <span class="kicker"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5c.5 3.6 1.4 4.5 5 5-3.6.5-4.5 1.4-5 5-.5-3.6-1.4-4.5-5-5 3.6-.5 4.5-1.4 5-5Zm6.5 11c.3 1.9.8 2.4 2.7 2.7-1.9.3-2.4.8-2.7 2.7-.3-1.9-.8-2.4-2.7-2.7 1.9-.3 2.4-.8 2.7-2.7Z"/></svg></span>Windows 10/11</span>
-            <span class="lang"><i style="background:#012456"></i>PowerShell</span>
-          </div>
-          <h3 class="feat-name">ULTIMATE-WINDOWS-OPTIMIZER</h3>
-          <p class="feat-tag">Debloat &amp; tune</p>
-          <p class="desc">Debloat and optimise any Windows 10/11 install to the limit.</p>
-          <div class="feat-badges">
-            <img loading="lazy" alt="" src="https://img.shields.io/github/stars/drsamonline/ULTIMATE-WINDOWS-OPTIMIZER?style=flat-square&labelColor=0b1020&color=7c5cff" onerror="this.style.display='none'">
-            <img loading="lazy" alt="" src="https://img.shields.io/github/last-commit/drsamonline/ULTIMATE-WINDOWS-OPTIMIZER?style=flat-square&labelColor=0b1020&color=22d3ee" onerror="this.style.display='none'">
-          </div>
-          <div class="links"><a class="lnk" href="https://drsamonline.github.io/ULTIMATE-WINDOWS-OPTIMIZER/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/ULTIMATE-WINDOWS-OPTIMIZER" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/ULTIMATE-WINDOWS-OPTIMIZER/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-        </article>
-        <article class="feat-card" data-cat="health">
-          <div class="feat-glow" aria-hidden="true"></div>
-          <div class="feat-head">
-            <span class="kicker"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5c.5 3.6 1.4 4.5 5 5-3.6.5-4.5 1.4-5 5-.5-3.6-1.4-4.5-5-5 3.6-.5 4.5-1.4 5-5Zm6.5 11c.3 1.9.8 2.4 2.7 2.7-1.9.3-2.4.8-2.7 2.7-.3-1.9-.8-2.4-2.7-2.7 1.9-.3 2.4-.8 2.7-2.7Z"/></svg></span>Homeopathy</span>
-            <span class="lang"><i style="background:#e34c26"></i>HTML</span>
-          </div>
-          <h3 class="feat-name">open-materia-medica</h3>
-          <p class="feat-tag">344 remedy portraits</p>
-          <p class="desc">The classical homeopathic materia medica in plain language — 344 remedy portraits.</p>
-          <div class="feat-badges">
-            <img loading="lazy" alt="" src="https://img.shields.io/github/stars/drsamonline/open-materia-medica?style=flat-square&labelColor=0b1020&color=7c5cff" onerror="this.style.display='none'">
-            <img loading="lazy" alt="" src="https://img.shields.io/github/last-commit/drsamonline/open-materia-medica?style=flat-square&labelColor=0b1020&color=22d3ee" onerror="this.style.display='none'">
-          </div>
-          <div class="links"><a class="lnk" href="https://drsamonline.github.io/open-materia-medica/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/open-materia-medica/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/open-materia-medica" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/open-materia-medica/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-        </article>
-        <article class="feat-card" data-cat="games">
-          <div class="feat-glow" aria-hidden="true"></div>
-          <div class="feat-head">
-            <span class="kicker"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5c.5 3.6 1.4 4.5 5 5-3.6.5-4.5 1.4-5 5-.5-3.6-1.4-4.5-5-5 3.6-.5 4.5-1.4 5-5Zm6.5 11c.3 1.9.8 2.4 2.7 2.7-1.9.3-2.4.8-2.7 2.7-.3-1.9-.8-2.4-2.7-2.7 1.9-.3 2.4-.8 2.7-2.7Z"/></svg></span>Browser game</span>
-            <span class="lang"><i style="background:#f1e05a"></i>JavaScript</span>
-          </div>
-          <h3 class="feat-name">neon-runner</h3>
-          <p class="feat-tag">Auto-fire shooter</p>
-          <p class="desc">Retro auto-fire side-scrolling shooter in one self-contained HTML file.</p>
-          <div class="feat-badges">
-            <img loading="lazy" alt="" src="https://img.shields.io/github/stars/drsamonline/neon-runner?style=flat-square&labelColor=0b1020&color=7c5cff" onerror="this.style.display='none'">
-            <img loading="lazy" alt="" src="https://img.shields.io/github/last-commit/drsamonline/neon-runner?style=flat-square&labelColor=0b1020&color=22d3ee" onerror="this.style.display='none'">
-          </div>
-          <div class="links"><a class="lnk" href="https://drsamonline.github.io/neon-runner/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/neon-runner/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/neon-runner" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-        </article>
-  </div>
+  <div class="feat-grid" id="featGrid"></div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="wrap reveal">
   <div class="sec-head">
     <span class="sec-kicker"><span class="ic"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg></span> The gallery</span>
-    <h2>All 37 projects</h2>
+    <h2>All <span id="projCount">37</span> projects</h2>
     <p>Filter by category, or search by name. Every card links to its landing page, its live demo where one exists, the source, and downloads where there are releases.</p>
   </div>
 
+  <p class="src-note" id="srcNote" aria-live="polite"></p>
+
   <div class="toolbar">
-    <div class="chips" role="tablist" aria-label="Filter projects by category">
-          <button class="chip active" data-filter="all" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg></span><span>All</span><b>37</b></button>
-          <button class="chip" data-filter="desktop" type="button"><span>Desktop &amp; System Tools</span><b>10</b></button>
-          <button class="chip" data-filter="games" type="button"><span>Games &amp; Engines</span><b>9</b></button>
-          <button class="chip" data-filter="health" type="button"><span>Health &amp; Medicine</span><b>9</b></button>
-          <button class="chip" data-filter="mind" type="button"><span>Mind, Memory &amp; Wellbeing</span><b>6</b></button>
-          <button class="chip" data-filter="audio" type="button"><span>Audio &amp; Media</span><b>1</b></button>
-          <button class="chip" data-filter="business" type="button"><span>Business &amp; Productivity</span><b>2</b></button>
-    </div>
+    <div class="chips" id="chips" role="tablist" aria-label="Filter projects by category"></div>
     <label class="search">
       <span class="ic"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Zm4.7-1.8L20 20"/></svg></span>
       <input id="q" type="search" placeholder="Search projects…" aria-label="Search projects">
@@ -971,377 +922,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 34px;margin-top:24px;
   <p class="result-count" id="count" aria-live="polite"></p>
 
   <div class="grid" id="grid">
-      <article class="card feat" data-cat="desktop" data-name="all4one" data-desc="551 portable windows tools in one free .exe — zero install, zero telemetry.">
-        <div class="card-top">
-          <h3 class="repo">All4ONE</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">551 portable Windows tools in one free .exe — zero install, zero telemetry.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#3572A5"></i>Python</span><span class='rel'>releases</span></div>
-        <div class="badges"><img loading="lazy" alt="" src="https://img.shields.io/github/stars/drsamonline/All4ONE?style=flat-square&labelColor=0b1020&color=7c5cff" onerror="this.style.display='none'"><img loading="lazy" alt="" src="https://img.shields.io/github/last-commit/drsamonline/All4ONE?style=flat-square&labelColor=0b1020&color=22d3ee" onerror="this.style.display='none'"></div>
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/All4ONE/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/All4ONE" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/All4ONE/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card feat" data-cat="desktop" data-name="ultimate-windows-optimizer" data-desc="debloat and optimise any windows 10/11 install to the limit.">
-        <div class="card-top">
-          <h3 class="repo">ULTIMATE-WINDOWS-OPTIMIZER</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">Debloat and optimise any Windows 10/11 install to the limit.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#012456"></i>PowerShell</span><span class='rel'>releases</span></div>
-        <div class="badges"><img loading="lazy" alt="" src="https://img.shields.io/github/stars/drsamonline/ULTIMATE-WINDOWS-OPTIMIZER?style=flat-square&labelColor=0b1020&color=7c5cff" onerror="this.style.display='none'"><img loading="lazy" alt="" src="https://img.shields.io/github/last-commit/drsamonline/ULTIMATE-WINDOWS-OPTIMIZER?style=flat-square&labelColor=0b1020&color=22d3ee" onerror="this.style.display='none'"></div>
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/ULTIMATE-WINDOWS-OPTIMIZER/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/ULTIMATE-WINDOWS-OPTIMIZER" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/ULTIMATE-WINDOWS-OPTIMIZER/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card" data-cat="desktop" data-name="blinkcode-ai" data-desc="optical pwa that moves code camera-to-screen.">
-        <div class="card-top">
-          <h3 class="repo">blinkcode-ai</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">Optical PWA that moves code camera-to-screen.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/blinkcode-ai/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/blinkcode-ai/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/blinkcode-ai" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="desktop" data-name="blinktransfer" data-desc="offline file transfer over animated qr codes — no internet, no cables.">
-        <div class="card-top">
-          <h3 class="repo">BLINKTRANSFER</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">Offline file transfer over animated QR codes — no internet, no cables.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/BLINKTRANSFER/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/BLINKTRANSFER/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/BLINKTRANSFER" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="desktop" data-name="cldr" data-desc="a fast rust command launcher you summon straight from the system tray.">
-        <div class="card-top">
-          <h3 class="repo">CLDR</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">A fast Rust command launcher you summon straight from the system tray.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#dea584"></i>Rust</span><span class='rel'>releases</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/CLDR/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/CLDR" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/CLDR/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card" data-cat="desktop" data-name="lexora" data-desc="high-ratio adaptive compression architecture.">
-        <div class="card-top">
-          <h3 class="repo">lexora</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">High-ratio adaptive compression architecture.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#3572A5"></i>Python</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/lexora/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/lexora" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="desktop" data-name="lockhtml" data-desc="pin-protect or one-time-view any html file with aes-256-gcm.">
-        <div class="card-top">
-          <h3 class="repo">lockhtml</h3>
-          
-        </div>
-        <p class="desc">PIN-protect or one-time-view any HTML file with AES-256-GCM.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span><span class='rel'>releases</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/lockhtml/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/lockhtml/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/lockhtml" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/lockhtml/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card" data-cat="desktop" data-name="neo" data-desc="nova — a compiled systems language that lowers to c, js, rust &amp;amp; webassembly.">
-        <div class="card-top">
-          <h3 class="repo">NEO</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">NOVA — a compiled systems language that lowers to C, JS, Rust &amp; WebAssembly.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#427819"></i>Makefile</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/NEO/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/NEO" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="desktop" data-name="the_browser" data-desc="aetheris — an experimental c++ browser engine (not production-ready).">
-        <div class="card-top">
-          <h3 class="repo">The_Browser</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">Aetheris — an experimental C++ browser engine (not production-ready).</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f34b7d"></i>C++</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/The_Browser/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/The_Browser" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="desktop" data-name="ttb" data-desc="tinytoolbox — 590 utilities bundled into one lightweight chrome extension.">
-        <div class="card-top">
-          <h3 class="repo">TTB</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">TinyToolBox — 590 utilities bundled into one lightweight Chrome extension.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span><span class='rel'>releases</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/TTB/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/TTB" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/TTB/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card feat" data-cat="games" data-name="neon-runner" data-desc="retro auto-fire side-scrolling shooter in one self-contained html file.">
-        <div class="card-top">
-          <h3 class="repo">neon-runner</h3>
-          
-        </div>
-        <p class="desc">Retro auto-fire side-scrolling shooter in one self-contained HTML file.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span></div>
-        <div class="badges"><img loading="lazy" alt="" src="https://img.shields.io/github/stars/drsamonline/neon-runner?style=flat-square&labelColor=0b1020&color=7c5cff" onerror="this.style.display='none'"><img loading="lazy" alt="" src="https://img.shields.io/github/last-commit/drsamonline/neon-runner?style=flat-square&labelColor=0b1020&color=22d3ee" onerror="this.style.display='none'"></div>
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/neon-runner/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/neon-runner/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/neon-runner" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="games" data-name="aethelgard-engine" data-desc="the base engine powering the aethelgard rpg.">
-        <div class="card-top">
-          <h3 class="repo">Aethelgard-Engine</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">The base engine powering the Aethelgard RPG.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/Aethelgard-Engine/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/Aethelgard-Engine/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/Aethelgard-Engine" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="games" data-name="aethelgard-games" data-desc="two free aethelgard browser games — a visual novel and an rpg.">
-        <div class="card-top">
-          <h3 class="repo">aethelgard-games</h3>
-          
-        </div>
-        <p class="desc">Two free Aethelgard browser games — a visual novel and an RPG.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/aethelgard-games/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/aethelgard-games/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/aethelgard-games" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="games" data-name="aethelgardvn" data-desc="visual novel set in the aethelgard: chronicles of fate rpg universe.">
-        <div class="card-top">
-          <h3 class="repo">AethelgardVN</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">Visual novel set in the Aethelgard: Chronicles of Fate RPG universe.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/AethelgardVN/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/AethelgardVN/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/AethelgardVN" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="games" data-name="dance-fight" data-desc="a browser dance-fighting game where every fight move is a dance move.">
-        <div class="card-top">
-          <h3 class="repo">dance-fight</h3>
-          
-        </div>
-        <p class="desc">A browser dance-fighting game where every fight move is a dance move.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/dance-fight/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/dance-fight/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/dance-fight" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="games" data-name="idle-city-ages-of-growth" data-desc="a single-file idle city-builder, stone age to fusion age.">
-        <div class="card-top">
-          <h3 class="repo">idle-city-ages-of-growth</h3>
-          
-        </div>
-        <p class="desc">A single-file idle city-builder, Stone Age to Fusion Age.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/idle-city-ages-of-growth/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/idle-city-ages-of-growth/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/idle-city-ages-of-growth" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="games" data-name="neon-engine" data-desc="a code-only open-world game engine for the browser — no assets, no deps.">
-        <div class="card-top">
-          <h3 class="repo">neon-engine</h3>
-          
-        </div>
-        <p class="desc">A code-only open-world game engine for the browser — no assets, no deps.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/neon-engine/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/neon-engine" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="games" data-name="neon-games" data-desc="two open-world browser games on the neon engine — dead zone and neon police.">
-        <div class="card-top">
-          <h3 class="repo">neon-games</h3>
-          
-        </div>
-        <p class="desc">Two open-world browser games on the Neon Engine — Dead Zone and Neon Police.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#563d7c"></i>CSS</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/neon-games/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/neon-games" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="games" data-name="retro-strike" data-desc="a complete retro third-person shooter in a single html file.">
-        <div class="card-top">
-          <h3 class="repo">retro-strike</h3>
-          
-        </div>
-        <p class="desc">A complete retro third-person shooter in a single HTML file.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/retro-strike/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/retro-strike/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/retro-strike" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card feat" data-cat="health" data-name="open-materia-medica" data-desc="the classical homeopathic materia medica in plain language — 344 remedy portraits.">
-        <div class="card-top">
-          <h3 class="repo">open-materia-medica</h3>
-          
-        </div>
-        <p class="desc">The classical homeopathic materia medica in plain language — 344 remedy portraits.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span><span class='rel'>releases</span></div>
-        <div class="badges"><img loading="lazy" alt="" src="https://img.shields.io/github/stars/drsamonline/open-materia-medica?style=flat-square&labelColor=0b1020&color=7c5cff" onerror="this.style.display='none'"><img loading="lazy" alt="" src="https://img.shields.io/github/last-commit/drsamonline/open-materia-medica?style=flat-square&labelColor=0b1020&color=22d3ee" onerror="this.style.display='none'"></div>
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/open-materia-medica/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/open-materia-medica/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/open-materia-medica" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/open-materia-medica/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card" data-cat="health" data-name="bmi-bmr-tdee-macros-fluid-calculator" data-desc="single-file clinical calculator: bmi, bmr, tdee, macros &amp;amp; fluids.">
-        <div class="card-top">
-          <h3 class="repo">bmi-bmr-tdee-macros-fluid-calculator</h3>
-          
-        </div>
-        <p class="desc">Single-file clinical calculator: BMI, BMR, TDEE, macros &amp; fluids.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span><span class='rel'>releases</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/bmi-bmr-tdee-macros-fluid-calculator/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/bmi-bmr-tdee-macros-fluid-calculator/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/bmi-bmr-tdee-macros-fluid-calculator" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/bmi-bmr-tdee-macros-fluid-calculator/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card" data-cat="health" data-name="boericke-repertory" data-desc="boericke&#x27;s repertory as a free, offline single-file web app.">
-        <div class="card-top">
-          <h3 class="repo">boericke-repertory</h3>
-          
-        </div>
-        <p class="desc">Boericke's Repertory as a free, offline single-file web app.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/boericke-repertory/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/boericke-repertory/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/boericke-repertory" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="health" data-name="gentle-pediatrics-companion" data-desc="a triage-first home companion app for a sick child.">
-        <div class="card-top">
-          <h3 class="repo">gentle-pediatrics-companion</h3>
-          
-        </div>
-        <p class="desc">A triage-first home companion app for a sick child.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/gentle-pediatrics-companion/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/gentle-pediatrics-companion/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/gentle-pediatrics-companion" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="health" data-name="hms" data-desc="a lan-based hospital management system built for homeopathic hospitals.">
-        <div class="card-top">
-          <h3 class="repo">HMS</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">A LAN-based hospital management system built for homeopathic hospitals.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#3572A5"></i>Python</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/HMS/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/HMS" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="health" data-name="homoeopathic-materia-medica-repertory-json" data-desc="13 books, ~108k rubrics as app-ready open json.">
-        <div class="card-top">
-          <h3 class="repo">homoeopathic-materia-medica-repertory-json</h3>
-          
-        </div>
-        <p class="desc">13 books, ~108k rubrics as app-ready open JSON.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#3572A5"></i>Python</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/homoeopathic-materia-medica-repertory-json/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/homoeopathic-materia-medica-repertory-json" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="health" data-name="materia-medica-builder" data-desc="build, structure and export materia medica content.">
-        <div class="card-top">
-          <h3 class="repo">MATERIA-MEDICA-BUILDER</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">Build, structure and export materia medica content.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#f1e05a"></i>JavaScript</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/MATERIA-MEDICA-BUILDER/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/MATERIA-MEDICA-BUILDER/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/MATERIA-MEDICA-BUILDER" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="health" data-name="skin-case-tracker" data-desc="a private, offline skin-case tracker with a 90-day pattern engine.">
-        <div class="card-top">
-          <h3 class="repo">skin-case-tracker</h3>
-          
-        </div>
-        <p class="desc">A private, offline skin-case tracker with a 90-day pattern engine.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/skin-case-tracker/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/skin-case-tracker/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/skin-case-tracker" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="health" data-name="whispering-body-first-aid" data-desc="a home homeopathic first-aid box — 30 remedies.">
-        <div class="card-top">
-          <h3 class="repo">whispering-body-first-aid</h3>
-          
-        </div>
-        <p class="desc">A home homeopathic first-aid box — 30 remedies.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/whispering-body-first-aid/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/whispering-body-first-aid/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/whispering-body-first-aid" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="mind" data-name="conqueror-os" data-desc="a private, offline resilience workspace in a single html file.">
-        <div class="card-top">
-          <h3 class="repo">conqueror-os</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">A private, offline resilience workspace in a single HTML file.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span><span class='rel'>releases</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/conqueror-os/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/conqueror-os/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/conqueror-os" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/conqueror-os/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card" data-cat="mind" data-name="mnemosyne-companion" data-desc="100 polycrest remedies as poetic pearls, keynotes and spaced-repetition drills.">
-        <div class="card-top">
-          <h3 class="repo">mnemosyne-companion</h3>
-          
-        </div>
-        <p class="desc">100 polycrest remedies as poetic pearls, keynotes and spaced-repetition drills.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/mnemosyne-companion/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/mnemosyne-companion/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/mnemosyne-companion" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="mind" data-name="read-live-transform-app" data-desc="companion pwa to read. live. transform.: a practical reading of the qur&#x27;an.">
-        <div class="card-top">
-          <h3 class="repo">read-live-transform-app</h3>
-          
-        </div>
-        <p class="desc">Companion PWA to Read. Live. Transform.: A Practical Reading of the Qur'an.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span><span class='rel'>releases</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/read-live-transform-app/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/read-live-transform-app/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/read-live-transform-app" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/read-live-transform-app/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card" data-cat="mind" data-name="smartnotes" data-desc="turn raw thoughts into organised action.">
-        <div class="card-top">
-          <h3 class="repo">SmartNotes</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">Turn raw thoughts into organised action.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#3178c6"></i>TypeScript</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/SmartNotes/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk" href="https://github.com/drsamonline/SmartNotes" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="mind" data-name="the-symphony-companion" data-desc="a pocket pwa companion to the symphony of the present.">
-        <div class="card-top">
-          <h3 class="repo">the-symphony-companion</h3>
-          
-        </div>
-        <p class="desc">A pocket PWA companion to The Symphony of the Present.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/the-symphony-companion/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/the-symphony-companion/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/the-symphony-companion" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="mind" data-name="unstoppable-mind-companion" data-desc="offline companion to the unstoppable mind — key points, exercises, a 7-day challenge.">
-        <div class="card-top">
-          <h3 class="repo">unstoppable-mind-companion</h3>
-          
-        </div>
-        <p class="desc">Offline companion to The Unstoppable Mind — key points, exercises, a 7-day challenge.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/unstoppable-mind-companion/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/unstoppable-mind-companion/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/unstoppable-mind-companion" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="audio" data-name="ambient-sound-studio" data-desc="a private, offline ambient sound mixer — 25 layers, 36 presets, wav/opus export.">
-        <div class="card-top">
-          <h3 class="repo">ambient-sound-studio</h3>
-          
-        </div>
-        <p class="desc">A private, offline ambient sound mixer — 25 layers, 36 presets, WAV/Opus export.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span><span class='rel'>releases</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/ambient-sound-studio/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/ambient-sound-studio/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/ambient-sound-studio" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a><a class="lnk" href="https://github.com/drsamonline/ambient-sound-studio/releases" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg></span><span>Download</span></a></div>
-      </article>
-      <article class="card" data-cat="business" data-name="matneo" data-desc="ai-powered digital products and automation platform.">
-        <div class="card-top">
-          <h3 class="repo">Matneo</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">AI-powered digital products and automation platform.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/Matneo/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/Matneo/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/Matneo" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-      <article class="card" data-cat="business" data-name="smartbill-app" data-desc="fast, serverless gst billing and invoicing for indian businesses.">
-        <div class="card-top">
-          <h3 class="repo">smartbill-app</h3>
-          <span class="stat"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg></span>1</span>
-        </div>
-        <p class="desc">Fast, serverless GST billing and invoicing for Indian businesses.</p>
-        <div class="card-meta"><span class="lang"><i style="background:#e34c26"></i>HTML</span></div>
-        
-        <div class="links"><a class="lnk" href="https://drsamonline.github.io/smartbill-app/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg></span><span>Landing</span></a><a class="lnk demo" href="https://drsamonline.github.io/smartbill-app/play/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg></span><span>Live demo</span></a><a class="lnk" href="https://github.com/drsamonline/smartbill-app" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg></span><span>Code</span></a></div>
-      </article>
-    <p class="empty" id="empty" hidden>No projects match that filter.</p>
+      <p class="empty" id="empty" hidden>No projects match that filter.</p>
   </div>
 </section>
 
@@ -1411,67 +992,205 @@ footer{border-top:1px solid var(--line);padding:46px 0 34px;margin-top:24px;
   </div>
 </footer>
 
+<!--REPO_SNAPSHOT_START-->
+<script id="repo-snapshot" type="application/json">[{"name":"SmartNotes","description":"Turn raw thoughts into organized action.","homepage":"https://drsamonline.github.io/SmartNotes/","language":"TypeScript","stargazers_count":1,"pushed_at":"2026-10-21T18:00:23Z","archived":false,"fork":false,"topics":[]},{"name":"smartbill-app","description":"A fast, serverless, single-page billing and invoicing application built with Vue.js, tailored for Indian businesses. Features local IndexedDB storage and GST support.","homepage":"https://drsamonline.github.io/smartbill-app/","language":"HTML","stargazers_count":1,"pushed_at":"2026-10-21T18:00:22Z","archived":false,"fork":false,"topics":[]},{"name":"ambient-sound-studio","description":"A private, offline ambient sound mixer that lives in a single HTML file. 25 synthesised layers, 36 presets, English/Hindi/Gujarati, WAV & Opus export, installable PWA. Free for personal use.","homepage":"https://drsamonline.github.io/ambient-sound-studio/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T18:00:22Z","archived":false,"fork":false,"topics":["ambient","focus","html5","no-tracking","offline-first","pwa","relaxation","single-file","sleep","soundscape","web-audio","white-noise","zero-dependencies"]},{"name":"Matneo","description":"AI-powered digital products and automation platform.","homepage":"https://drsamonline.github.io/Matneo/","language":"HTML","stargazers_count":1,"pushed_at":"2026-10-21T18:00:21Z","archived":false,"fork":false,"topics":[]},{"name":"conqueror-os","description":"A private, offline resilience workspace in a single HTML file — read, reflect, journal, track and review. No server, no account, no dependencies.","homepage":"https://drsamonline.github.io/conqueror-os/","language":"HTML","stargazers_count":1,"pushed_at":"2026-10-21T18:00:12Z","archived":false,"fork":false,"topics":["habits","journal","local-first","no-dependencies","offline-first","privacy","resilience","single-file","spaced-repetition","vanilla-js"]},{"name":"unstoppable-mind-companion","description":"Offline companion app to the book The Unstoppable Mind by Dr. Sohil Momin - key points, exercises, a 7-day challenge and flashcards. Free to use.","homepage":"https://drsamonline.github.io/unstoppable-mind-companion/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T18:00:12Z","archived":false,"fork":false,"topics":["book","companion-app","confidence","github-pages","habits","no-javascript","offline","psychology","self-help"]},{"name":"mnemosyne-companion","description":"Companion study app for Mnemosyne Materia Medica — 100 polycrest homoeopathic remedies as poetic pearls, keynotes and spaced-repetition drills. Single offline HTML file. Proprietary, all rights reserved.","homepage":"https://drsamonline.github.io/mnemosyne-companion/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T18:00:11Z","archived":false,"fork":false,"topics":["flashcards","homeopathy","homoeopathy","html","javascript","materia-medica","medical-education","mnemosyne","offline-first","repertory","spaced-repetition","study-app"]},{"name":"read-live-transform-app","description":"The companion app to the book \"Read. Live. Transform.: A Practical Reading of the Qur'an\" by Dr Sohil Momin. Read the verse, live the practice, keep the change. Offline PWA, no dependencies. © Dr Sohil Momin — all rights reserved; permission required to reuse.","homepage":"https://drsamonline.github.io/read-live-transform-app/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T18:00:11Z","archived":false,"fork":false,"topics":["all-rights-reserved","islam","islamic-books","no-dependencies","offline-first","pwa","quran","quran-study","reading-app","vanilla-javascript"]},{"name":"the-symphony-companion","description":"A pocket companion web app to The Symphony of the Present by Dr. Sohil Momin. Installable PWA, works offline. Copyrighted; free for personal, non-commercial use.","homepage":"https://drsamonline.github.io/the-symphony-companion/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T18:00:10Z","archived":false,"fork":false,"topics":["alan-watts","companion-app","css-only","github-pages","mindfulness","offline-first","philosophy","privacy-first","pwa","self-help","vanilla-js","wellbeing"]},{"name":"bmi-bmr-tdee-macros-fluid-calculator","description":"Single-file clinical health calculator: BMI, BMR (Mifflin-St Jeor), TDEE, macros, fluid requirement and body composition, with Indian/WHO BMI cut-offs, saved entries, CSV export/import and EN/HI/GU UI. Offline-capable. By Dr. Sohil Momin.","homepage":"https://drsamonline.github.io/bmi-bmr-tdee-macros-fluid-calculator/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T18:00:10Z","archived":false,"fork":false,"topics":["bmi","bmr","calculator","clinical","health","html","javascript","medical","nutrition","offline","pwa","single-file","tdee"]},{"name":"whispering-body-first-aid","description":"Companion app for the book 'The Whispering Body' by Dr. Sohil Momin — a home homeopathic first-aid box (30 remedies). Free to use; source code and book content are copyrighted.","homepage":"https://drsamonline.github.io/whispering-body-first-aid/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T17:59:59Z","archived":false,"fork":false,"topics":["companion-app","first-aid","first-aid-box","gujarati","health","hindi","homeopathy","homoeopathy","offline","pwa","remedies","single-file"]},{"name":"MATERIA-MEDICA-BUILDER","description":"Materia Medica Builder","homepage":"https://drsamonline.github.io/MATERIA-MEDICA-BUILDER/","language":"JavaScript","stargazers_count":1,"pushed_at":"2026-10-21T17:59:58Z","archived":false,"fork":false,"topics":[]},{"name":"homoeopathic-materia-medica-repertory-json","description":"Open-domain homoeopathic Materia Medica and Repertory texts as app-ready JSON (13 books, ~108k rubrics). Free to use; credit the book authors and the JSON compiler.","homepage":"https://drsamonline.github.io/homoeopathic-materia-medica-repertory-json/","language":"Python","stargazers_count":0,"pushed_at":"2026-10-21T17:59:58Z","archived":false,"fork":false,"topics":["classical-homeopathy","dataset","homeopathy","homoeopathy","json","materia-medica","medical","open-data","public-domain","repertory"]},{"name":"gentle-pediatrics-companion","description":"A triage-first home companion app for a sick child, built from the book Gentle Pediatrics by Dr. Sohil Momin. Free to use; copyright retained.","homepage":"https://drsamonline.github.io/gentle-pediatrics-companion/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T17:59:58Z","archived":false,"fork":false,"topics":[]},{"name":"skin-case-tracker","description":"Companion app to the book \"The Skin Is a Liar\" by Dr. Sohil Momin — a private, offline HHMS skin-case tracker (History, Habits, Mapping, Symptoms) with a 90-day pattern engine. Free to use; all rights reserved.","homepage":"https://drsamonline.github.io/skin-case-tracker/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T17:59:57Z","archived":false,"fork":false,"topics":[]},{"name":"boericke-repertory","description":"Boericke's Repertory — a free, offline digital edition (single-file web app). Content by Oscar E. Boericke, M.D.; design & app by Dr. Sohil Momin. Free to use with compulsory attribution.","homepage":"https://drsamonline.github.io/boericke-repertory/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T17:59:57Z","archived":false,"fork":false,"topics":[]},{"name":"idle-city-ages-of-growth","description":"A single-file idle city-builder that grows from a Stone Age village into a Fusion Age world-city. Zero dependencies, fully offline, mobile-ready. By Dr. Sohil Momin. Source-available: free for non-commercial use with attribution; commercial use requires a licence.","homepage":"https://drsamonline.github.io/idle-city-ages-of-growth/","language":"JavaScript","stargazers_count":0,"pushed_at":"2026-10-21T17:59:50Z","archived":false,"fork":false,"topics":["canvas","city-builder","game","github-pages","html5","idle-game","incremental","mobile","no-dependencies","offline-first","single-file","source-available","vanilla-javascript"]},{"name":"Aethelgard-Engine","description":"Aethelgard-Engine base Engine for Aethlgard RPG Game","homepage":"https://drsamonline.github.io/Aethelgard-Engine/","language":"JavaScript","stargazers_count":1,"pushed_at":"2026-10-21T17:59:50Z","archived":false,"fork":false,"topics":[]},{"name":"AethelgardVN","description":"Visual Novel based on Aethelgard: Chronicles of Fate RPG with Base Engine","homepage":"https://drsamonline.github.io/AethelgardVN/","language":"JavaScript","stargazers_count":1,"pushed_at":"2026-10-21T17:59:50Z","archived":false,"fork":false,"topics":[]},{"name":"open-materia-medica","description":"Open Materia Medica — the classical homeopathic materia medica in plain language: 344 remedy portraits. Free web edition and offline Android companion app to the book by Dr. Sohil Momin, BHMS. (c) 2026, all rights reserved.","homepage":"https://drsamonline.github.io/open-materia-medica/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T17:59:49Z","archived":false,"fork":false,"topics":[]},{"name":"aethelgard-games","description":"Two free browser games by Dr. Sohil Momin — Aethelgard: The Books (visual novel) and Aethelgard: Chronicles of Fate (RPG). Playable on GitHub Pages.","homepage":"https://drsamonline.github.io/aethelgard-games/","language":"JavaScript","stargazers_count":0,"pushed_at":"2026-10-21T17:59:49Z","archived":false,"fork":false,"topics":[]},{"name":"neon-engine","description":"A code-only open-world game engine for the browser. No assets, no build step, no dependencies — every texture, mesh and sound is generated at runtime. MIT licensed.","homepage":"https://drsamonline.github.io/neon-engine/","language":"JavaScript","stargazers_count":0,"pushed_at":"2026-10-21T17:59:49Z","archived":false,"fork":false,"topics":["browser-game","es-modules","game-engine","javascript","mit-license","no-dependencies","offline-first","open-world","procedural-generation","pwa","threejs","webgl"]},{"name":"The_Browser","description":"","homepage":"https://drsamonline.github.io/The_Browser/","language":"C++","stargazers_count":1,"pushed_at":"2026-10-21T17:59:42Z","archived":false,"fork":false,"topics":[]},{"name":"neon-games","description":"Two free open-world browser games on the Neon Engine — Dead Zone (zombie survival) and Neon Police. Playable in the browser, no install. CC BY-NC-SA 4.0.","homepage":"https://drsamonline.github.io/neon-games/","language":"CSS","stargazers_count":0,"pushed_at":"2026-10-21T17:59:41Z","archived":false,"fork":false,"topics":["browser-game","cc-by-nc-sa","game","github-pages","javascript","offline-first","open-world","playable","pwa","threejs","webgl","zombie-survival"]},{"name":"dance-fight","description":"A browser dance-fighting game where every fight move is a dance move. Load your own track and the character dances to its actual beat grid. Single HTML file, no dependencies, no build step.","homepage":"https://drsamonline.github.io/dance-fight/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T17:59:41Z","archived":false,"fork":false,"topics":[]},{"name":"NEO","description":"","homepage":"https://drsamonline.github.io/NEO/","language":"Makefile","stargazers_count":1,"pushed_at":"2026-10-21T17:59:41Z","archived":false,"fork":false,"topics":[]},{"name":"retro-strike","description":"🎮 A complete retro 3rd-person shooter in a single HTML file — custom software 3D renderer, chiptune audio, zero dependencies.","homepage":"https://drsamonline.github.io/retro-strike/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T17:59:41Z","archived":false,"fork":false,"topics":["canvas","chiptune","game","html5","javascript","no-dependencies","retro","shooter","single-file","web-game"]},{"name":"neon-runner","description":"Retro auto-fire side-scrolling shooter. Move, jump, duck — your gun fires itself. One self-contained HTML file, zero dependencies, fully offline.","homepage":"https://drsamonline.github.io/neon-runner/","language":"JavaScript","stargazers_count":0,"pushed_at":"2026-10-21T17:59:41Z","archived":false,"fork":false,"topics":["canvas","game","html5-game","javascript","mobile-game","no-dependencies","offline","pixel-art","roguelite","shooter","side-scroller","single-file","web-audio"]},{"name":"CLDR","description":"Command Run Utility - Performance over Bloat","homepage":"https://drsamonline.github.io/CLDR/","language":"Rust","stargazers_count":1,"pushed_at":"2026-10-21T17:59:33Z","archived":false,"fork":false,"topics":[]},{"name":"lexora","description":"LEXORA — Layered Exact-text Repository & Adaptive Compression Architecture","homepage":"https://drsamonline.github.io/lexora/","language":"Python","stargazers_count":1,"pushed_at":"2026-10-21T17:59:33Z","archived":false,"fork":false,"topics":[]},{"name":"lockhtml","description":"PIN-protect and one-time-view any HTML file with AES-256-GCM. Cross-platform CLI plus a browser-based GUI that runs on any OS.","homepage":"https://drsamonline.github.io/lockhtml/","language":"HTML","stargazers_count":0,"pushed_at":"2026-10-21T17:59:33Z","archived":false,"fork":false,"topics":["aes-256","cli","cross-platform","encryption","gui","html","pin","privacy","python","security","self-destruct","webcrypto"]},{"name":"TTB","description":"TinyToolBox with 590 functionalities in one small extension for chrome","homepage":"https://drsamonline.github.io/TTB/","language":"JavaScript","stargazers_count":1,"pushed_at":"2026-10-21T17:59:33Z","archived":false,"fork":false,"topics":[]},{"name":"BLINKTRANSFER","description":"DATA TRANSFER IN BLINK OF EYE","homepage":"https://drsamonline.github.io/BLINKTRANSFER/","language":"JavaScript","stargazers_count":1,"pushed_at":"2026-10-21T17:59:33Z","archived":false,"fork":false,"topics":[]},{"name":"blinkcode-ai","description":"BlinkCode AI — single-shot optical file transfer PWA (compression -> SpectraCode -> camera -> restore)","homepage":"https://drsamonline.github.io/blinkcode-ai/","language":"JavaScript","stargazers_count":1,"pushed_at":"2026-10-21T17:59:32Z","archived":false,"fork":false,"topics":[]},{"name":"HMS","description":"HHMS — Homeopathic Hospital Management System A LAN-based hospital management system purpose-built for homeopathic hospitals and clinics.  Runs entirely on the local network with a server-owned database — no internet dependency, no cloud lock-in.","homepage":"https://drsamonline.github.io/HMS/","language":"Python","stargazers_count":1,"pushed_at":"2026-10-21T17:33:12Z","archived":false,"fork":false,"topics":[]},{"name":"ULTIMATE-WINDOWS-OPTIMIZER","description":"OPTIMIZE DEBLOAT TWEAK TO THE LEVEL PHYSICALLY POSSIBLE ANY WINDOWS 10/11 INSTALLATION","homepage":"https://drsamonline.github.io/ULTIMATE-WINDOWS-OPTIMIZER/","language":"PowerShell","stargazers_count":1,"pushed_at":"2026-10-21T16:30:50Z","archived":false,"fork":false,"topics":[]},{"name":"All4ONE","description":"🧰 551 portable Windows tools in ONE free .exe — file ops, hashing, PDF/Office batch, image/video/audio, network diagnostics, registry helpers, disk cleaner, security audits. Zero installs, zero telemetry, MIT licensed. CLI + GUI.","homepage":"https://drsamonline.github.io/All4ONE/","language":"Python","stargazers_count":1,"pushed_at":"2026-10-21T16:11:23Z","archived":false,"fork":false,"topics":["batch-processing","cli-tool","disk-cleaner","ffmpeg","file-manager","hashing","network-diagnostics","offline-tools","open-source","pdf-tools","portable-app","productivity","python","security-tools","single-exe","sysadmin","tkinter-gui","toolbox","utilities","windows"]}]</script>
+<!--REPO_SNAPSHOT_END-->
 <script>
+
 (function(){
-  "use strict";
-  var grid = document.getElementById('grid');
-  var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
-  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
-  var q = document.getElementById('q');
-  var count = document.getElementById('count');
-  var empty = document.getElementById('empty');
-  var state = { cat: 'all', term: '' };
+"use strict";
+var CURATED = {"all4one":{"cat":"desktop","desc":"551 portable windows tools in one free .exe — zero install, zero telemetry.","demo":false,"feat":true,"rel":true,"kicker":"Windows toolkit","tag":"551 tools · one file"},"ultimate-windows-optimizer":{"cat":"desktop","desc":"debloat and optimise any windows 10/11 install to the limit.","demo":false,"feat":true,"rel":true,"kicker":"Windows 10/11","tag":"Debloat & tune"},"blinkcode-ai":{"cat":"desktop","desc":"optical pwa that moves code camera-to-screen.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"blinktransfer":{"cat":"desktop","desc":"offline file transfer over animated qr codes — no internet, no cables.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"cldr":{"cat":"desktop","desc":"a fast rust command launcher you summon straight from the system tray.","demo":false,"feat":false,"rel":true,"kicker":"","tag":""},"lexora":{"cat":"desktop","desc":"high-ratio adaptive compression architecture.","demo":false,"feat":false,"rel":false,"kicker":"","tag":""},"lockhtml":{"cat":"desktop","desc":"pin-protect or one-time-view any html file with aes-256-gcm.","demo":true,"feat":false,"rel":true,"kicker":"","tag":""},"neo":{"cat":"desktop","desc":"nova — a compiled systems language that lowers to c, js, rust &amp; webassembly.","demo":false,"feat":false,"rel":false,"kicker":"","tag":""},"the_browser":{"cat":"desktop","desc":"aetheris — an experimental c++ browser engine (not production-ready).","demo":false,"feat":false,"rel":false,"kicker":"","tag":""},"ttb":{"cat":"desktop","desc":"tinytoolbox — 590 utilities bundled into one lightweight chrome extension.","demo":false,"feat":false,"rel":true,"kicker":"","tag":""},"neon-runner":{"cat":"games","desc":"retro auto-fire side-scrolling shooter in one self-contained html file.","demo":true,"feat":true,"rel":false,"kicker":"Browser game","tag":"Auto-fire shooter"},"aethelgard-engine":{"cat":"games","desc":"the base engine powering the aethelgard rpg.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"aethelgard-games":{"cat":"games","desc":"two free aethelgard browser games — a visual novel and an rpg.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"aethelgardvn":{"cat":"games","desc":"visual novel set in the aethelgard: chronicles of fate rpg universe.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"dance-fight":{"cat":"games","desc":"a browser dance-fighting game where every fight move is a dance move.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"idle-city-ages-of-growth":{"cat":"games","desc":"a single-file idle city-builder, stone age to fusion age.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"neon-engine":{"cat":"games","desc":"a code-only open-world game engine for the browser — no assets, no deps.","demo":false,"feat":false,"rel":false,"kicker":"","tag":""},"neon-games":{"cat":"games","desc":"two open-world browser games on the neon engine — dead zone and neon police.","demo":false,"feat":false,"rel":false,"kicker":"","tag":""},"retro-strike":{"cat":"games","desc":"a complete retro third-person shooter in a single html file.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"open-materia-medica":{"cat":"health","desc":"the classical homeopathic materia medica in plain language — 344 remedy portraits.","demo":true,"feat":true,"rel":true,"kicker":"Homeopathy","tag":"344 remedy portraits"},"bmi-bmr-tdee-macros-fluid-calculator":{"cat":"health","desc":"single-file clinical calculator: bmi, bmr, tdee, macros &amp; fluids.","demo":true,"feat":false,"rel":true,"kicker":"","tag":""},"boericke-repertory":{"cat":"health","desc":"boericke's repertory as a free, offline single-file web app.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"gentle-pediatrics-companion":{"cat":"health","desc":"a triage-first home companion app for a sick child.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"hms":{"cat":"health","desc":"a lan-based hospital management system built for homeopathic hospitals.","demo":false,"feat":false,"rel":false,"kicker":"","tag":""},"homoeopathic-materia-medica-repertory-json":{"cat":"health","desc":"13 books, ~108k rubrics as app-ready open json.","demo":false,"feat":false,"rel":false,"kicker":"","tag":""},"materia-medica-builder":{"cat":"health","desc":"build, structure and export materia medica content.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"skin-case-tracker":{"cat":"health","desc":"a private, offline skin-case tracker with a 90-day pattern engine.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"whispering-body-first-aid":{"cat":"health","desc":"a home homeopathic first-aid box — 30 remedies.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"conqueror-os":{"cat":"mind","desc":"a private, offline resilience workspace in a single html file.","demo":true,"feat":false,"rel":true,"kicker":"","tag":""},"mnemosyne-companion":{"cat":"mind","desc":"100 polycrest remedies as poetic pearls, keynotes and spaced-repetition drills.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"read-live-transform-app":{"cat":"mind","desc":"companion pwa to read. live. transform.: a practical reading of the qur'an.","demo":true,"feat":false,"rel":true,"kicker":"","tag":""},"smartnotes":{"cat":"mind","desc":"turn raw thoughts into organised action.","demo":false,"feat":false,"rel":false,"kicker":"","tag":""},"the-symphony-companion":{"cat":"mind","desc":"a pocket pwa companion to the symphony of the present.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"unstoppable-mind-companion":{"cat":"mind","desc":"offline companion to the unstoppable mind — key points, exercises, a 7-day challenge.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"ambient-sound-studio":{"cat":"audio","desc":"a private, offline ambient sound mixer — 25 layers, 36 presets, wav/opus export.","demo":true,"feat":false,"rel":true,"kicker":"","tag":""},"matneo":{"cat":"business","desc":"ai-powered digital products and automation platform.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""},"smartbill-app":{"cat":"business","desc":"fast, serverless gst billing and invoicing for indian businesses.","demo":true,"feat":false,"rel":false,"kicker":"","tag":""}};
+var CAT_LABEL = {desktop:"Desktop & System Tools",games:"Games & Engines",health:"Health & Medicine",mind:"Mind, Memory & Wellbeing",audio:"Audio & Media",business:"Business & Productivity",other:"Other / New"};
+var CAT_ORDER = ["desktop","games","health","mind","audio","business","other"];
+var FEATURED = ["all4one","ultimate-windows-optimizer","open-materia-medica","neon-runner"];
+var LANG_COLORS = {Python:"#3572A5",PowerShell:"#012456",JavaScript:"#f1e05a",HTML:"#e34c26",CSS:"#563d7c",Rust:"#dea584","C++":"#f34b7d",C:"#555555",TypeScript:"#3178c6",Shell:"#89e051","C#":"#178600",Java:"#b07219",Ruby:"#701516",Go:"#00ADD8",PHP:"#4F5D95",Kotlin:"#A97BFF",Swift:"#F05138",Lua:"#000080",Dart:"#00B4AB",GDScript:"#355570",Batchfile:"#C1F12E",Makefile:"#427819"};
 
-  function apply(){
-    var term = state.term.trim().toLowerCase();
-    var shown = 0;
-    cards.forEach(function(c){
-      var okCat = state.cat === 'all' || c.dataset.cat === state.cat;
-      var hay = c.dataset.name + ' ' + c.dataset.desc;
-      var okTerm = !term || hay.indexOf(term) !== -1;
-      var show = okCat && okTerm;
-      c.style.display = show ? '' : 'none';
-      if (show) shown++;
-    });
-    count.textContent = shown + (shown === 1 ? ' project' : ' projects') + ' shown';
-    empty.hidden = shown !== 0;
+var ICON = {
+  globe:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 0c2.5 2.4 3.9 5.7 3.9 9.5S14.5 19.1 12 21.5m0-19C9.5 4.9 8.1 8.2 8.1 12s1.4 7.1 3.9 9.5M2.8 9.2h18.4M2.8 14.8h18.4"/></svg>',
+  play:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.4 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></svg>',
+  code:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m8.5 8-4 4 4 4m7-8 4 4-4 4"/></svg>',
+  down:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16"/></svg>',
+  star:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>'
+};
+
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+function readSnapshot(){ try{ var el=document.getElementById('repo-snapshot'); return JSON.parse(el.textContent||el.innerHTML)||[]; }catch(e){ return []; } }
+var SNAPSHOT = readSnapshot();
+
+var state={cat:'all',term:''};
+var projects=[];
+var source='snapshot';
+
+function norm(r){
+  var key=String(r.name||'').toLowerCase();
+  var c=CURATED[key]||{};
+  return {
+    name:r.name, key:key,
+    desc:c.desc || r.description || 'A project by Dr. Sohil Momin.',
+    cat:c.cat || 'other',
+    demo:!!c.demo, feat:!!c.feat, rel:!!c.rel,
+    kicker:c.kicker||'', tag:c.tag||'',
+    lang:r.language||'', stars:(r.stargazers_count|0),
+    pushed:r.pushed_at||'', archived:!!r.archived,
+    landing:'https://drsamonline.github.io/'+r.name+'/',
+    source:'https://github.com/drsamonline/'+r.name,
+    releases:'https://github.com/drsamonline/'+r.name+'/releases'
+  };
+}
+function isProject(r){
+  if(!r||!r.name||r.fork) return false;
+  var n=String(r.name).toLowerCase();
+  return n!=='drsamonline' && n!=='drsamonline.github.io';
+}
+function ago(iso){
+  if(!iso) return '';
+  var t=Date.parse(iso); if(isNaN(t)) return '';
+  var d=Math.floor((Date.now()-t)/86400000);
+  if(d<=0) return 'today'; if(d===1) return 'yesterday';
+  if(d<30) return d+'d ago'; if(d<365) return Math.floor(d/30)+'mo ago';
+  return Math.floor(d/365)+'y ago';
+}
+function shotURL(p){ return 'https://image.thum.io/get/width/1000/crop/640/noanimate/'+p.landing; }
+
+function shotBox(p){
+  return '<a class="shot" href="'+esc(p.landing)+'" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">'
+    +'<span class="ph"><b>'+esc((p.name||'?').charAt(0).toUpperCase())+'</b><span>'+esc(p.name)+'</span></span>'
+    +'<img loading="lazy" decoding="async" width="1000" height="640" alt="Live screenshot of '+esc(p.name)+'" '
+    +'src="'+esc(shotURL(p))+'" onerror="this.style.display=\'none\'">'
+    +'</a>';
+}
+function langChip(p){
+  if(!p.lang) return '';
+  var col=LANG_COLORS[p.lang]||'#8b93ad';
+  return '<span class="lang"><i style="background:'+col+'"></i>'+esc(p.lang)+'</span>';
+}
+function links(p, withDemo){
+  var h='<div class="links">';
+  h+='<a class="lnk" href="'+esc(p.landing)+'" target="_blank" rel="noopener"><span class="ic">'+ICON.globe+'</span><span>Landing</span></a>';
+  if(withDemo && p.demo) h+='<a class="lnk demo" href="'+esc(p.landing)+'play/" target="_blank" rel="noopener"><span class="ic">'+ICON.play+'</span><span>Live demo</span></a>';
+  h+='<a class="lnk" href="'+esc(p.source)+'" target="_blank" rel="noopener"><span class="ic">'+ICON.code+'</span><span>Code</span></a>';
+  if(p.rel) h+='<a class="lnk" href="'+esc(p.releases)+'" target="_blank" rel="noopener"><span class="ic">'+ICON.down+'</span><span>Download</span></a>';
+  return h+'</div>';
+}
+function cardHTML(p){
+  var h='<article class="card'+(p.feat?' feat':'')+'" data-cat="'+esc(p.cat)+'" data-name="'+esc(p.key)+'" data-desc="'+esc(p.desc.toLowerCase())+'">';
+  h+=shotBox(p);
+  h+='<div class="card-top"><h3 class="repo">'+esc(p.name)+'</h3>';
+  if(p.stars>0) h+='<span class="stat"><span class="ic">'+ICON.star+'</span>'+p.stars+'</span>';
+  h+='</div>';
+  h+='<p class="desc">'+esc(p.desc)+'</p>';
+  var meta=langChip(p);
+  if(p.rel) meta+='<span class="rel">releases</span>';
+  var ag=ago(p.pushed); if(ag) meta+='<span class="upd">updated '+esc(ag)+'</span>';
+  if(p.archived) meta+='<span class="rel arch">archived</span>';
+  h+='<div class="card-meta">'+meta+'</div>';
+  return h+links(p,true)+'</article>';
+}
+function featHTML(p){
+  var h='<article class="feat-card" data-cat="'+esc(p.cat)+'">';
+  h+='<div class="feat-glow" aria-hidden="true"></div>';
+  h+=shotBox(p);
+  h+='<div class="feat-head"><span class="kicker"><span class="ic">'+ICON.star+'</span>'+esc(p.kicker||CAT_LABEL[p.cat]||'Project')+'</span>'+langChip(p)+'</div>';
+  h+='<h3 class="feat-name">'+esc(p.name)+'</h3>';
+  if(p.tag) h+='<p class="feat-tag">'+esc(p.tag)+'</p>';
+  h+='<p class="desc">'+esc(p.desc)+'</p>';
+  return h+links(p,true)+'</article>';
+}
+
+function buildChips(){
+  var counts={}; projects.forEach(function(p){ counts[p.cat]=(counts[p.cat]||0)+1; });
+  var order=CAT_ORDER.filter(function(c){ return c!=='other'||counts.other; });
+  var h='<button class="chip active" data-filter="all" type="button" aria-selected="true"><span>All</span><b>'+projects.length+'</b></button>';
+  order.forEach(function(c){
+    if(!counts[c]) return;
+    h+='<button class="chip" data-filter="'+c+'" type="button" aria-selected="false"><span>'+esc(CAT_LABEL[c])+'</span><b>'+counts[c]+'</b></button>';
+  });
+  var el=document.getElementById('chips'); if(el) el.innerHTML=h;
+}
+function apply(){
+  var term=state.term.trim().toLowerCase(), shown=0;
+  var cards=[].slice.call(document.querySelectorAll('#grid .card'));
+  cards.forEach(function(c){
+    var okCat=state.cat==='all'||c.dataset.cat===state.cat;
+    var hay=(c.dataset.name||'')+' '+(c.dataset.desc||'');
+    var okTerm=!term||hay.indexOf(term)!==-1;
+    var show=okCat&&okTerm; c.style.display=show?'':'none'; if(show) shown++;
+  });
+  var count=document.getElementById('count');
+  if(count) count.textContent=shown+(shown===1?' project':' projects')+' shown';
+  var empty=document.getElementById('empty'); if(empty) empty.hidden=shown!==0;
+}
+function render(){
+  var grid=document.getElementById('grid');
+  grid.innerHTML=projects.map(cardHTML).join('');
+  var fg=document.getElementById('featGrid');
+  if(fg){
+    var fl=FEATURED.map(function(k){ return projects.filter(function(p){return p.key===k;})[0]; }).filter(Boolean);
+    fl=fl.concat(projects.filter(function(p){ return p.feat && FEATURED.indexOf(p.key)===-1; }));
+    fg.innerHTML=fl.map(featHTML).join('');
   }
-
-  chips.forEach(function(chip){
-    chip.addEventListener('click', function(){
-      chips.forEach(function(c){ c.classList.remove('active'); c.setAttribute('aria-selected','false'); });
+  buildChips();
+  // live stats
+  var cats={}; projects.forEach(function(p){ cats[p.cat]=1; });
+  var set=function(id,v){ var e=document.getElementById(id); if(e) e.textContent=v; };
+  set('statProjects',projects.length);
+  set('statCats',Object.keys(cats).length);
+  set('statDemos',projects.filter(function(p){return p.demo;}).length);
+  var newest=projects.slice().sort(function(a,b){return (b.pushed||'').localeCompare(a.pushed||'');})[0];
+  set('statUpdated',newest?ago(newest.pushed):'—');
+  set('heroCount',projects.length);
+  set('projCount',projects.length);
+  var note=document.getElementById('srcNote');
+  if(note) note.textContent=(source==='live'?'Live from the GitHub API':'Snapshot (GitHub API unavailable)')+' · '+projects.length+' repositories';
+  var chips=document.querySelectorAll('#chips .chip');
+  [].forEach.call(chips,function(chip){
+    chip.addEventListener('click',function(){
+      [].forEach.call(chips,function(c){ c.classList.remove('active'); c.setAttribute('aria-selected','false'); });
       chip.classList.add('active'); chip.setAttribute('aria-selected','true');
-      state.cat = chip.dataset.filter;
-      apply();
+      state.cat=chip.dataset.filter; apply();
     });
   });
-  if (q) q.addEventListener('input', function(){ state.term = q.value; apply(); });
+  apply();
+}
 
-  // nav
-  var burger = document.getElementById('burger');
-  var navlinks = document.getElementById('navlinks');
-  if (burger) burger.addEventListener('click', function(){
-    var open = navlinks.classList.toggle('open');
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  navlinks && navlinks.addEventListener('click', function(e){
-    if (e.target.tagName === 'A') { navlinks.classList.remove('open'); burger && burger.setAttribute('aria-expanded','false'); }
-  });
+function start(){
+  try{
+    projects=SNAPSHOT.filter(isProject).map(norm);
+  }catch(e){ projects=[]; }
+  render();               // render immediately from the embedded snapshot
+  fetch('https://api.github.com/users/drsamonline/repos?per_page=100&sort=updated',{headers:{'Accept':'application/vnd.github+json'}})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(list){
+      if(!Array.isArray(list)||!list.length) throw new Error('empty');
+      projects=list.filter(isProject).map(norm);
+      source='live'; render();
+    })
+    .catch(function(){ /* keep snapshot render */ });
+}
 
-  // reveal on scroll
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-  if (reduce || !('IntersectionObserver' in window)) {
-    reveals.forEach(function(el){ el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+// nav + reveal (unchanged behaviour)
+function chrome(){
+  var burger=document.getElementById('burger'), navlinks=document.getElementById('navlinks');
+  if(burger) burger.addEventListener('click',function(){
+    var open=navlinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  if(navlinks) navlinks.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){ navlinks.classList.remove('open'); if(burger) burger.setAttribute('aria-expanded','false'); }
+  });
+  var q=document.getElementById('q');
+  if(q) q.addEventListener('input',function(){ state.term=q.value; apply(); });
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals=[].slice.call(document.querySelectorAll('.reveal'));
+  if(reduce||!('IntersectionObserver' in window)){ reveals.forEach(function(el){ el.classList.add('in'); }); }
+  else{
+    var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); },{threshold:.08,rootMargin:'0px 0px -8% 0px'});
     reveals.forEach(function(el){ io.observe(el); });
   }
-
-  apply();
+}
+try{ chrome(); start(); }catch(e){ try{ render(); }catch(_){} }
 })();
+
 </script>
 </body>
 </html>
