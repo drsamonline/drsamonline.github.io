@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Dr. Sohil Momin">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff"/><stop offset=".55" stop-color="#22d3ee"/><stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="t2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b9a8ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="12" width="40" height="40" rx="12" fill="#05060d" stroke="url(#g2)" stroke-width="2.5"/>
+  <text x="24" y="39" text-anchor="middle" font-family="system-ui,Segoe UI,Arial" font-size="18" font-weight="800" fill="url(#g2)">SM</text>
+  <text x="58" y="34" font-family="system-ui,Segoe UI,Arial" font-size="19" font-weight="800" fill="url(#t2)">Dr. Sohil Momin</text>
+  <text x="58" y="49" font-family="system-ui,Segoe UI,Arial" font-size="10" letter-spacing="3" fill="#6b7490">PROJECTS</text>
+</svg>

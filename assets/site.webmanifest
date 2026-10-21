@@ -1,0 +1,13 @@
+{
+  "name": "Dr. Sohil Momin — Projects",
+  "short_name": "Sohil Momin",
+  "description": "Showcase hub of 37 open-source, offline-first projects by Dr. Sohil Momin.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#05060d",
+  "theme_color": "#05060d",
+  "icons": [
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
