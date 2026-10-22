@@ -3,6 +3,14 @@
 The personal project index for **Dr Sohil Momin**, served by GitHub Pages at
 **https://drsamonline.github.io/**.
 
+[![Live site](https://img.shields.io/badge/live%20site-drsamonline.github.io-2e7d32
+[![Projects: 41](https://img.shields.io/badge/projects-41-2e7d32
+[![Offline-first](https://img.shields.io/badge/offline--first-yes-2e7d32
+[![No trackers, no cookies](https://img.shields.io/badge/no%20trackers-no%20cookies-586069
+[![Type: project hub](https://img.shields.io/badge/type-project%20hub-586069
+
+**Live site:** <https://drsamonline.github.io/> &nbsp;·&nbsp; **Source:** <https://github.com/drsamonline/drsamonline.github.io>
+
 A single static page that lists every project. The data is **built ahead of
 time and committed**, so the page never depends on a rate-limited third-party
 call to render — it fetches one same-origin JSON file and falls back to an
