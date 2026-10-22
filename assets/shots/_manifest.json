@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T06:46:25Z",
+ "generated_at": "2026-10-22T08:37:01Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -185,6 +185,12 @@
    "bytes": 15690,
    "captured": "2026-10-22T06:44:09Z",
    "source": "https://drsamonline.github.io/open-materia-medica/",
+   "status": "ok"
+  },
+  "profile-kit": {
+   "bytes": 15096,
+   "captured": "2026-10-22T08:37:01Z",
+   "source": "https://drsamonline.github.io/profile-kit/",
    "status": "ok"
   },
   "read-live-transform-app": {

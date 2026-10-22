@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-10-22T06:46:21Z",
+ "generated_at": "2026-10-22T08:36:57Z",
  "owner": "drsamonline",
- "count": 40,
+ "count": 41,
  "repos": [
   {
    "name": "Aethelgard-Engine",
@@ -749,6 +749,28 @@
    "shot": "assets/shots/open-materia-medica.webp"
   },
   {
+   "name": "profile-kit",
+   "key": "profile-kit",
+   "desc": "A small, reusable kit that packages a theme-aware, self-updating GitHub profile — a light/dark hero SVG, a metrics card rendered twice with extras_css, and a README generator.",
+   "cat": "desktop",
+   "catLabel": "Desktop & System Tools",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Python",
+   "stars": 0,
+   "pushed": "2026-10-22T08:34:47Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/profile-kit/",
+   "source": "https://github.com/drsamonline/profile-kit",
+   "releases": "https://github.com/drsamonline/profile-kit/releases",
+   "shot": "assets/shots/profile-kit.webp"
+  },
+  {
    "name": "read-live-transform-app",
    "key": "read-live-transform-app",
    "desc": "A companion PWA to Read. Live. Transform.: A Practical Reading of the Qur'an — read the verse, live the practice, keep the change.",
@@ -794,7 +816,7 @@
    "tag": "686 remedies · 7,786 links",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-22T06:36:48Z",
+   "pushed": "2026-10-22T06:59:06Z",
    "archived": false,
    "topics": [
     "boericke",
@@ -867,7 +889,7 @@
    "tag": "",
    "lang": "",
    "stars": 0,
-   "pushed": "2026-10-22T06:45:06Z",
+   "pushed": "2026-10-22T08:35:38Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
@@ -990,7 +1012,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-10-22T06:41:10Z",
+   "pushed": "2026-10-22T08:35:27Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
