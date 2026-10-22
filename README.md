@@ -3,36 +3,61 @@
 The personal project index for **Dr Sohil Momin**, served by GitHub Pages at
 **https://drsamonline.github.io/**.
 
-It is a single static page that reads the **public GitHub API at runtime**, so
-every repository appears here automatically — there is nothing to update by hand
-when a new project is finished.
+A single static page that lists every project. The data is **built ahead of
+time and committed**, so the page never depends on a rate-limited third-party
+call to render — it fetches one same-origin JSON file and falls back to an
+embedded snapshot if that is unavailable.
 
 ## How it works
 
-1. On load, the page calls
-   `https://api.github.com/users/drsamonline/repos?per_page=100&sort=updated&type=owner`
-   (plus the user endpoint for the profile header).
-2. It renders a responsive card per repository with the description, primary
-   language (colour-coded), stars, forks, licence, last-updated time, topics and
-   buttons to the **code** and, when a repository sets one, its **live demo** or
-   **download** page.
-3. New repositories appear on the next page load. Renamed ones update themselves.
-   Archived repositories are labelled, and forks are hidden by default (there is
-   a toggle if any exist).
-4. Results are cached in `sessionStorage` for 10 minutes to stay well inside
-   GitHub's unauthenticated rate limit (60 requests/hour per visitor).
-5. A snapshot of the repositories is **embedded in the page** and is used only if
-   the API is unreachable or rate-limited, so the page is never blank.
+1. A scheduled GitHub Actions workflow (`.github/workflows/refresh-hub.yml`)
+   runs daily at 03:17 UTC and on `workflow_dispatch`, with
+   `permissions: contents: write`.
+2. It calls the GitHub API **with the runner's authenticated token** (never the
+   60-requests/hour unauthenticated limit), drops forks and the
+   `drsamonline` / `drsamonline.github.io` repos, and merges the rest with the
+   `CURATED` map inside `index.html`. A repo that is **not** in the map still
+   appears, under the automatic **Other / New** category, using its GitHub
+   description.
+3. `tools/build_hub.py` writes the merged data to **`repos.json`** and
+   regenerates the embedded snapshot in `index.html` (so the offline fallback
+   always matches) plus the JSON-LD `ItemList` and `sitemap.xml`.
+4. `tools/capture_shots.py` loads every project landing page at 1200×750,
+   downscales to 600×375 and encodes **WebP** into `assets/shots/<repo>.webp`.
+   Images that already exist, are recent and were a successful capture are
+   skipped; failures fall back to a branded placeholder and are retried.
+5. Everything is committed back to the repository.
 
-## Images
+At runtime the page:
 
-Each card's cover image is GitHub's own OpenGraph card for the repository
-(`opengraph.githubassets.com`). That means it is generated and kept up to date by
-GitHub for free.
+* renders instantly from the embedded snapshot, then
+* fetches **`repos.json`** (same origin, no rate limit, fast) and re-renders.
 
-To give a project a custom cover, set it on GitHub under
-**Settings → Social preview**. If an image is ever unavailable, the card falls
-back to a gradient tinted with the repository's language colour.
+No third-party screenshot host, no runtime GitHub API call, no analytics.
+
+## Design
+
+* Calm, professional palette built on CSS custom properties in `:root`, with a
+  full override under `[data-theme="dark"]`. Body text meets WCAG AA (4.5:1)
+  and UI borders meet 3:1 in both themes.
+* A **theme toggle** in the navigation that respects `prefers-color-scheme` on a
+  first visit, persists the choice in `localStorage`, applies the stored theme
+  **before first paint** via a tiny inline `<head>` script, updates its
+  `aria-label` / `aria-pressed` and icon, and works with the keyboard.
+* `prefers-reduced-motion` is honoured throughout.
+* Self-contained: inline CSS/JS, no external JS libraries, inline SVG icons.
+
+## Layout
+
+| Path | Purpose |
+|---|---|
+| `index.html` | The hub. Contains the `CURATED` map (source of curated fields) and the embedded snapshot. |
+| `repos.json` | Build-time data the page fetches at runtime. |
+| `tools/build_hub.py` | Fetches the API, merges with `CURATED`, writes `repos.json` + snapshot + JSON-LD + sitemap. |
+| `tools/capture_shots.py` | Captures and encodes the local thumbnails. |
+| `tools/placeholders.py` | Branded fallback thumbnail. |
+| `assets/shots/` | Locally served thumbnails (`<repo>.webp`) + `_manifest.json`. |
+| `.github/workflows/refresh-hub.yml` | The scheduled build. |
 
 ## Customising
 
@@ -41,16 +66,9 @@ Everything configurable lives in the small block at the top of the inline
 
 | Setting | Purpose |
 |---|---|
-| `USER` | The GitHub account to list. |
-| `EXCLUDE` | Repository names never to show (this site, `.github`). |
-| `FEATURED` | Optional list of names to pin to the top, e.g. `["conqueror-os"]`. |
-| `CACHE_TTL` | How long a fetched result is reused, in milliseconds. |
-
-## Privacy
-
-The page has no backend, no analytics and no cookies. It only calls GitHub's
-public API, and its Content-Security-Policy restricts network access to that API
-and to HTTPS images.
+| `CURATED` | Per-repo `cat`, `desc`, `demo`, `feat`, `rel`, `kicker`, `tag`. |
+| `CAT_LABEL` / `CAT_ORDER` | Category names and display order. |
+| `FEATURED` | Repo keys pinned to the top of the Featured section. |
 
 ## Local preview
 
@@ -58,6 +76,18 @@ and to HTTPS images.
 python3 -m http.server 8080
 # then open http://localhost:8080/
 ```
+
+To regenerate the data locally without the API:
+
+```bash
+HUB_REPOS_FILE=repos_raw.json python3 tools/build_hub.py
+```
+
+## Privacy
+
+The page has no backend, no analytics and no cookies. It fetches only its own
+`repos.json` and its own images; the Content-Security-Policy restricts network
+access to `'self'`.
 
 ## License
 

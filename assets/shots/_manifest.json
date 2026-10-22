@@ -1,0 +1,245 @@
+{
+ "generated_at": "2026-10-22T06:32:49Z",
+ "shots": {
+  "Aethelgard-Engine": {
+   "bytes": 4726,
+   "captured": null,
+   "source": "https://drsamonline.github.io/Aethelgard-Engine/",
+   "status": "placeholder"
+  },
+  "AethelgardVN": {
+   "bytes": 4248,
+   "captured": null,
+   "source": "https://drsamonline.github.io/AethelgardVN/",
+   "status": "placeholder"
+  },
+  "All4ONE": {
+   "bytes": 3404,
+   "captured": null,
+   "source": "https://drsamonline.github.io/All4ONE/",
+   "status": "placeholder"
+  },
+  "BLINKTRANSFER": {
+   "bytes": 4012,
+   "captured": null,
+   "source": "https://drsamonline.github.io/BLINKTRANSFER/",
+   "status": "placeholder"
+  },
+  "CLDR": {
+   "bytes": 3062,
+   "captured": null,
+   "source": "https://drsamonline.github.io/CLDR/",
+   "status": "placeholder"
+  },
+  "HMS": {
+   "bytes": 2780,
+   "captured": null,
+   "source": "https://drsamonline.github.io/HMS/",
+   "status": "placeholder"
+  },
+  "MATERIA-MEDICA-BUILDER": {
+   "bytes": 4778,
+   "captured": null,
+   "source": "https://drsamonline.github.io/MATERIA-MEDICA-BUILDER/",
+   "status": "placeholder"
+  },
+  "Matneo": {
+   "bytes": 3448,
+   "captured": null,
+   "source": "https://drsamonline.github.io/Matneo/",
+   "status": "placeholder"
+  },
+  "NEO": {
+   "bytes": 2758,
+   "captured": null,
+   "source": "https://drsamonline.github.io/NEO/",
+   "status": "placeholder"
+  },
+  "SmartNotes": {
+   "bytes": 4076,
+   "captured": null,
+   "source": "https://drsamonline.github.io/SmartNotes/",
+   "status": "placeholder"
+  },
+  "TTB": {
+   "bytes": 2398,
+   "captured": null,
+   "source": "https://drsamonline.github.io/TTB/",
+   "status": "placeholder"
+  },
+  "The_Browser": {
+   "bytes": 3502,
+   "captured": null,
+   "source": "https://drsamonline.github.io/The_Browser/",
+   "status": "placeholder"
+  },
+  "ULTIMATE-WINDOWS-OPTIMIZER": {
+   "bytes": 4578,
+   "captured": null,
+   "source": "https://drsamonline.github.io/ULTIMATE-WINDOWS-OPTIMIZER/",
+   "status": "placeholder"
+  },
+  "aethelgard-games": {
+   "bytes": 4726,
+   "captured": null,
+   "source": "https://drsamonline.github.io/aethelgard-games/",
+   "status": "placeholder"
+  },
+  "ambient-sound-studio": {
+   "bytes": 4990,
+   "captured": null,
+   "source": "https://drsamonline.github.io/ambient-sound-studio/",
+   "status": "placeholder"
+  },
+  "app-builder": {
+   "bytes": 3786,
+   "captured": null,
+   "source": "https://drsamonline.github.io/app-builder/",
+   "status": "placeholder"
+  },
+  "blinkcode-ai": {
+   "bytes": 3890,
+   "captured": null,
+   "source": "https://drsamonline.github.io/blinkcode-ai/",
+   "status": "placeholder"
+  },
+  "bmi-bmr-tdee-macros-fluid-calculator": {
+   "bytes": 5062,
+   "captured": null,
+   "source": "https://drsamonline.github.io/bmi-bmr-tdee-macros-fluid-calculator/",
+   "status": "placeholder"
+  },
+  "boericke-repertory": {
+   "bytes": 4532,
+   "captured": null,
+   "source": "https://drsamonline.github.io/boericke-repertory/",
+   "status": "placeholder"
+  },
+  "conqueror-os": {
+   "bytes": 4000,
+   "captured": null,
+   "source": "https://drsamonline.github.io/conqueror-os/",
+   "status": "placeholder"
+  },
+  "dance-fight": {
+   "bytes": 3888,
+   "captured": null,
+   "source": "https://drsamonline.github.io/dance-fight/",
+   "status": "placeholder"
+  },
+  "gentle-pediatrics-companion": {
+   "bytes": 5508,
+   "captured": null,
+   "source": "https://drsamonline.github.io/gentle-pediatrics-companion/",
+   "status": "placeholder"
+  },
+  "homoeopathic-materia-medica-repertory-json": {
+   "bytes": 5014,
+   "captured": null,
+   "source": "https://drsamonline.github.io/homoeopathic-materia-medica-repertory-json/",
+   "status": "placeholder"
+  },
+  "idle-city-ages-of-growth": {
+   "bytes": 4658,
+   "captured": null,
+   "source": "https://drsamonline.github.io/idle-city-ages-of-growth/",
+   "status": "placeholder"
+  },
+  "lexora": {
+   "bytes": 2898,
+   "captured": null,
+   "source": "https://drsamonline.github.io/lexora/",
+   "status": "placeholder"
+  },
+  "lockhtml": {
+   "bytes": 3044,
+   "captured": null,
+   "source": "https://drsamonline.github.io/lockhtml/",
+   "status": "placeholder"
+  },
+  "mnemosyne-companion": {
+   "bytes": 4934,
+   "captured": null,
+   "source": "https://drsamonline.github.io/mnemosyne-companion/",
+   "status": "placeholder"
+  },
+  "neon-engine": {
+   "bytes": 3770,
+   "captured": null,
+   "source": "https://drsamonline.github.io/neon-engine/",
+   "status": "placeholder"
+  },
+  "neon-games": {
+   "bytes": 3712,
+   "captured": null,
+   "source": "https://drsamonline.github.io/neon-games/",
+   "status": "placeholder"
+  },
+  "neon-runner": {
+   "bytes": 3568,
+   "captured": null,
+   "source": "https://drsamonline.github.io/neon-runner/",
+   "status": "placeholder"
+  },
+  "open-materia-medica": {
+   "bytes": 5002,
+   "captured": null,
+   "source": "https://drsamonline.github.io/open-materia-medica/",
+   "status": "placeholder"
+  },
+  "read-live-transform-app": {
+   "bytes": 5016,
+   "captured": null,
+   "source": "https://drsamonline.github.io/read-live-transform-app/",
+   "status": "placeholder"
+  },
+  "remedy-relationship-explorer": {
+   "bytes": 5436,
+   "captured": null,
+   "source": "https://drsamonline.github.io/remedy-relationship-explorer/",
+   "status": "placeholder"
+  },
+  "retro-strike": {
+   "bytes": 3850,
+   "captured": null,
+   "source": "https://drsamonline.github.io/retro-strike/",
+   "status": "placeholder"
+  },
+  "skills": {
+   "bytes": 3374,
+   "captured": null,
+   "source": "https://drsamonline.github.io/skills/",
+   "status": "placeholder"
+  },
+  "skin-case-tracker": {
+   "bytes": 4584,
+   "captured": null,
+   "source": "https://drsamonline.github.io/skin-case-tracker/",
+   "status": "placeholder"
+  },
+  "smartbill-app": {
+   "bytes": 4112,
+   "captured": null,
+   "source": "https://drsamonline.github.io/smartbill-app/",
+   "status": "placeholder"
+  },
+  "the-symphony-companion": {
+   "bytes": 4802,
+   "captured": null,
+   "source": "https://drsamonline.github.io/the-symphony-companion/",
+   "status": "placeholder"
+  },
+  "unstoppable-mind-companion": {
+   "bytes": 5066,
+   "captured": null,
+   "source": "https://drsamonline.github.io/unstoppable-mind-companion/",
+   "status": "placeholder"
+  },
+  "whispering-body-first-aid": {
+   "bytes": 5720,
+   "captured": null,
+   "source": "https://drsamonline.github.io/whispering-body-first-aid/",
+   "status": "placeholder"
+  }
+ }
+}

@@ -2,40 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var s=localStorage.getItem('theme');if(s!=='light'&&s!=='dark'){s=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',s);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>404 — Page not found · Dr. Sohil Momin</title>
 <meta name="description" content="That page doesn't exist. Head back to the project showcase.">
 <meta name="robots" content="noindex, follow">
-<meta name="theme-color" content="#05060d">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12141a" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="canonical" href="https://drsamonline.github.io/">
 <style>
-:root{--bg:#05060d;--ink:#eef1f8;--muted:#9aa3ba;--line:rgba(255,255,255,.1);--violet:#7c5cff;--cyan:#22d3ee}
+:root{--bg:#f6f7f9;--surface:#ffffff;--ink:#171a21;--muted:#5a6272;--faint:#676f7f;--line:#e1e5ec;--line-strong:#848c9c;--accent:#2b4fc8;--accent-ink:#fff;--accent-soft:#eef2fd;--accent-line:#6b7fd0}
+[data-theme="dark"]{--bg:#12141a;--surface:#1a1d25;--ink:#e9ecf2;--muted:#a4acbb;--faint:#8b93a3;--line:#272c36;--line-strong:#6b7280;--accent:#8fa8ff;--accent-ink:#0f1218;--accent-soft:#1d2333;--accent-line:#5a6ea8}
 *{box-sizing:border-box}
 html,body{height:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Arial,sans-serif;
-  display:grid;place-items:center;text-align:center;padding:24px;overflow:hidden;line-height:1.6}
-.bg{position:fixed;inset:0;z-index:-1;overflow:hidden}
-.bg i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;mix-blend-mode:screen}
-.b1{width:60vw;height:60vw;left:-15vw;top:-20vw;background:radial-gradient(circle,#7c5cff,transparent 65%)}
-.b2{width:50vw;height:50vw;right:-12vw;bottom:-16vw;background:radial-gradient(circle,#22d3ee,transparent 65%)}
-.wrap{max-width:560px}
-.code{font-size:clamp(4.5rem,18vw,9rem);font-weight:800;letter-spacing:-.05em;line-height:1;
-  background:linear-gradient(100deg,#fff,#b9a8ff,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
-h1{font-size:1.4rem;margin:8px 0 6px;letter-spacing:-.02em}
+  display:grid;place-items:center;text-align:center;padding:24px;line-height:1.62}
+.wrap{max-width:520px}
+.code{font-size:clamp(4rem,16vw,7rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--accent)}
+h1{font-size:1.3rem;margin:10px 0 8px;letter-spacing:-.02em}
 p{color:var(--muted);margin:0 0 26px}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:13px;font-weight:700;font-size:.95rem;text-decoration:none;
-  background:linear-gradient(100deg,#7c5cff,#22d3ee);color:#05060d;box-shadow:0 16px 40px -14px rgba(124,92,255,.9)}
-.btn.ghost{background:rgba(255,255,255,.06);color:#fff;border:1px solid var(--line);box-shadow:none;margin-left:10px}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:10px;font-weight:600;font-size:.94rem;text-decoration:none;
+  background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent)}
+.btn.ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);margin-left:10px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="bg" aria-hidden="true"><i class="b1"></i><i class="b2"></i></div>
 <div class="wrap">
   <div class="code">404</div>
-  <h1>This page drifted off the grid</h1>
-  <p>The link you followed doesn't point anywhere here. The showcase hub — with 37 projects — is one click away.</p>
+  <h1>This page could not be found</h1>
+  <p>The link you followed doesn't point anywhere here. The showcase hub — with 40 projects — is one click away.</p>
   <a class="btn" href="/">Back to the showcase</a>
   <a class="btn ghost" href="https://github.com/drsamonline" target="_blank" rel="noopener">GitHub</a>
 </div>
