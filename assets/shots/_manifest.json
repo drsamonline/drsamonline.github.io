@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T06:44:44Z",
+ "generated_at": "2026-10-22T06:46:25Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -20,11 +20,10 @@
    "status": "ok"
   },
   "BLINKTRANSFER": {
-   "bytes": 4012,
-   "captured": null,
-   "reason": "TimeoutError",
+   "bytes": 13992,
+   "captured": "2026-10-22T06:46:25Z",
    "source": "https://drsamonline.github.io/BLINKTRANSFER/",
-   "status": "placeholder"
+   "status": "ok"
   },
   "CLDR": {
    "bytes": 15136,
