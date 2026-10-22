@@ -32,6 +32,8 @@ from datetime import datetime, timezone
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from playwright.sync_api import TimeoutError as PWTimeout  # noqa: E402
+
 from placeholders import make_placeholder  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -79,7 +81,15 @@ def is_recent_ok(entry: dict | None) -> bool:
 
 def capture(page, url: str) -> Image.Image:
     page.set_viewport_size(VIEWPORT)
-    page.goto(url, wait_until="load", timeout=NAV_TIMEOUT_MS)
+    try:
+        page.goto(url, wait_until="load", timeout=NAV_TIMEOUT_MS)
+    except PWTimeout:
+        # Some landing pages never fire `load` (streaming assets, long-polling,
+        # a camera-permission prompt). The DOM is usually rendered by now, so we
+        # still take the shot rather than discarding a perfectly good page.
+        # A genuine navigation failure (DNS, TLS, connection refused) is *not*
+        # a timeout and propagates, so it still becomes a placeholder.
+        pass
     try:
         page.wait_for_load_state("networkidle", timeout=6_000)
     except Exception:
