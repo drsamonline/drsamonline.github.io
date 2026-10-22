@@ -9,10 +9,19 @@ name: Refresh project hub
 #   * index.html (embedded snapshot) — offline fallback, kept identical
 #   * sitemap.xml                    — one <url> per project
 #   * assets/shots/<repo>.webp       — local thumbnails (no thum.io, no 3rd party)
+#
+# build_hub.py MUST run before capture_shots.py: the capture step reads the
+# freshly written repos.json (including each repo's current `pushed` timestamp,
+# which drives source-based thumbnail invalidation).
 on:
   schedule:
     - cron: "17 3 * * *"        # daily, 03:17 UTC
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force re-capture of every thumbnail (ignore freshness checks)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write               # least privilege: commit the regenerated data + shots
@@ -45,6 +54,8 @@ jobs:
         run: python tools/build_hub.py
 
       - name: Capture local thumbnails (assets/shots/*.webp)
+        env:
+          FORCE_CAPTURE: ${{ github.event.inputs.force == 'true' && '1' || '' }}
         run: python tools/capture_shots.py
 
       - name: Commit the refreshed hub

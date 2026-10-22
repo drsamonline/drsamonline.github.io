@@ -12,9 +12,24 @@ dev sandbox cannot). For every project in ``repos.json`` it:
 No third-party screenshot host is involved — the bytes are generated here and
 committed, so the page serves them from its own origin.
 
-Skip logic: an image is left alone when the manifest records a *successful*
-capture for it that is newer than ``MAX_AGE_DAYS`` and the file still exists.
-Placeholders (from a previous failure) are always retried.
+Invalidation (why a shot is re-captured)
+----------------------------------------
+A thumbnail is re-captured when **either** of these holds:
+
+1. **Age** — the manifest records a *successful* capture older than
+   ``MAX_AGE_DAYS``.
+2. **Source changed** — the repo's current ``pushed`` timestamp (from
+   ``repos.json``) is newer than the ``source_pushed`` timestamp recorded in the
+   manifest when the shot was last taken. This means the landing page's source
+   has moved on since the shot, so the image is stale even if it is minutes old.
+
+The manifest stores, per shot, the ``source_pushed`` value seen at capture time
+so the comparison is exact. When ``repos.json`` is missing or a project has no
+``pushed`` value the source check is simply unavailable and the age check alone
+decides — the run never crashes over it.
+
+Placeholders (from a previous failure) are always retried. Passing ``--force``
+(or setting ``FORCE_CAPTURE=1``) ignores both checks and re-captures everything.
 
 A capture that fails or times out falls back to a branded placeholder via
 ``tools/placeholders.py`` so every card always has a local image, and the repo
@@ -23,6 +38,7 @@ is retried on the next run.
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import sys
@@ -42,7 +58,7 @@ MANIFEST = os.path.join(SHOTS, "_manifest.json")
 
 VIEWPORT = {"width": 1200, "height": 750}
 OUT_SIZE = (600, 375)
-MAX_AGE_DAYS = 14
+MAX_AGE_DAYS = 3
 NAV_TIMEOUT_MS = 25_000
 SETTLE_MS = 1_500
 SHOT_QUALITY = 76
@@ -65,18 +81,60 @@ def save_manifest(m: dict) -> None:
         fh.write("\n")
 
 
+def _parse_iso(ts: str | None):
+    if not ts:
+        return None
+    try:
+        return datetime.fromisoformat(ts.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
 def is_recent_ok(entry: dict | None) -> bool:
+    """Age check only: a successful capture newer than ``MAX_AGE_DAYS``."""
     if not entry or entry.get("status") != "ok":
         return False
-    ts = entry.get("captured")
-    if not ts:
-        return False
-    try:
-        when = datetime.fromisoformat(ts.replace("Z", "+00:00"))
-    except Exception:
+    when = _parse_iso(entry.get("captured"))
+    if when is None:
         return False
     age = (datetime.now(timezone.utc) - when).total_seconds() / 86400
     return age < MAX_AGE_DAYS
+
+
+def source_changed(entry: dict | None, pushed: str | None) -> bool:
+    """True when the repo's current ``pushed`` is newer than the stored one.
+
+    Falls back to a plain inequality when either value is not a parseable
+    timestamp, and returns ``False`` (age check decides) when the current
+    ``pushed`` is unknown. A missing stored ``source_pushed`` counts as changed
+    — we have no record of what source the shot was taken from.
+    """
+    if not pushed:
+        return False
+    stored = entry.get("source_pushed") if entry else None
+    if not stored:
+        return True
+    cur, old = _parse_iso(pushed), _parse_iso(stored)
+    if cur is None or old is None:
+        return pushed != stored
+    return cur > old
+
+
+def needs_capture(entry: dict | None, pushed: str | None, exists: bool) -> bool:
+    """Decide whether a shot must be re-taken.
+
+    Re-capture when the file is missing, the last capture was not successful,
+    the source has changed, or the capture is older than ``MAX_AGE_DAYS``.
+    """
+    if not exists:
+        return True
+    if not entry or entry.get("status") != "ok":
+        return True
+    if source_changed(entry, pushed):
+        return True
+    if not is_recent_ok(entry):
+        return True
+    return False
 
 
 def capture(page, url: str) -> Image.Image:
@@ -102,21 +160,51 @@ def capture(page, url: str) -> Image.Image:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--force", action="store_true",
+                        help="re-capture every shot, ignoring manifest freshness")
+    args = parser.parse_args()
+    force = args.force or os.environ.get("FORCE_CAPTURE", "").strip().lower() in {"1", "true", "yes", "on"}
+
     repos_path = os.path.join(ROOT, "repos.json")
-    if not os.path.exists(repos_path):
-        sys.exit("FATAL: repos.json not found — run tools/build_hub.py first")
-    with open(repos_path, encoding="utf-8") as fh:
-        records = json.load(fh)["repos"]
+    records = None
+    try:
+        if os.path.exists(repos_path):
+            with open(repos_path, encoding="utf-8") as fh:
+                records = (json.load(fh) or {}).get("repos")
+    except Exception as exc:  # noqa: BLE001 - a bad repos.json must not kill the run
+        print(f"WARN: could not read repos.json ({type(exc).__name__}: {exc}) — "
+              f"falling back to age-only")
+        records = None
 
     os.makedirs(SHOTS, exist_ok=True)
     manifest = load_manifest()
     shots = manifest.setdefault("shots", {})
 
+    if not records:
+        # No project data (missing/unreadable repos.json): fall back to whatever
+        # the manifest already knows so the age check still runs. No source
+        # timestamps are available here, so this is age-only — and never crashes.
+        print("WARN: repos.json unavailable — falling back to manifest entries (age-only)")
+        records = [{"name": name, "landing": e.get("source"), "pushed": None}
+                   for name, e in shots.items() if e.get("source")]
+        if not records:
+            print("nothing to do: no repos.json and no usable manifest entries")
+            return
+
     todo = []
     for r in records:
         out = os.path.join(SHOTS, r["name"] + ".webp")
-        if os.path.exists(out) and is_recent_ok(shots.get(r["name"])):
-            print(f"skip  {r['name']}  (recent successful capture)")
+        entry = shots.get(r["name"])
+        pushed = r.get("pushed") or None
+        if force:
+            todo.append(r)
+            continue
+        if not needs_capture(entry, pushed, os.path.exists(out)):
+            reason = "recent successful capture"
+            if entry and entry.get("source_pushed") == pushed:
+                reason = "recent capture, source unchanged"
+            print(f"skip  {r['name']}  ({reason})")
             continue
         todo.append(r)
 
@@ -130,6 +218,7 @@ def main() -> None:
             page = ctx.new_page()
             for r in todo:
                 name, url = r["name"], r["landing"]
+                pushed = r.get("pushed") or None
                 out = os.path.join(SHOTS, name + ".webp")
                 try:
                     img = capture(page, url)
@@ -138,6 +227,7 @@ def main() -> None:
                         "status": "ok",
                         "captured": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
                         "source": url,
+                        "source_pushed": pushed,
                         "bytes": os.path.getsize(out),
                     }
                     captured += 1
@@ -148,6 +238,7 @@ def main() -> None:
                         "status": "placeholder",
                         "captured": None,
                         "source": url,
+                        "source_pushed": pushed,
                         "reason": type(exc).__name__,
                         "bytes": os.path.getsize(out),
                     }
