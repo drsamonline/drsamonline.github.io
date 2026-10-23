@@ -16,6 +16,11 @@ name: Refresh project hub
 on:
   schedule:
     - cron: "17 3 * * *"        # daily, 03:17 UTC
+  push:
+    branches: [ main ]
+    paths:
+      - tools/build_hub.py
+      - tools/capture_shots.py
   workflow_dispatch:
     inputs:
       force:

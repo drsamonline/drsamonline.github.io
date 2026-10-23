@@ -246,6 +246,31 @@ def build_jsonld(records: list[dict]) -> dict:
     }
 
 
+def sync_counts(html: str, records: list[dict]) -> str:
+    """Rewrite the hardcoded count labels so the visible TEXT matches the data.
+
+    The page's JS updates the id'd spans at runtime, but the meta description and
+    the og/twitter titles are static - and they were drifting (they said "40").
+    This keeps every number in step with ``repos.json``.
+    """
+    n = len(records)
+    cats = len({r["cat"] for r in records})
+    demos = sum(1 for r in records if r["demo"])
+    subs = [
+        (r"Explore \d+ projects", "Explore %d projects" % n),
+        (r"\u2014 \d+ open-source projects, one hub", "\u2014 %d open-source projects, one hub" % n),
+        (r"(\d+) open-source projects", "%d open-source projects" % n),
+        (r'(<span id="heroCount">)\d+(</span>)', r"\g<1>%d\g<2>" % n),
+        (r'(<span id="projCount">)\d+(</span>)', r"\g<1>%d\g<2>" % n),
+        (r'(id="statProjects">)\d+(<)', r"\g<1>%d\g<2>" % n),
+        (r'(id="statCats">)\d+(<)', r"\g<1>%d\g<2>" % cats),
+        (r'(id="statDemos">)\d+(<)', r"\g<1>%d\g<2>" % demos),
+    ]
+    for pat, rep in subs:
+        html = re.sub(pat, rep, html)
+    return html
+
+
 def build_sitemap(records: list[dict], lastmod: str) -> str:
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -291,9 +316,11 @@ def main() -> None:
         '<script type="application/ld+json">' + json_in_html(build_jsonld(records)) + "</script>\n"
         "<!--JSONLD_END-->")
 
+    # 4. the visible count labels (meta description, og/twitter titles, no-JS fallbacks)
+    html = sync_counts(html, records)
     write(index_path, html)
 
-    # 4. sitemap.xml
+    # 5. sitemap.xml
     write(os.path.join(ROOT, "sitemap.xml"), build_sitemap(records, lastmod))
 
     cats = sorted({r["cat"] for r in records})
