@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-23T05:49:37Z",
+ "generated_at": "2026-10-23T08:41:27Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -24,9 +24,9 @@
   },
   "BLINKTRANSFER": {
    "bytes": 15252,
-   "captured": "2026-10-23T03:00:49Z",
+   "captured": "2026-10-23T08:40:31Z",
    "source": "https://drsamonline.github.io/BLINKTRANSFER/",
-   "source_pushed": "2026-10-23T02:00:07Z",
+   "source_pushed": "2026-10-23T08:26:23Z",
    "status": "ok"
   },
   "CLDR": {
@@ -51,10 +51,10 @@
    "status": "ok"
   },
   "Matneo": {
-   "bytes": 18276,
-   "captured": "2026-10-23T05:49:37Z",
+   "bytes": 18320,
+   "captured": "2026-10-23T08:40:53Z",
    "source": "https://drsamonline.github.io/Matneo/",
-   "source_pushed": "2026-10-23T05:33:19Z",
+   "source_pushed": "2026-10-23T08:16:33Z",
    "status": "ok"
   },
   "NEO": {
@@ -72,17 +72,17 @@
    "status": "ok"
   },
   "TTB": {
-   "bytes": 19766,
-   "captured": "2026-10-22T09:53:11Z",
+   "bytes": 19608,
+   "captured": "2026-10-23T08:41:20Z",
    "source": "https://drsamonline.github.io/TTB/",
-   "source_pushed": "2026-10-22T06:02:21Z",
+   "source_pushed": "2026-10-23T07:02:23Z",
    "status": "ok"
   },
   "The_Browser": {
-   "bytes": 17230,
-   "captured": "2026-10-23T05:10:44Z",
+   "bytes": 17220,
+   "captured": "2026-10-23T08:41:18Z",
    "source": "https://drsamonline.github.io/The_Browser/",
-   "source_pushed": "2026-10-23T03:51:06Z",
+   "source_pushed": "2026-10-23T07:47:46Z",
    "status": "ok"
   },
   "ULTIMATE-WINDOWS-OPTIMIZER": {
@@ -101,9 +101,9 @@
   },
   "aethelgard-rpg-engine": {
    "bytes": 20254,
-   "captured": "2026-10-23T05:10:26Z",
+   "captured": "2026-10-23T08:40:22Z",
    "source": "https://drsamonline.github.io/aethelgard-rpg-engine/",
-   "source_pushed": "2026-10-23T04:39:07Z",
+   "source_pushed": "2026-10-23T08:28:55Z",
    "status": "ok"
   },
   "ambient-sound-studio": {
@@ -115,16 +115,16 @@
   },
   "app-builder": {
    "bytes": 11916,
-   "captured": "2026-10-23T05:49:34Z",
+   "captured": "2026-10-23T08:40:24Z",
    "source": "https://drsamonline.github.io/app-builder/",
-   "source_pushed": "2026-10-23T05:32:57Z",
+   "source_pushed": "2026-10-23T08:26:26Z",
    "status": "ok"
   },
   "app-companion-forge": {
    "bytes": 13588,
-   "captured": "2026-10-23T03:00:39Z",
+   "captured": "2026-10-23T08:40:26Z",
    "source": "https://drsamonline.github.io/app-companion-forge/",
-   "source_pushed": "2026-10-22T21:31:30Z",
+   "source_pushed": "2026-10-23T06:12:58Z",
    "status": "ok"
   },
   "app-panchang": {
@@ -143,16 +143,16 @@
   },
   "blinkcode-ai": {
    "bytes": 13442,
-   "captured": "2026-10-23T03:00:46Z",
+   "captured": "2026-10-23T08:40:29Z",
    "source": "https://drsamonline.github.io/blinkcode-ai/",
-   "source_pushed": "2026-10-23T02:00:15Z",
+   "source_pushed": "2026-10-23T08:26:18Z",
    "status": "ok"
   },
   "bmi-bmr-tdee-macros-fluid-calculator": {
    "bytes": 18468,
-   "captured": "2026-10-23T03:00:51Z",
+   "captured": "2026-10-23T08:40:34Z",
    "source": "https://drsamonline.github.io/bmi-bmr-tdee-macros-fluid-calculator/",
-   "source_pushed": "2026-10-22T12:50:32Z",
+   "source_pushed": "2026-10-23T08:14:23Z",
    "status": "ok"
   },
   "boericke-repertory": {
@@ -171,9 +171,9 @@
   },
   "canteen-lan": {
    "bytes": 13298,
-   "captured": "2026-10-23T03:00:58Z",
+   "captured": "2026-10-23T08:40:36Z",
    "source": "https://drsamonline.github.io/canteen-lan/",
-   "source_pushed": "2026-10-23T01:30:00Z",
+   "source_pushed": "2026-10-23T06:13:08Z",
    "status": "ok"
   },
   "case-kit": {
@@ -185,9 +185,9 @@
   },
   "chalk-lan": {
    "bytes": 13330,
-   "captured": "2026-10-23T03:01:03Z",
+   "captured": "2026-10-23T08:40:38Z",
    "source": "https://drsamonline.github.io/chalk-lan/",
-   "source_pushed": "2026-10-22T23:30:02Z",
+   "source_pushed": "2026-10-23T06:13:11Z",
    "status": "ok"
   },
   "compress-kit": {
@@ -198,10 +198,10 @@
    "status": "ok"
   },
   "conqueror-os": {
-   "bytes": 14426,
-   "captured": "2026-10-23T03:01:10Z",
+   "bytes": 14382,
+   "captured": "2026-10-23T08:40:41Z",
    "source": "https://drsamonline.github.io/conqueror-os/",
-   "source_pushed": "2026-10-22T11:03:24Z",
+   "source_pushed": "2026-10-23T08:26:11Z",
    "status": "ok"
   },
   "crypto-kit": {
@@ -219,10 +219,10 @@
    "status": "ok"
   },
   "dashboard": {
-   "bytes": 16390,
-   "captured": "2026-10-23T05:10:31Z",
+   "bytes": 14400,
+   "captured": "2026-10-23T08:40:43Z",
    "source": "https://drsamonline.github.io/dashboard/",
-   "source_pushed": "2026-10-23T05:00:11Z",
+   "source_pushed": "2026-10-23T08:25:02Z",
    "status": "ok"
   },
   "export-kit": {
@@ -234,9 +234,9 @@
   },
   "frame-kit": {
    "bytes": 10360,
-   "captured": "2026-10-23T03:01:19Z",
+   "captured": "2026-10-23T08:40:46Z",
    "source": "https://drsamonline.github.io/frame-kit/",
-   "source_pushed": "2026-10-23T01:57:59Z",
+   "source_pushed": "2026-10-23T06:12:10Z",
    "status": "ok"
   },
   "game-kit": {
@@ -255,9 +255,9 @@
   },
   "helioprism": {
    "bytes": 11304,
-   "captured": "2026-10-23T03:01:27Z",
+   "captured": "2026-10-23T08:40:48Z",
    "source": "https://drsamonline.github.io/helioprism/",
-   "source_pushed": "2026-10-23T02:00:01Z",
+   "source_pushed": "2026-10-23T08:26:14Z",
    "status": "ok"
   },
   "homoeopathic-materia-medica-repertory-json": {
@@ -276,9 +276,9 @@
   },
   "kent-repertory-explorer": {
    "bytes": 12538,
-   "captured": "2026-10-23T03:01:36Z",
+   "captured": "2026-10-23T08:40:50Z",
    "source": "https://drsamonline.github.io/kent-repertory-explorer/",
-   "source_pushed": "2026-10-22T19:03:10Z",
+   "source_pushed": "2026-10-23T07:48:35Z",
    "status": "ok"
   },
   "lan-kit": {
@@ -303,10 +303,10 @@
    "status": "ok"
   },
   "mnemosyne-companion": {
-   "bytes": 16440,
-   "captured": "2026-10-23T03:01:49Z",
+   "bytes": 16470,
+   "captured": "2026-10-23T08:40:56Z",
    "source": "https://drsamonline.github.io/mnemosyne-companion/",
-   "source_pushed": "2026-10-23T01:06:16Z",
+   "source_pushed": "2026-10-23T07:46:48Z",
    "status": "ok"
   },
   "neon-engine": {
@@ -332,9 +332,9 @@
   },
   "offline-pdf-toolkit": {
    "bytes": 10304,
-   "captured": "2026-10-23T03:02:02Z",
+   "captured": "2026-10-23T08:40:58Z",
    "source": "https://drsamonline.github.io/offline-pdf-toolkit/",
-   "source_pushed": "2026-10-22T19:03:40Z",
+   "source_pushed": "2026-10-23T07:48:30Z",
    "status": "ok"
   },
   "open-materia-medica": {
@@ -346,9 +346,9 @@
   },
   "optical-kit": {
    "bytes": 9438,
-   "captured": "2026-10-23T03:02:07Z",
+   "captured": "2026-10-23T08:41:00Z",
    "source": "https://drsamonline.github.io/optical-kit/",
-   "source_pushed": "2026-10-23T02:20:19Z",
+   "source_pushed": "2026-10-23T06:12:06Z",
    "status": "ok"
   },
   "profile-kit": {
@@ -360,16 +360,16 @@
   },
   "read-live-transform-app": {
    "bytes": 21232,
-   "captured": "2026-10-23T03:02:09Z",
+   "captured": "2026-10-23T08:41:03Z",
    "source": "https://drsamonline.github.io/read-live-transform-app/",
-   "source_pushed": "2026-10-23T02:08:07Z",
+   "source_pushed": "2026-10-23T08:14:26Z",
    "status": "ok"
   },
   "remedy-relationship-explorer": {
    "bytes": 12384,
-   "captured": "2026-10-23T03:02:12Z",
+   "captured": "2026-10-23T08:41:05Z",
    "source": "https://drsamonline.github.io/remedy-relationship-explorer/",
-   "source_pushed": "2026-10-22T19:03:29Z",
+   "source_pushed": "2026-10-23T07:47:49Z",
    "status": "ok"
   },
   "repertory-kit": {
@@ -395,9 +395,9 @@
   },
   "seance": {
    "bytes": 4476,
-   "captured": "2026-10-23T03:02:19Z",
+   "captured": "2026-10-23T08:41:07Z",
    "source": "https://drsamonline.github.io/seance/",
-   "source_pushed": "2026-10-22T19:24:57Z",
+   "source_pushed": "2026-10-23T05:51:52Z",
    "status": "ok"
   },
   "search-kit": {
@@ -416,16 +416,16 @@
   },
   "skin-case-tracker": {
    "bytes": 16534,
-   "captured": "2026-10-23T03:02:26Z",
+   "captured": "2026-10-23T08:41:10Z",
    "source": "https://drsamonline.github.io/skin-case-tracker/",
-   "source_pushed": "2026-10-23T01:04:48Z",
+   "source_pushed": "2026-10-23T08:14:17Z",
    "status": "ok"
   },
   "smartbill-app": {
    "bytes": 18632,
-   "captured": "2026-10-22T09:53:02Z",
+   "captured": "2026-10-23T08:41:13Z",
    "source": "https://drsamonline.github.io/smartbill-app/",
-   "source_pushed": "2026-10-22T09:04:44Z",
+   "source_pushed": "2026-10-23T08:09:26Z",
    "status": "ok"
   },
   "srs-kit": {
@@ -436,10 +436,10 @@
    "status": "ok"
   },
   "the-symphony-companion": {
-   "bytes": 12504,
-   "captured": "2026-10-23T03:02:34Z",
+   "bytes": 12646,
+   "captured": "2026-10-23T08:41:15Z",
    "source": "https://drsamonline.github.io/the-symphony-companion/",
-   "source_pushed": "2026-10-22T11:03:29Z",
+   "source_pushed": "2026-10-23T08:08:42Z",
    "status": "ok"
   },
   "today-card": {
@@ -450,24 +450,24 @@
    "status": "ok"
   },
   "unstoppable-mind-companion": {
-   "bytes": 13178,
-   "captured": "2026-10-23T03:02:44Z",
+   "bytes": 13184,
+   "captured": "2026-10-23T08:41:23Z",
    "source": "https://drsamonline.github.io/unstoppable-mind-companion/",
-   "source_pushed": "2026-10-23T01:02:39Z",
+   "source_pushed": "2026-10-23T07:46:48Z",
    "status": "ok"
   },
   "web-kit": {
    "bytes": 7646,
-   "captured": "2026-10-23T03:02:46Z",
+   "captured": "2026-10-23T08:41:25Z",
    "source": "https://drsamonline.github.io/web-kit/",
-   "source_pushed": "2026-10-23T02:20:16Z",
+   "source_pushed": "2026-10-23T07:45:07Z",
    "status": "ok"
   },
   "whispering-body-first-aid": {
    "bytes": 19894,
-   "captured": "2026-10-23T03:02:49Z",
+   "captured": "2026-10-23T08:41:27Z",
    "source": "https://drsamonline.github.io/whispering-body-first-aid/",
-   "source_pushed": "2026-10-22T18:43:50Z",
+   "source_pushed": "2026-10-23T08:34:40Z",
    "status": "ok"
   }
  }
