@@ -31,8 +31,57 @@ from datetime import datetime, timezone
 
 OWNER = "drsamonline"
 SITE = "https://drsamonline.github.io"
+
+# --------------------------------------------------------------------------- #
+# What COUNTS as a project — an explicit definition, not an accident of the API
+# --------------------------------------------------------------------------- #
+# A repository appears on the hub, and in every number the hub shows, only if it
+# satisfies this definition. That is what keeps the hub's count and the
+# console's count from drifting apart again: both can point at the same rule.
+#
+#   public     a private repo is never published on a public hub
+#   source     a fork is someone else's repo; the origin is the project, not the copy
+#   non-empty  a repo with no content (size 0) is a placeholder, not a project
+#   not self   the profile (drsamonline) and this site (drsamonline.github.io)
+#              are the hub's own scaffolding, not projects
+#
+# Archived repos are still COUNTED and shown — an archived project is still a
+# project; it simply carries an "archived" marker on its card.
 EXCLUDE = {"drsamonline", "drsamonline.github.io"}
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def classify(repos: list[dict]) -> tuple[list[dict], dict]:
+    """Split repos into those the definition counts, plus an auditable breakdown.
+
+    Returns ``(counted, breakdown)``. The breakdown is written into repos.json
+    so the number is always explainable, and it is printed at build time.
+    """
+    counted: list[dict] = []
+    b = {"total": len(repos), "public": 0, "private": 0, "source": 0, "fork": 0,
+         "empty": 0, "archived": 0, "excluded": 0, "counted": 0}
+    for r in repos:
+        name = r.get("name") or ""
+        if not name:
+            continue
+        key = name.lower()
+        private = bool(r.get("private"))
+        fork = bool(r.get("fork"))
+        empty = int(r.get("size") or 0) == 0
+        archived = bool(r.get("archived"))
+        b["private" if private else "public"] += 1
+        b["fork" if fork else "source"] += 1
+        if empty:
+            b["empty"] += 1
+        if archived:
+            b["archived"] += 1
+        if private or fork or empty or key in EXCLUDE:
+            b["excluded"] += 1
+            continue
+        counted.append(r)
+    b["counted"] = len(counted)
+    return counted, b
+
 
 CAT_LABEL = {
     "desktop": "Desktop & System Tools",
@@ -288,8 +337,8 @@ def main() -> None:
     html = read(index_path)
     curated = extract_curated(html)
 
-    repos = fetch_repos()
-    records = build_records(repos, curated)
+    counted, breakdown = classify(fetch_repos())
+    records = build_records(counted, curated)
     if not records:
         sys.exit("FATAL: no repositories returned by the GitHub API")
 
@@ -298,7 +347,8 @@ def main() -> None:
     lastmod = now.date().isoformat()
 
     # 1. repos.json — the page's same-origin data source.
-    payload = {"generated_at": iso, "owner": OWNER, "count": len(records), "repos": records}
+    payload = {"generated_at": iso, "owner": OWNER, "count": len(records),
+               "counts": breakdown, "repos": records}
     write(os.path.join(ROOT, "repos.json"),
           json.dumps(payload, ensure_ascii=False, indent=1) + "\n")
 
@@ -323,6 +373,10 @@ def main() -> None:
     # 5. sitemap.xml
     write(os.path.join(ROOT, "sitemap.xml"), build_sitemap(records, lastmod))
 
+    print("counted %d of %d repos (%d private, %d forks, %d empty, %d excluded; "
+          "%d archived)" % (breakdown["counted"], breakdown["total"], breakdown["private"],
+                             breakdown["fork"], breakdown["empty"], breakdown["excluded"],
+                             breakdown["archived"]))
     cats = sorted({r["cat"] for r in records})
     print(f"repos.json: {len(records)} projects, {len(cats)} categories "
           f"({', '.join(cats)}), {sum(1 for r in records if r['demo'])} with a live demo")
