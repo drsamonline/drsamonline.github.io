@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-10-24T13:46:44Z",
+ "generated_at": "2026-10-24T16:43:18Z",
  "owner": "drsamonline",
- "count": 65,
+ "count": 67,
  "counts": {
-  "total": 72,
-  "public": 72,
+  "total": 74,
+  "public": 74,
   "private": 0,
-  "source": 72,
+  "source": 74,
   "fork": 0,
   "empty": 0,
   "archived": 0,
   "excluded": 7,
-  "counted": 65
+  "counted": 67
  },
  "repos": [
   {
@@ -27,7 +27,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T02:20:44Z",
+   "pushed": "2026-10-24T15:09:11Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -54,7 +54,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T18:42:02Z",
+   "pushed": "2026-10-24T15:09:13Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -81,7 +81,7 @@
    "tag": "551 tools · one file",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-24T08:38:07Z",
+   "pushed": "2026-10-24T15:09:07Z",
    "archived": false,
    "topics": [
     "cli-tool",
@@ -110,7 +110,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:06Z",
+   "pushed": "2026-10-24T15:09:13Z",
    "archived": false,
    "topics": [
     "ambient",
@@ -139,7 +139,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:46Z",
+   "pushed": "2026-10-24T15:09:14Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -154,6 +154,28 @@
    "shot": "assets/shots/app-companion-forge.webp"
   },
   {
+   "name": "app-encrypted-case-log",
+   "key": "app-encrypted-case-log",
+   "desc": "Per-patient clinical notes, encrypted on the device with AES-256-GCM. Offline, no account, no server. Built with Forge on crypto-kit, case-kit, search-kit, export-kit and web-kit. MIT.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 1,
+   "pushed": "2026-10-24T14:28:52Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/app-encrypted-case-log/",
+   "source": "https://github.com/drsamonline/app-encrypted-case-log",
+   "releases": "https://github.com/drsamonline/app-encrypted-case-log/releases",
+   "shot": "assets/shots/app-encrypted-case-log.webp"
+  },
+  {
    "name": "app-panchang",
    "key": "app-panchang",
    "desc": "A daily Indian almanac — tithi, nakshatra, yoga, karana, rahu-kaal and muhurat, computed offline. Built with Forge.",
@@ -166,7 +188,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T03:30:29Z",
+   "pushed": "2026-10-24T15:09:16Z",
    "archived": false,
    "topics": [
     "india",
@@ -229,7 +251,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T02:20:34Z",
+   "pushed": "2026-10-24T15:09:16Z",
    "archived": false,
    "topics": [
     "astronomy",
@@ -291,7 +313,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T02:18:40Z",
+   "pushed": "2026-10-24T15:09:19Z",
    "archived": false,
    "topics": [
     "compression",
@@ -319,7 +341,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T08:31:36Z",
+   "pushed": "2026-10-24T15:09:07Z",
    "archived": false,
    "topics": [
     "file-transfer",
@@ -346,7 +368,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T08:56:07Z",
+   "pushed": "2026-10-24T15:09:19Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -375,7 +397,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:19Z",
+   "pushed": "2026-10-24T15:09:19Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -403,7 +425,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T02:20:46Z",
+   "pushed": "2026-10-24T15:09:19Z",
    "archived": false,
    "topics": [
     "education",
@@ -430,7 +452,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:50Z",
+   "pushed": "2026-10-24T15:09:22Z",
    "archived": false,
    "topics": [
     "lan",
@@ -457,7 +479,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T07:42:25Z",
+   "pushed": "2026-10-24T15:09:22Z",
    "archived": false,
    "topics": [
     "case-management",
@@ -484,7 +506,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:54Z",
+   "pushed": "2026-10-24T15:09:22Z",
    "archived": false,
    "topics": [
     "collaboration",
@@ -511,7 +533,7 @@
    "tag": "",
    "lang": "Rust",
    "stars": 1,
-   "pushed": "2026-10-24T08:34:25Z",
+   "pushed": "2026-10-24T15:09:07Z",
    "archived": false,
    "topics": [
     "cli",
@@ -539,7 +561,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T02:20:25Z",
+   "pushed": "2026-10-24T15:09:22Z",
    "archived": false,
    "topics": [
     "compression",
@@ -565,7 +587,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T09:08:51Z",
+   "pushed": "2026-10-24T15:09:25Z",
    "archived": false,
    "topics": [
     "habits",
@@ -582,6 +604,28 @@
    "shot": "assets/shots/conqueror-os.webp"
   },
   {
+   "name": "control-panel",
+   "key": "control-panel",
+   "desc": "Every workflow in every repo: what runs, when, what calls what, and what is connected to nothing. The four stages from scratch to repair, the routes that need one input, and a Run button for each workflow. MIT.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Python",
+   "stars": 1,
+   "pushed": "2026-10-24T15:11:51Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/control-panel/",
+   "source": "https://github.com/drsamonline/control-panel",
+   "releases": "https://github.com/drsamonline/control-panel/releases",
+   "shot": "assets/shots/control-panel.webp"
+  },
+  {
    "name": "crypto-kit",
    "key": "crypto-kit",
    "desc": "The shared crypto core for drsamonline apps: AES-256-GCM, PBKDF2 passphrase keys, sealed envelopes, one-time view. One file, Web Crypto. MIT.",
@@ -594,7 +638,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T02:20:22Z",
+   "pushed": "2026-10-24T15:09:24Z",
    "archived": false,
    "topics": [
     "cryptography",
@@ -621,7 +665,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:27Z",
+   "pushed": "2026-10-24T15:09:25Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -648,7 +692,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T09:24:28Z",
+   "pushed": "2026-10-24T15:09:28Z",
    "archived": false,
    "topics": [
     "export",
@@ -701,7 +745,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T08:06:22Z",
+   "pushed": "2026-10-24T15:09:30Z",
    "archived": false,
    "topics": [
     "games",
@@ -727,7 +771,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:32Z",
+   "pushed": "2026-10-24T15:09:31Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -755,7 +799,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T02:18:40Z",
+   "pushed": "2026-10-24T15:09:31Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -839,7 +883,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:41Z",
+   "pushed": "2026-10-24T15:09:33Z",
    "archived": false,
    "topics": [
     "city-builder",
@@ -867,7 +911,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:45Z",
+   "pushed": "2026-10-24T15:09:34Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -894,7 +938,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T02:20:28Z",
+   "pushed": "2026-10-24T15:09:36Z",
    "archived": false,
    "topics": [
     "kit",
@@ -921,7 +965,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-22T11:00:26Z",
+   "pushed": "2026-10-24T15:09:37Z",
    "archived": false,
    "topics": [
     "codec",
@@ -948,7 +992,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:49Z",
+   "pushed": "2026-10-24T15:09:38Z",
    "archived": false,
    "topics": [
     "cli",
@@ -976,7 +1020,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T03:30:42Z",
+   "pushed": "2026-10-24T15:09:08Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -1003,7 +1047,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-24T11:35:45Z",
+   "pushed": "2026-10-24T15:09:11Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -1065,7 +1109,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:55Z",
+   "pushed": "2026-10-24T15:09:37Z",
    "archived": false,
    "topics": [
     "education",
@@ -1120,7 +1164,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T12:46:22Z",
+   "pushed": "2026-10-24T15:09:39Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -1148,7 +1192,7 @@
    "tag": "",
    "lang": "CSS",
    "stars": 1,
-   "pushed": "2026-10-24T02:21:08Z",
+   "pushed": "2026-10-24T15:09:40Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1176,7 +1220,7 @@
    "tag": "Auto-fire shooter",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:59Z",
+   "pushed": "2026-10-24T15:09:41Z",
    "archived": false,
    "topics": [
     "games",
@@ -1203,7 +1247,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:06Z",
+   "pushed": "2026-10-24T15:09:41Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -1230,7 +1274,7 @@
    "tag": "344 remedy portraits",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:10Z",
+   "pushed": "2026-10-24T15:09:42Z",
    "archived": false,
    "topics": [
     "education",
@@ -1258,7 +1302,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T06:12:06Z",
+   "pushed": "2026-10-24T15:09:43Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1285,7 +1329,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:15Z",
+   "pushed": "2026-10-24T15:09:44Z",
    "archived": false,
    "topics": [
     "education",
@@ -1313,7 +1357,7 @@
    "tag": "686 remedies · 7,786 links",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:18Z",
+   "pushed": "2026-10-24T15:09:45Z",
    "archived": false,
    "topics": [
     "data-visualisation",
@@ -1342,7 +1386,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T02:20:37Z",
+   "pushed": "2026-10-24T15:09:45Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -1369,7 +1413,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T12:42:18Z",
+   "pushed": "2026-10-24T15:09:47Z",
    "archived": false,
    "topics": [
     "games",
@@ -1425,7 +1469,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:58Z",
+   "pushed": "2026-10-24T15:09:48Z",
    "archived": false,
    "topics": [
     "encryption",
@@ -1453,7 +1497,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T08:00:25Z",
+   "pushed": "2026-10-24T15:09:48Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1479,7 +1523,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T09:43:22Z",
+   "pushed": "2026-10-24T15:09:50Z",
    "archived": false,
    "topics": [
     "case-management",
@@ -1507,7 +1551,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:31Z",
+   "pushed": "2026-10-24T15:09:50Z",
    "archived": false,
    "topics": [
     "billing",
@@ -1564,7 +1608,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T09:37:54Z",
+   "pushed": "2026-10-24T15:09:51Z",
    "archived": false,
    "topics": [
     "education",
@@ -1591,7 +1635,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:37Z",
+   "pushed": "2026-10-24T15:09:52Z",
    "archived": false,
    "topics": [
     "github-pages",
@@ -1647,7 +1691,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-24T02:19:05Z",
+   "pushed": "2026-10-24T15:09:53Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -1673,7 +1717,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-23T07:02:23Z",
+   "pushed": "2026-10-24T15:09:10Z",
    "archived": false,
    "topics": [
     "browser-extension",
@@ -1734,7 +1778,7 @@
    "tag": "Debloat & tune",
    "lang": "PowerShell",
    "stars": 1,
-   "pushed": "2026-10-22T11:00:21Z",
+   "pushed": "2026-10-24T15:09:10Z",
    "archived": false,
    "topics": [
     "debloat",
@@ -1762,7 +1806,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:41Z",
+   "pushed": "2026-10-24T15:09:52Z",
    "archived": false,
    "topics": [
     "education",
@@ -1790,7 +1834,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T09:24:55Z",
+   "pushed": "2026-10-24T15:09:54Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1817,7 +1861,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:16:07Z",
+   "pushed": "2026-10-24T15:09:55Z",
    "archived": false,
    "topics": [
     "clinical",
