@@ -44,10 +44,16 @@ SITE = "https://drsamonline.github.io"
 #   non-empty  a repo with no content (size 0) is a placeholder, not a project
 #   not self   the profile (drsamonline) and this site (drsamonline.github.io)
 #              are the hub's own scaffolding, not projects
+#   not tooling the console, the build kit, the backup store, the skills catalogue and the
+#              profile kit are how the products are made, not products
 #
 # Archived repos are still COUNTED and shown — an archived project is still a
 # project; it simply carries an "archived" marker on its card.
-EXCLUDE = {"drsamonline", "drsamonline.github.io"}
+#   not tooling the hub does not showcase: the console, the build kit, the backup
+#              store, the skills catalogue and the profile kit are how the products are
+#              MADE, not products. They were appearing as projects on a showcase.
+EXCLUDE = {"drsamonline", "drsamonline.github.io",
+           "dashboard", "app-builder", "backup", "skills", "profile-kit"}
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
