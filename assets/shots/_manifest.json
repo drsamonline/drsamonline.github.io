@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T07:43:42Z",
+ "generated_at": "2026-10-24T08:15:10Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -150,9 +150,9 @@
   },
   "bmi-bmr-tdee-macros-fluid-calculator": {
    "bytes": 18468,
-   "captured": "2026-10-24T07:43:30Z",
+   "captured": "2026-10-24T08:15:01Z",
    "source": "https://drsamonline.github.io/bmi-bmr-tdee-macros-fluid-calculator/",
-   "source_pushed": "2026-10-24T07:42:41Z",
+   "source_pushed": "2026-10-24T07:52:07Z",
    "status": "ok"
   },
   "boericke-repertory": {
@@ -219,10 +219,10 @@
    "status": "ok"
   },
   "dashboard": {
-   "bytes": 11898,
-   "captured": "2026-10-24T07:43:34Z",
+   "bytes": 12026,
+   "captured": "2026-10-24T08:15:04Z",
    "source": "https://drsamonline.github.io/dashboard/",
-   "source_pushed": "2026-10-24T07:21:30Z",
+   "source_pushed": "2026-10-24T08:13:07Z",
    "status": "ok"
   },
   "export-kit": {
@@ -241,9 +241,9 @@
   },
   "game-kit": {
    "bytes": 7984,
-   "captured": "2026-10-23T03:01:22Z",
+   "captured": "2026-10-24T08:15:06Z",
    "source": "https://drsamonline.github.io/game-kit/",
-   "source_pushed": "2026-10-23T02:20:31Z",
+   "source_pushed": "2026-10-24T08:06:22Z",
    "status": "ok"
   },
   "gentle-pediatrics-companion": {
@@ -402,16 +402,16 @@
   },
   "search-kit": {
    "bytes": 6844,
-   "captured": "2026-10-24T06:02:55Z",
+   "captured": "2026-10-24T08:15:08Z",
    "source": "https://drsamonline.github.io/search-kit/",
-   "source_pushed": "2026-10-24T05:14:11Z",
+   "source_pushed": "2026-10-24T08:00:25Z",
    "status": "ok"
   },
   "skills": {
-   "bytes": 15546,
-   "captured": "2026-10-24T07:43:39Z",
+   "bytes": 15542,
+   "captured": "2026-10-24T08:15:10Z",
    "source": "https://drsamonline.github.io/skills/",
-   "source_pushed": "2026-10-24T07:42:25Z",
+   "source_pushed": "2026-10-24T08:12:30Z",
    "status": "ok"
   },
   "skin-case-tracker": {
