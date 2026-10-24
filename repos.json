@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T06:01:17Z",
+ "generated_at": "2026-10-24T07:43:23Z",
  "owner": "drsamonline",
  "count": 65,
  "counts": {
@@ -139,7 +139,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-24T04:50:26Z",
+   "pushed": "2026-10-24T07:42:41Z",
    "archived": false,
    "topics": [
     "build-tool",
@@ -303,7 +303,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:14:14Z",
+   "pushed": "2026-10-24T07:42:41Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -414,7 +414,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-24T05:39:56Z",
+   "pushed": "2026-10-24T07:42:25Z",
    "archived": false,
    "topics": [
     "case-management",
@@ -605,7 +605,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T05:41:01Z",
+   "pushed": "2026-10-24T07:21:30Z",
    "archived": false,
    "topics": [
     "dashboard",
@@ -640,7 +640,7 @@
     "zero-dependency"
    ],
    "hasPages": false,
-   "landing": "https://drsamonline.github.io/export-kit/",
+   "landing": "",
    "source": "https://github.com/drsamonline/export-kit",
    "releases": "https://github.com/drsamonline/export-kit/releases",
    "shot": "assets/shots/export-kit.webp"
@@ -987,7 +987,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-24T04:36:40Z",
+   "pushed": "2026-10-24T06:45:27Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -1454,7 +1454,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-24T04:09:49Z",
+   "pushed": "2026-10-24T07:42:25Z",
    "archived": false,
    "topics": [
     "agent-skills",
@@ -1537,7 +1537,7 @@
    "tag": "",
    "lang": "TypeScript",
    "stars": 1,
-   "pushed": "2026-10-22T11:00:19Z",
+   "pushed": "2026-10-24T06:39:57Z",
    "archived": false,
    "topics": [
     "notes",

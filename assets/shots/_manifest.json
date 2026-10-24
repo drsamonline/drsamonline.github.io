@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T06:03:17Z",
+ "generated_at": "2026-10-24T07:43:42Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -51,10 +51,10 @@
    "status": "ok"
   },
   "Matneo": {
-   "bytes": 18356,
-   "captured": "2026-10-24T06:02:27Z",
+   "bytes": 18284,
+   "captured": "2026-10-24T07:43:37Z",
    "source": "https://drsamonline.github.io/Matneo/",
-   "source_pushed": "2026-10-24T04:36:40Z",
+   "source_pushed": "2026-10-24T06:45:27Z",
    "status": "ok"
   },
   "NEO": {
@@ -65,10 +65,10 @@
    "status": "ok"
   },
   "SmartNotes": {
-   "bytes": 14922,
-   "captured": "2026-10-23T03:02:29Z",
+   "bytes": 15172,
+   "captured": "2026-10-24T07:43:42Z",
    "source": "https://drsamonline.github.io/SmartNotes/",
-   "source_pushed": "2026-10-22T11:00:19Z",
+   "source_pushed": "2026-10-24T06:39:57Z",
    "status": "ok"
   },
   "TTB": {
@@ -115,9 +115,9 @@
   },
   "app-builder": {
    "bytes": 11916,
-   "captured": "2026-10-24T06:01:31Z",
+   "captured": "2026-10-24T07:43:27Z",
    "source": "https://drsamonline.github.io/app-builder/",
-   "source_pushed": "2026-10-24T04:50:26Z",
+   "source_pushed": "2026-10-24T07:42:41Z",
    "status": "ok"
   },
   "app-companion-forge": {
@@ -150,9 +150,9 @@
   },
   "bmi-bmr-tdee-macros-fluid-calculator": {
    "bytes": 18468,
-   "captured": "2026-10-24T06:01:44Z",
+   "captured": "2026-10-24T07:43:30Z",
    "source": "https://drsamonline.github.io/bmi-bmr-tdee-macros-fluid-calculator/",
-   "source_pushed": "2026-10-24T02:14:14Z",
+   "source_pushed": "2026-10-24T07:42:41Z",
    "status": "ok"
   },
   "boericke-repertory": {
@@ -178,9 +178,9 @@
   },
   "case-kit": {
    "bytes": 6720,
-   "captured": "2026-10-24T06:01:50Z",
+   "captured": "2026-10-24T07:43:32Z",
    "source": "https://drsamonline.github.io/case-kit/",
-   "source_pushed": "2026-10-24T05:39:56Z",
+   "source_pushed": "2026-10-24T07:42:25Z",
    "status": "ok"
   },
   "chalk-lan": {
@@ -219,10 +219,10 @@
    "status": "ok"
   },
   "dashboard": {
-   "bytes": 11994,
-   "captured": "2026-10-24T06:02:03Z",
+   "bytes": 11898,
+   "captured": "2026-10-24T07:43:34Z",
    "source": "https://drsamonline.github.io/dashboard/",
-   "source_pushed": "2026-10-24T05:41:01Z",
+   "source_pushed": "2026-10-24T07:21:30Z",
    "status": "ok"
   },
   "export-kit": {
@@ -408,10 +408,10 @@
    "status": "ok"
   },
   "skills": {
-   "bytes": 15560,
-   "captured": "2026-10-24T06:02:57Z",
+   "bytes": 15546,
+   "captured": "2026-10-24T07:43:39Z",
    "source": "https://drsamonline.github.io/skills/",
-   "source_pushed": "2026-10-24T04:09:49Z",
+   "source_pushed": "2026-10-24T07:42:25Z",
    "status": "ok"
   },
   "skin-case-tracker": {
