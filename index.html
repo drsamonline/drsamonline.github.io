@@ -306,10 +306,25 @@ html.js .reveal.in{opacity:1;transform:none}
 .recent-desc{color:var(--ink-soft);font-size:.9rem;line-height:1.45;flex:1}
 .recent-meta{font-size:.78rem;letter-spacing:.02em;color:var(--ink-soft)}
 @media (max-width:720px){.recent-strip{grid-auto-columns:minmax(80%,1fr)}}
+
+/* ---------- offline demo (a 'pull the plug' demonstration) ---------- */
+.demo-pill{position:fixed;right:16px;bottom:16px;z-index:80;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow-2);font:inherit;font-size:.86rem;font-weight:600;cursor:pointer;transition:border-color .2s var(--ease),background .2s var(--ease),color .2s var(--ease)}
+.demo-pill:hover{border-color:var(--accent)}
+.demo-pill:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.demo-pill .ic{display:inline-flex;width:16px;height:16px;color:var(--accent)}
+.demo-pill .ic svg{width:16px;height:16px}
+.demo-pill[aria-pressed="true"]{background:var(--warn-soft);border-color:var(--warn);color:var(--warn)}
+.demo-pill[aria-pressed="true"] .ic{color:var(--warn)}
+@media (max-width:540px){.demo-pill{right:12px;bottom:12px;padding:9px 12px;font-size:.82rem}}
 </style>
 </head>
 <body>
 <a class="skip" href="#projects">Skip to projects</a>
+<button class="demo-pill" id="demoToggle" type="button" aria-pressed="false"
+        title="Demo: cut the network and watch this page keep working">
+  <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 3v6M15 3v6M6 9h12v2.5a6 6 0 0 1-12 0V9ZM12 17.5V21"/></svg></span>
+  <span class="demo-label">Offline demo</span>
+</button>
 
 <header class="site-head">
   <div class="wrap head-in">
@@ -782,6 +797,37 @@ function initChrome(){
   }
 }
 
+/* ----------------------------------------------------------- offline demo */
+/* "Pull the plug" — the page's whole claim is that it needs no network, so let
+   a visitor SEE it: this makes fetch/XHR fail and keeps a visible indicator,
+   while the page carries on. It is a demo affordance, never on by default. */
+function initOfflineDemo(){
+  var btn=document.getElementById('demoToggle');
+  if(!btn) return;
+  var label=btn.querySelector('.demo-label');
+  var origFetch=null, origOpen=null, on=false;
+  function patch(){
+    if(typeof window.fetch==='function' && !origFetch){ origFetch=window.fetch.bind(window); }
+    if(origFetch){ window.fetch=function(){ return Promise.reject(new Error('offline demo: the network is OFF')); }; }
+    if(window.XMLHttpRequest && window.XMLHttpRequest.prototype.open && !origOpen){
+      origOpen=window.XMLHttpRequest.prototype.open;
+    }
+    if(origOpen){ window.XMLHttpRequest.prototype.open=function(){ throw new Error('offline demo: the network is OFF'); }; }
+  }
+  function unpatch(){
+    if(origFetch){ window.fetch=origFetch; origFetch=null; }
+    if(origOpen){ window.XMLHttpRequest.prototype.open=origOpen; origOpen=null; }
+  }
+  function paint(){
+    btn.setAttribute('aria-pressed',on?'true':'false');
+    if(label) label.textContent=on?'network: OFF \u00b7 demo':'Offline demo';
+    btn.title=on?'Network is OFF (demo) \u2014 click to restore'
+                :'Demo: cut the network and watch this page keep working';
+  }
+  btn.addEventListener('click',function(){ on=!on; if(on){patch();}else{unpatch();} paint(); });
+  paint();
+}
+
 /* ------------------------------------------------------------------ boot */
 function start(){
   try{ projects=readSnapshot().filter(isProject).map(toProject); }catch(e){ projects=[]; }
@@ -805,6 +851,7 @@ try{
   initTheme();
   initImages();
   initChrome();
+  initOfflineDemo();
   start();
 }catch(e){
   try{ start(); }catch(_){}
