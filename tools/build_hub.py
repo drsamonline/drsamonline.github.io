@@ -217,7 +217,19 @@ def build_records(repos: list[dict], curated: dict) -> list[dict]:
         cat = c.get("cat") or "other"
         if cat not in CAT_LABEL:
             cat = "other"
-        landing = (r.get("homepage") or "").strip() or f"{SITE}/{name}/"
+        # A landing must EXIST. A homepage on THIS site is only real when the
+        # repo actually has Pages deployed; an optimistic homepage pointing at a
+        # not-yet-deployed Pages URL 404s. So: trust an external homepage, trust
+        # any homepage when Pages is on, and otherwise carry an EMPTY landing so
+        # every card links to the source instead of a URL that would 404.
+        homepage = (r.get("homepage") or "").strip()
+        has_pages = bool(r.get("has_pages"))
+        if homepage and (has_pages or not homepage.startswith(SITE)):
+            landing = homepage
+        elif has_pages:
+            landing = f"{SITE}/{name}/"
+        else:
+            landing = ""
         records.append({
             "name": name,
             "key": key,
@@ -251,13 +263,13 @@ def build_jsonld(records: list[dict]) -> dict:
             "@type": "ListItem",
             "position": i,
             "name": r["name"],
-            "url": r["landing"],
+            "url": r["landing"] or r["source"],
             "item": {
                 "@type": "SoftwareApplication",
                 "name": r["name"],
                 "description": r["desc"],
                 "applicationCategory": "WebApplication",
-                "url": r["landing"],
+                "url": r["landing"] or r["source"],
                 "codeRepository": r["source"],
             },
         })
@@ -325,6 +337,8 @@ def build_sitemap(records: list[dict], lastmod: str) -> str:
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
              f'  <url><loc>{SITE}/</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>']
     for r in records:
+        if not r["landing"]:
+            continue  # no page on this site -> not a sitemap entry
         lines.append(f'  <url><loc>{r["landing"]}</loc><lastmod>{lastmod}</lastmod>'
                      f'<changefreq>weekly</changefreq><priority>0.7</priority></url>')
     lines.append('</urlset>')
