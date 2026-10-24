@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-10-24T12:07:10Z",
+ "generated_at": "2026-10-24T13:46:44Z",
  "owner": "drsamonline",
- "count": 70,
+ "count": 65,
  "counts": {
   "total": 72,
   "public": 72,
@@ -10,8 +10,8 @@
   "fork": 0,
   "empty": 0,
   "archived": 0,
-  "excluded": 2,
-  "counted": 70
+  "excluded": 7,
+  "counted": 65
  },
  "repos": [
   {
@@ -127,33 +127,6 @@
    "shot": "assets/shots/ambient-sound-studio.webp"
   },
   {
-   "name": "app-builder",
-   "key": "app-builder",
-   "desc": "A shared build kit that compiles a static web app into a single-file portable Windows EXE and an Android WebView APK.",
-   "cat": "desktop",
-   "catLabel": "Desktop & System Tools",
-   "demo": false,
-   "feat": false,
-   "rel": false,
-   "kicker": "",
-   "tag": "",
-   "lang": "Python",
-   "stars": 1,
-   "pushed": "2026-10-24T11:35:22Z",
-   "archived": false,
-   "topics": [
-    "build-tool",
-    "kit",
-    "single-file",
-    "tooling"
-   ],
-   "hasPages": true,
-   "landing": "https://drsamonline.github.io/app-builder/",
-   "source": "https://github.com/drsamonline/app-builder",
-   "releases": "https://github.com/drsamonline/app-builder/releases",
-   "shot": "assets/shots/app-builder.webp"
-  },
-  {
    "name": "app-companion-forge",
    "key": "app-companion-forge",
    "desc": "Forge tooling (not a product app): an offline pocket console for the Forge system.",
@@ -220,7 +193,7 @@
    "kicker": "",
    "tag": "",
    "lang": "JavaScript",
-   "stars": 0,
+   "stars": 1,
    "pushed": "2026-10-24T08:11:33Z",
    "archived": false,
    "topics": [
@@ -282,7 +255,7 @@
    "kicker": "",
    "tag": "",
    "lang": "JavaScript",
-   "stars": 0,
+   "stars": 1,
    "pushed": "2026-10-24T08:17:05Z",
    "archived": false,
    "topics": [
@@ -304,28 +277,6 @@
    "source": "https://github.com/drsamonline/audio-kit",
    "releases": "https://github.com/drsamonline/audio-kit/releases",
    "shot": "assets/shots/audio-kit.webp"
-  },
-  {
-   "name": "backup",
-   "key": "backup",
-   "desc": "Snapshot a repository BEFORE a merge replaces it: a reusable GitHub workflow + a zero-dependency script. Compressed, timestamped, rotated to keep the newest 100, and it rolls over to a new dumps repo when one fills up. MIT.",
-   "cat": "other",
-   "catLabel": "Other / New",
-   "demo": false,
-   "feat": false,
-   "rel": false,
-   "kicker": "",
-   "tag": "",
-   "lang": "Python",
-   "stars": 0,
-   "pushed": "2026-10-24T10:13:37Z",
-   "archived": false,
-   "topics": [],
-   "hasPages": false,
-   "landing": "",
-   "source": "https://github.com/drsamonline/backup",
-   "releases": "https://github.com/drsamonline/backup/releases",
-   "shot": "assets/shots/backup.webp"
   },
   {
    "name": "blinkcode-ai",
@@ -683,33 +634,6 @@
    "source": "https://github.com/drsamonline/dance-fight",
    "releases": "https://github.com/drsamonline/dance-fight/releases",
    "shot": "assets/shots/dance-fight.webp"
-  },
-  {
-   "name": "dashboard",
-   "key": "dashboard",
-   "desc": "Live status of the drsamonline system: the repo fleet, build health, downloads and the store. Public so it can use free GitHub Pages.",
-   "cat": "other",
-   "catLabel": "Other / New",
-   "demo": false,
-   "feat": false,
-   "rel": false,
-   "kicker": "",
-   "tag": "",
-   "lang": "HTML",
-   "stars": 1,
-   "pushed": "2026-10-24T12:06:46Z",
-   "archived": false,
-   "topics": [
-    "dashboard",
-    "github-pages",
-    "static-site",
-    "tooling"
-   ],
-   "hasPages": true,
-   "landing": "https://drsamonline.github.io/dashboard/",
-   "source": "https://github.com/drsamonline/dashboard",
-   "releases": "https://github.com/drsamonline/dashboard/releases",
-   "shot": "assets/shots/dashboard.webp"
   },
   {
    "name": "export-kit",
@@ -1105,7 +1029,7 @@
    "kicker": "",
    "tag": "",
    "lang": "JavaScript",
-   "stars": 0,
+   "stars": 1,
    "pushed": "2026-10-24T07:56:59Z",
    "archived": false,
    "topics": [
@@ -1349,32 +1273,6 @@
    "shot": "assets/shots/optical-kit.webp"
   },
   {
-   "name": "profile-kit",
-   "key": "profile-kit",
-   "desc": "A small, reusable kit that packages a theme-aware, self-updating GitHub profile — a light/dark hero SVG, a metrics card rendered twice with extras_css, and a README generator.",
-   "cat": "desktop",
-   "catLabel": "Desktop & System Tools",
-   "demo": false,
-   "feat": false,
-   "rel": false,
-   "kicker": "",
-   "tag": "",
-   "lang": "Python",
-   "stars": 1,
-   "pushed": "2026-10-22T09:38:57Z",
-   "archived": false,
-   "topics": [
-    "github-profile",
-    "kit",
-    "zero-dependency"
-   ],
-   "hasPages": true,
-   "landing": "https://drsamonline.github.io/profile-kit/",
-   "source": "https://github.com/drsamonline/profile-kit",
-   "releases": "https://github.com/drsamonline/profile-kit/releases",
-   "shot": "assets/shots/profile-kit.webp"
-  },
-  {
    "name": "read-live-transform-app",
    "key": "read-live-transform-app",
    "desc": "A companion PWA to Read. Live. Transform.: A Practical Reading of the Qur'an — read the verse, live the practice, keep the change.",
@@ -1471,7 +1369,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-24T02:15:23Z",
+   "pushed": "2026-10-24T12:42:18Z",
    "archived": false,
    "topics": [
     "games",
@@ -1567,32 +1465,6 @@
    "source": "https://github.com/drsamonline/search-kit",
    "releases": "https://github.com/drsamonline/search-kit/releases",
    "shot": "assets/shots/search-kit.webp"
-  },
-  {
-   "name": "skills",
-   "key": "skills",
-   "desc": "Reusable, machine-consumable skills extracted from every drsamonline project — a categorised, self-updating catalogue.",
-   "cat": "desktop",
-   "catLabel": "Desktop & System Tools",
-   "demo": false,
-   "feat": false,
-   "rel": false,
-   "kicker": "",
-   "tag": "",
-   "lang": "Python",
-   "stars": 1,
-   "pushed": "2026-10-24T08:25:00Z",
-   "archived": false,
-   "topics": [
-    "agent-skills",
-    "skills",
-    "tooling"
-   ],
-   "hasPages": true,
-   "landing": "https://drsamonline.github.io/skills/",
-   "source": "https://github.com/drsamonline/skills",
-   "releases": "https://github.com/drsamonline/skills/releases",
-   "shot": "assets/shots/skills.webp"
   },
   {
    "name": "skin-case-tracker",
@@ -1828,7 +1700,7 @@
    "kicker": "",
    "tag": "",
    "lang": "JavaScript",
-   "stars": 0,
+   "stars": 1,
    "pushed": "2026-10-24T08:24:02Z",
    "archived": false,
    "topics": [
