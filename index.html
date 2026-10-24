@@ -305,6 +305,17 @@ html.js .reveal.in{opacity:1;transform:none}
 .recent-name{font-weight:700;font-size:1.02rem}
 .recent-desc{color:var(--ink-soft);font-size:.9rem;line-height:1.45;flex:1}
 .recent-meta{font-size:.78rem;letter-spacing:.02em;color:var(--ink-soft)}
+/* ---------- the repo blog ---------- */
+.post-list{display:flex;flex-direction:column;gap:0;margin:8px 0 0}
+.post{display:grid;grid-template-columns:132px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+.post:first-child{border-top:0}
+.post__date{font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);padding-top:3px}
+.post__title{margin:0 0 5px;font-size:1.06rem;font-weight:700}
+.post__title a{color:var(--ink);text-decoration:none}
+.post__title a:hover{color:var(--accent);text-decoration:underline}
+.post__body{margin:0;color:var(--ink-soft);font-size:.94rem;line-height:1.55}
+.post__meta{margin:7px 0 0;font-size:.79rem;color:var(--ink-soft)}
+@media (max-width:640px){.post{grid-template-columns:1fr;gap:5px}}
 @media (max-width:720px){.recent-strip{grid-auto-columns:minmax(80%,1fr)}}
 
 /* ---------- offline demo (a 'pull the plug' demonstration) ---------- */
@@ -433,6 +444,16 @@ html.js .reveal.in{opacity:1;transform:none}
 </section>
 
 <!-- ABOUT -->
+<section id="blog" class="wrap reveal">
+  <div class="sec-head">
+    <span class="sec-kicker"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 4h9l4 4v12H6zM15 4v4h4M9 13h7M9 17h5"/></svg></span> The repo blog</span>
+    <h2>What changed, newest first</h2>
+    <p>Every project on this hub, as a dated feed — the same data as the grid, read as a log. This is the
+    <b>only</b> list of the free and open-source work: the shop next door sells a licence, it does not list apps.</p>
+  </div>
+  <div class="post-list" id="blogFeed"></div>
+</section>
+
 <section id="about" class="wrap reveal">
   <div class="sec-head">
     <span class="sec-kicker"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.7-9.6-9C1 8.7 3 5.5 6.2 5.5c1.9 0 3.3 1 4.1 2.2.8-1.2 2.2-2.2 4.1-2.2 3.2 0 5.2 3.2 3.8 6.5C19.5 16.3 12 21 12 21Z"/></svg></span> About</span>
@@ -637,6 +658,20 @@ function recentHTML(p){
     +'<span class="recent-meta">'+m+'</span>'
     +'</a>';
 }
+function blogHTML(p){
+  var when = p.pushed ? ago(p.pushed) : '';
+  var meta = esc(CAT_LABEL[p.cat]||'');
+  if(p.lang) meta += (meta?' \u00b7 ':'') + esc(p.lang);
+  if(p.demo) meta += (meta?' \u00b7 ':'') + 'live demo';
+  return '<article class="post">'
+    +'<div class="post__date">'+esc(when||'\u2014')+'</div>'
+    +'<div>'
+      +'<h3 class="post__title"><a href="'+esc(p.dest)+'" target="_blank" rel="noopener">'+esc(p.name)+'</a></h3>'
+      +'<p class="post__body">'+esc(p.desc||'')+'</p>'
+      +(meta?'<p class="post__meta">'+meta+'</p>':'')
+    +'</div>'
+    +'</article>';
+}
 function buildChips(){
   var counts={}; projects.forEach(function(p){ counts[p.cat]=(counts[p.cat]||0)+1; });
   var h='<button class="chip" type="button" data-filter="all" aria-pressed="true"><span>All</span><b>'+projects.length+'</b></button>';
@@ -680,6 +715,12 @@ function render(){
     var recent=projects.slice().sort(function(a,b){return (b.pushed||'').localeCompare(a.pushed||'');}).slice(0,6);
     strip.innerHTML=recent.map(recentHTML).join('');
     var sec=document.getElementById('recent'); if(sec&&recent.length) sec.hidden=false;
+  }
+
+  var feed=document.getElementById('blogFeed');
+  if(feed){
+    var posts=projects.slice().sort(function(a,b){return (b.pushed||'').localeCompare(a.pushed||'');}).slice(0,15);
+    feed.innerHTML=posts.map(blogHTML).join('');
   }
 
   var cats={}; projects.forEach(function(p){ cats[p.cat]=1; });
