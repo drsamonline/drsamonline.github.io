@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-10-25T12:10:37Z",
+ "generated_at": "2026-10-26T09:06:41Z",
  "owner": "drsamonline",
- "count": 68,
+ "count": 71,
  "counts": {
-  "total": 75,
-  "public": 75,
+  "total": 78,
+  "public": 78,
   "private": 0,
-  "source": 75,
+  "source": 78,
   "fork": 0,
   "empty": 0,
   "archived": 0,
   "excluded": 7,
-  "counted": 68
+  "counted": 71
  },
  "repos": [
   {
@@ -27,7 +27,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:12:19Z",
+   "pushed": "2026-10-25T14:03:00Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -54,7 +54,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T09:49:41Z",
+   "pushed": "2026-10-25T13:15:17Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -81,7 +81,7 @@
    "tag": "551 tools · one file",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-25T10:12:14Z",
+   "pushed": "2026-10-25T12:10:46Z",
    "archived": false,
    "topics": [
     "cli-tool",
@@ -110,7 +110,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:10Z",
+   "pushed": "2026-10-25T14:03:06Z",
    "archived": false,
    "topics": [
     "ambient",
@@ -139,7 +139,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:18:19Z",
+   "pushed": "2026-10-25T14:03:06Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -164,9 +164,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T08:47:45Z",
+   "pushed": "2026-10-25T13:32:38Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
@@ -188,7 +188,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:58Z",
+   "pushed": "2026-10-25T13:43:45Z",
    "archived": false,
    "topics": [
     "india",
@@ -204,6 +204,39 @@
    "shot": "assets/shots/app-panchang.webp"
   },
   {
+   "name": "app-poets-studio",
+   "key": "app-poets-studio",
+   "desc": "Rhyme, metre and fixed forms, fully offline — a poetry workshop that measures what you wrote. 124,085 words bundled.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-10-25T13:00:02Z",
+   "archived": false,
+   "topics": [
+    "creative-writing",
+    "javascript",
+    "metre",
+    "no-tracking",
+    "offline-first",
+    "poetry",
+    "pwa",
+    "rhyme",
+    "single-file",
+    "writing"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/app-poets-studio/",
+   "source": "https://github.com/drsamonline/app-poets-studio",
+   "releases": "https://github.com/drsamonline/app-poets-studio/releases",
+   "shot": "assets/shots/app-poets-studio.webp"
+  },
+  {
    "name": "art-kit",
    "key": "art-kit",
    "desc": "The art primitives Forge was missing: an indexed palette, a pixel canvas with nearest-neighbour scaling, draw ops, a delta undo stack, dithering (Bayer + Floyd-Steinberg), median-cut quantisation, sprite sheets, the isometric mapping and a sketch loop. Zero dependencies, single file, no assets. MIT.",
@@ -216,7 +249,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T08:47:47Z",
+   "pushed": "2026-10-25T13:32:39Z",
    "archived": false,
    "topics": [
     "canvas",
@@ -249,9 +282,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T09:49:52Z",
+   "pushed": "2026-10-25T14:03:06Z",
    "archived": false,
    "topics": [
     "astronomy",
@@ -278,7 +311,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T08:47:52Z",
+   "pushed": "2026-10-25T13:32:42Z",
    "archived": false,
    "topics": [
     "adsr",
@@ -301,6 +334,28 @@
    "shot": "assets/shots/audio-kit.webp"
   },
   {
+   "name": "base-bench",
+   "key": "base-bench",
+   "desc": "Every number base, unit and timezone on one page, with the working shown. Offline, no accounts.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-10-25T18:43:06Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/base-bench/play/",
+   "source": "https://github.com/drsamonline/base-bench",
+   "releases": "https://github.com/drsamonline/base-bench/releases",
+   "shot": "assets/shots/base-bench.webp"
+  },
+  {
    "name": "blinkcode-ai",
    "key": "blinkcode-ai",
    "desc": "An optical file-transfer PWA: compress, encode to a SpectraCode, scan with the camera, restore.",
@@ -313,7 +368,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:12:28Z",
+   "pushed": "2026-10-25T14:03:07Z",
    "archived": false,
    "topics": [
     "compression",
@@ -341,7 +396,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:12:11Z",
+   "pushed": "2026-10-25T14:03:00Z",
    "archived": false,
    "topics": [
     "file-transfer",
@@ -368,7 +423,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:03Z",
+   "pushed": "2026-10-25T18:53:57Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -397,7 +452,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:07Z",
+   "pushed": "2026-10-25T13:23:24Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -423,9 +478,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T09:50:03Z",
+   "pushed": "2026-10-25T13:15:27Z",
    "archived": false,
    "topics": [
     "education",
@@ -452,7 +507,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:18:59Z",
+   "pushed": "2026-10-25T13:46:20Z",
    "archived": false,
    "topics": [
     "lan",
@@ -477,9 +532,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T09:50:08Z",
+   "pushed": "2026-10-25T13:15:28Z",
    "archived": false,
    "topics": [
     "case-management",
@@ -506,7 +561,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:17:45Z",
+   "pushed": "2026-10-25T13:46:54Z",
    "archived": false,
    "topics": [
     "collaboration",
@@ -533,7 +588,7 @@
    "tag": "",
    "lang": "Rust",
    "stars": 1,
-   "pushed": "2026-10-25T10:12:11Z",
+   "pushed": "2026-10-25T12:10:47Z",
    "archived": false,
    "topics": [
     "cli",
@@ -559,9 +614,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T09:50:09Z",
+   "pushed": "2026-10-25T13:32:54Z",
    "archived": false,
    "topics": [
     "compression",
@@ -587,7 +642,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T11:44:43Z",
+   "pushed": "2026-10-25T14:03:13Z",
    "archived": false,
    "topics": [
     "habits",
@@ -616,7 +671,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-25T12:02:51Z",
+   "pushed": "2026-10-25T12:14:39Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
@@ -636,9 +691,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T09:50:18Z",
+   "pushed": "2026-10-25T13:32:57Z",
    "archived": false,
    "topics": [
     "cryptography",
@@ -665,7 +720,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:32Z",
+   "pushed": "2026-10-25T13:15:35Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -692,7 +747,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T09:50:32Z",
+   "pushed": "2026-10-25T14:03:12Z",
    "archived": false,
    "topics": [
     "export",
@@ -718,7 +773,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T09:50:36Z",
+   "pushed": "2026-10-25T12:27:23Z",
    "archived": false,
    "topics": [
     "kit",
@@ -743,9 +798,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T09:50:39Z",
+   "pushed": "2026-10-25T14:03:12Z",
    "archived": false,
    "topics": [
     "games",
@@ -771,7 +826,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:18:27Z",
+   "pushed": "2026-10-25T13:15:41Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -799,7 +854,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:12:48Z",
+   "pushed": "2026-10-25T13:44:16Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -826,7 +881,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-25T10:05:22Z",
+   "pushed": "2026-10-25T14:03:00Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -854,7 +909,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-25T10:02:04Z",
+   "pushed": "2026-10-25T12:11:43Z",
    "archived": false,
    "topics": [
     "dataset",
@@ -883,7 +938,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:53Z",
+   "pushed": "2026-10-26T08:30:04Z",
    "archived": false,
    "topics": [
     "city-builder",
@@ -911,7 +966,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:25Z",
+   "pushed": "2026-10-25T13:33:16Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -936,9 +991,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T09:50:54Z",
+   "pushed": "2026-10-25T14:03:18Z",
    "archived": false,
    "topics": [
     "kit",
@@ -992,7 +1047,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:58Z",
+   "pushed": "2026-10-25T14:07:10Z",
    "archived": false,
    "topics": [
     "cli",
@@ -1020,7 +1075,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:18:21Z",
+   "pushed": "2026-10-25T13:24:11Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -1047,7 +1102,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-25T10:01:54Z",
+   "pushed": "2026-10-25T12:10:54Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -1074,7 +1129,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T08:48:44Z",
+   "pushed": "2026-10-25T13:33:17Z",
    "archived": false,
    "topics": [
     "algorithms",
@@ -1109,7 +1164,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:14Z",
+   "pushed": "2026-10-25T13:33:18Z",
    "archived": false,
    "topics": [
     "education",
@@ -1164,7 +1219,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T09:51:04Z",
+   "pushed": "2026-10-25T14:03:18Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -1192,7 +1247,7 @@
    "tag": "",
    "lang": "CSS",
    "stars": 1,
-   "pushed": "2026-10-25T10:12:58Z",
+   "pushed": "2026-10-25T14:03:20Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1220,7 +1275,7 @@
    "tag": "Auto-fire shooter",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:28Z",
+   "pushed": "2026-10-25T13:33:24Z",
    "archived": false,
    "topics": [
     "games",
@@ -1235,6 +1290,28 @@
    "shot": "assets/shots/neon-runner.webp"
   },
   {
+   "name": "neon-velocity",
+   "key": "neon-velocity",
+   "desc": "Procedural retro side-scrolling shooter for Godot 4.3 — zero binary assets, all sprites and audio generated at runtime.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "GDScript",
+   "stars": 0,
+   "pushed": "2026-10-25T19:38:08Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/neon-velocity/",
+   "source": "https://github.com/drsamonline/neon-velocity",
+   "releases": "https://github.com/drsamonline/neon-velocity/releases",
+   "shot": "assets/shots/neon-velocity.webp"
+  },
+  {
    "name": "offline-pdf-toolkit",
    "key": "offline-pdf-toolkit",
    "desc": "Merge, split, rotate, reorder, watermark, number and compress PDFs entirely in your browser. No upload, no account, no server — works offline. Single self-contained HTML file.",
@@ -1247,7 +1324,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:20:10Z",
+   "pushed": "2026-10-25T13:33:28Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -1274,7 +1351,7 @@
    "tag": "344 remedy portraits",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:20:32Z",
+   "pushed": "2026-10-25T13:33:28Z",
    "archived": false,
    "topics": [
     "education",
@@ -1302,7 +1379,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T09:51:16Z",
+   "pushed": "2026-10-25T13:33:27Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1329,7 +1406,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:19:51Z",
+   "pushed": "2026-10-26T03:54:02Z",
    "archived": false,
    "topics": [
     "education",
@@ -1357,7 +1434,7 @@
    "tag": "686 remedies · 7,786 links",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:20:23Z",
+   "pushed": "2026-10-25T13:37:02Z",
    "archived": false,
    "topics": [
     "data-visualisation",
@@ -1384,9 +1461,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T09:51:28Z",
+   "pushed": "2026-10-25T13:33:37Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -1469,7 +1546,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T10:53:39Z",
+   "pushed": "2026-10-25T12:15:47Z",
    "archived": false,
    "topics": [
     "arcade",
@@ -1502,7 +1579,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-25T10:20:06Z",
+   "pushed": "2026-10-25T14:03:24Z",
    "archived": false,
    "topics": [
     "encryption",
@@ -1530,7 +1607,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T09:51:39Z",
+   "pushed": "2026-10-25T13:33:41Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1556,7 +1633,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T11:15:35Z",
+   "pushed": "2026-10-26T05:01:46Z",
    "archived": false,
    "topics": [
     "case-management",
@@ -1584,7 +1661,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T12:03:40Z",
+   "pushed": "2026-10-25T13:33:42Z",
    "archived": false,
    "topics": [
     "billing",
@@ -1613,7 +1690,7 @@
    "tag": "",
    "lang": "TypeScript",
    "stars": 1,
-   "pushed": "2026-10-25T09:49:30Z",
+   "pushed": "2026-10-25T12:10:58Z",
    "archived": false,
    "topics": [
     "notes",
@@ -1639,9 +1716,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T09:51:48Z",
+   "pushed": "2026-10-25T13:33:48Z",
    "archived": false,
    "topics": [
     "education",
@@ -1668,7 +1745,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:20:16Z",
+   "pushed": "2026-10-25T13:33:50Z",
    "archived": false,
    "topics": [
     "github-pages",
@@ -1724,7 +1801,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-25T10:20:10Z",
+   "pushed": "2026-10-25T15:57:00Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -1750,7 +1827,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T09:49:31Z",
+   "pushed": "2026-10-25T14:03:00Z",
    "archived": false,
    "topics": [
     "browser-extension",
@@ -1778,7 +1855,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T08:49:23Z",
+   "pushed": "2026-10-25T13:33:52Z",
    "archived": false,
    "topics": [
     "frontend",
@@ -1811,7 +1888,7 @@
    "tag": "Debloat & tune",
    "lang": "PowerShell",
    "stars": 1,
-   "pushed": "2026-10-25T09:49:36Z",
+   "pushed": "2026-10-25T12:10:58Z",
    "archived": false,
    "topics": [
     "debloat",
@@ -1839,7 +1916,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:20:22Z",
+   "pushed": "2026-10-25T13:33:53Z",
    "archived": false,
    "topics": [
     "education",
@@ -1867,7 +1944,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-25T09:51:59Z",
+   "pushed": "2026-10-26T06:24:19Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1894,7 +1971,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-25T10:20:16Z",
+   "pushed": "2026-10-25T13:34:00Z",
    "archived": false,
    "topics": [
     "clinical",
