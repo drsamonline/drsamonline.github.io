@@ -33,8 +33,7 @@ permissions:
 
 concurrency:
   group: refresh-hub
-  cancel-in-progress: true
-
+  cancel-in-progress: false   # this workflow pushes; never cancel it mid-commit
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -74,4 +73,14 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh hub data and screenshots"
-          git push
+          # retry: a bare `git push` loses the race when anything else commits first
+          BR="${GITHUB_REF_NAME:-main}"
+          pushed=0
+          for attempt in 1 2 3 4; do
+            git fetch origin "$BR" --quiet
+            git rebase "origin/$BR" --quiet || { git rebase --abort || true; sleep 4; continue; }
+            if git push --quiet origin "HEAD:$BR"; then pushed=1; break; fi
+            echo "::warning::push rejected on attempt $attempt - the branch moved again"
+            sleep 4
+          done
+          [ "$pushed" = 1 ] || { echo "::error::could not push after 4 attempts - another workflow keeps moving the branch"; exit 1; }
