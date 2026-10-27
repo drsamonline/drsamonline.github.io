@@ -65,22 +65,12 @@ jobs:
 
       - name: Commit the refreshed hub
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add repos.json index.html sitemap.xml assets/shots
-          if git diff --cached --quiet; then
-            echo "Nothing changed — hub already up to date."
-            exit 0
-          fi
-          git commit -m "chore: refresh hub data and screenshots"
-          # retry: a bare `git push` loses the race when anything else commits first
-          BR="${GITHUB_REF_NAME:-main}"
-          pushed=0
-          for attempt in 1 2 3 4; do
-            git fetch origin "$BR" --quiet
-            git rebase "origin/$BR" --quiet || { git rebase --abort || true; sleep 4; continue; }
-            if git push --quiet origin "HEAD:$BR"; then pushed=1; break; fi
-            echo "::warning::push rejected on attempt $attempt - the branch moved again"
-            sleep 4
-          done
-          [ "$pushed" = 1 ] || { echo "::error::could not push after 4 attempts - another workflow keeps moving the branch"; exit 1; }
+          # F-97: the verdict is "did the hub land", not "did git exit 0". This step's
+          # own four-attempt rebase loop was right about the race and wrong about the
+          # verdict - a push that exited 0 was never checked against the branch.
+          #
+          # assets/shots is a DIRECTORY, so it is not passed here: the script hashes
+          # regular files and would skip a directory with a warning. The three
+          # top-level files are what the page is built from.
+          bash tools/commit-and-verify.sh "chore: refresh hub data and screenshots" main -- \
+            repos.json index.html sitemap.xml
