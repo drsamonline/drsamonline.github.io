@@ -8,7 +8,7 @@ The personal project index for **Dr Sohil Momin**, served by GitHub Pages at
 [![Offline-first](https://img.shields.io/badge/offline--first-yes-2e7d32?style=flat-square)](https://drsamonline.github.io/)
 [![No trackers, no cookies](https://img.shields.io/badge/no%20trackers-no%20cookies-586069?style=flat-square)](https://drsamonline.github.io/)
 [![Type: project hub](https://img.shields.io/badge/type-project%20hub-586069?style=flat-square)](https://drsamonline.github.io/)
-[![License: MIT](https://img.shields.io/badge/license-PolyForm Noncommercial-2e7d32?style=flat-square)](LICENSE)
+[![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-2e7d32?style=flat-square)](LICENSE)
 
 **Live site:** <https://drsamonline.github.io/> &nbsp;·&nbsp; **Source:** <https://github.com/drsamonline/drsamonline.github.io>
 
