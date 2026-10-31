@@ -1,0 +1,887 @@
+{
+  "owner": "drsamonline",
+  "metaRepos": [
+    "drsamonline",
+    "drsamonline.github.io"
+  ],
+  "categories": [
+    {
+      "key": "desktop",
+      "label": "Desktop, System & Developer Tools"
+    },
+    {
+      "key": "games",
+      "label": "Games & Engines"
+    },
+    {
+      "key": "health",
+      "label": "Health & Medicine"
+    },
+    {
+      "key": "mind",
+      "label": "Mind, Memory & Wellbeing"
+    },
+    {
+      "key": "audio",
+      "label": "Audio & Media"
+    },
+    {
+      "key": "business",
+      "label": "Business & Productivity"
+    },
+    {
+      "key": "learning",
+      "label": "Learning & Reference"
+    },
+    {
+      "key": "weft",
+      "label": "Weft-8 & Retrocomputing"
+    },
+    {
+      "key": "kits",
+      "label": "Libraries & Kits"
+    },
+    {
+      "key": "chce",
+      "label": "CHCE Compression"
+    },
+    {
+      "key": "infra",
+      "label": "Meta & Infrastructure"
+    },
+    {
+      "key": "other",
+      "label": "Other / New"
+    }
+  ],
+  "repos": {
+    "aethelgard-games": {
+      "description": "Two free Aethelgard browser games — a visual novel (The Books) and a role-playing game (Chronicles of Fate).",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "aethelgard-rpg-engine": {
+      "description": "A dependency-free vanilla-JavaScript engine for deep single-player browser RPGs. Engine only — the games it powers live in aethelgard-games.",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "ai-bridge": {
+      "description": "A VS Code extension that brings web-chat AI models into the editor, so you can work without leaving the code.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "All4ONE": {
+      "description": "403 working tools in one portable Windows binary — file and folder work, encoding and hashing, images, PDFs, media, documents, network diagnostics, system maintenance, security checks and generators. No installer, no registry writes, no telemetry.",
+      "category": "desktop",
+      "featured": true,
+      "demo": true,
+      "release": true,
+      "kicker": "Windows toolkit",
+      "tag": "403 tools · one file"
+    },
+    "ambient-sound-studio": {
+      "description": "A private, offline ambient sound mixer in a single HTML file — 25 synthesised layers, 36 presets and WAV/Opus export.",
+      "category": "audio",
+      "featured": true,
+      "demo": true,
+      "release": true,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-builder": {
+      "description": "A shared build kit that compiles a static web app into a single-file portable Windows EXE and an Android WebView APK.",
+      "category": "infra",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-clip-loom": {
+      "description": "Clip Loom — clipboard programs you can read: strip tracking, tidy text, keep what matters. Weft-8 on the Loom.",
+      "category": "business",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-companion-forge": {
+      "description": "Forge tooling, not a product app — an offline pocket console for the Forge system.",
+      "category": "infra",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-encrypted-case-log": {
+      "description": "Per-patient clinical notes encrypted on the device with AES-256-GCM — offline, no account, no server.",
+      "category": "health",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-image-toolkit": {
+      "description": "Compress, resize, convert and strip the GPS from photos on your own device — nothing uploaded, no account, works offline.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-jacquard": {
+      "description": "Jacquard — the loom you program: a Weft-8 8-bit assembler and VM with the device's sensors as memory-mapped peripherals.",
+      "category": "weft",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-lantern": {
+      "description": "A whole library served over your own Wi-Fi — browse and search offline content on the LAN, with no internet at any point.",
+      "category": "desktop",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-panchang": {
+      "description": "A daily Indian almanac — tithi, nakshatra, yoga, karana, rahu-kaal and muhurat, computed offline.",
+      "category": "learning",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-poets-studio": {
+      "description": "Rhyme, metre and fixed forms, fully offline — a poetry workshop that measures what you wrote, with 124,085 words bundled.",
+      "category": "learning",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "app-weft-puzzles": {
+      "description": "Weft Puzzles — small programming puzzles you solve in Weft-8 assembly, on the machine from Jacquard.",
+      "category": "weft",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "art-kit": {
+      "description": "The art primitives Forge was missing: an indexed palette, a pixel canvas, draw ops, a delta undo stack, dithering, median-cut quantisation and sprite sheets.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "astro-kit": {
+      "description": "The shared astronomy core: sun and moon longitude (Meeus), ayanamsa, sunrise/sunset, and tithi, nakshatra, yoga and karana.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "audio-kit": {
+      "description": "Synthesis, theory, patterns and notation for offline apps: ADSR envelopes, oscillator voices, filters, scales, chords, a pattern sequencer and staff layout.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "audit": {
+      "description": "The change log for the drsamonline fleet: what was measured, what was fixed, and the evidence.",
+      "category": "infra",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "backup": {
+      "description": "Snapshot a repository before a merge replaces it — a reusable GitHub workflow plus a zero-dependency script, compressed, timestamped and rotated to keep the newest 100.",
+      "category": "infra",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "base-bench": {
+      "description": "Every number base, unit and timezone on one page, with the working shown — offline, no accounts.",
+      "category": "learning",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "blinkcode-ai": {
+      "description": "An optical file-transfer PWA — compress a file into a File DNA container, paint it as SpectraCode colour matrices and recover it with a camera.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "BLINKTRANSFER": {
+      "description": "Offline file transfer over animated QR codes — no internet, no Bluetooth, no cables.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "bmi-bmr-tdee-macros-fluid-calculator": {
+      "description": "A single-file clinical calculator — BMI, BMR (Mifflin–St Jeor), TDEE, macros, fluids and body composition, with Indian and WHO cut-offs in English, Hindi and Gujarati.",
+      "category": "health",
+      "featured": true,
+      "demo": true,
+      "release": true,
+      "kicker": "",
+      "tag": ""
+    },
+    "boericke-repertory": {
+      "description": "Boericke's Repertory as a free, offline single-file web app — a searchable clinical repertory and repertorisation tool, after Oscar E. Boericke, M.D. (1927).",
+      "category": "health",
+      "featured": true,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "book-kit": {
+      "description": "The companion-app-from-a-book pattern: chapters, key points, practices, flashcards, search and reading progress.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "canteen-lan": {
+      "description": "Order from your table over the room's own Wi-Fi — a LAN canteen board built with Forge.",
+      "category": "business",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "case-kit": {
+      "description": "Clinical case tracking: sections, dated symptoms, follow-ups, a timeline and a summary.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "chalk-lan": {
+      "description": "A shared whiteboard for the room: everyone on the same Wi-Fi draws on the same board, live.",
+      "category": "business",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "CLDR": {
+      "description": "A single tiny Rust binary that sits in the system tray, pops up on a keystroke and runs whatever you type — a sum, a path, an app or a search.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": true,
+      "kicker": "",
+      "tag": ""
+    },
+    "compfactory": {
+      "description": "The development workspace for the CHCE multi-repository project.",
+      "category": "chce",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "compress-kit": {
+      "description": "The shared compression core: gzip, deflate and deflate-raw via the platform's Compression Streams.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "conqueror-os": {
+      "description": "A private, offline resilience workspace in a single HTML file — read, reflect, journal, track and review.",
+      "category": "mind",
+      "featured": false,
+      "demo": true,
+      "release": true,
+      "kicker": "",
+      "tag": ""
+    },
+    "control-panel": {
+      "description": "Every workflow in every repo: what runs, when, what calls what, and what is connected to nothing.",
+      "category": "infra",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "crypto-kit": {
+      "description": "The shared crypto core: AES-256-GCM, PBKDF2 passphrase keys, sealed envelopes and one-time view, on Web Crypto.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "dance-fight": {
+      "description": "A single-file browser rhythm game where every fight move is a dance move, driven by the beat grid of your own track.",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "dashboard": {
+      "description": "Live status of the drsamonline system — the repo fleet, build health, downloads and the store.",
+      "category": "infra",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "export-kit": {
+      "description": "Save text, JSON, CSV and binary to the user's device, and bundle files into a store-only ZIP.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "frame-kit": {
+      "description": "The shared transfer-frame core: a self-describing frame, a rateless collector and byte/checksum utilities.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "game-kit": {
+      "description": "The shared game core: a fixed-timestep loop, input, scenes, save/load and maths.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "gentle-pediatrics-companion": {
+      "description": "A triage-first home companion for a sick child — nine common childhood situations, a red-flag check and remedy orientation from the book Gentle Pediatrics.",
+      "category": "health",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "HCS": {
+      "description": "CHCE — Holistic Compression Sources: the reference compressor sources the CHCE engines are built from.",
+      "category": "chce",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "heavenzip": {
+      "description": "The CHCE orchestrator — chains prebuilt compression binaries into one pipeline.",
+      "category": "chce",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "helioprism": {
+      "description": "One app, two optical transports — send a file with light over QR codes or a colour matrix, with no network at all.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "HMS": {
+      "description": "HHMS — a LAN-based hospital management system purpose-built for homeopathic hospitals and clinics, with a server-owned database and no cloud lock-in.",
+      "category": "health",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "homoeopathic-materia-medica-repertory-json": {
+      "description": "Open-domain homoeopathic materia medica and repertory texts as app-ready JSON — 13 books (1840–1906), about 108,000 rubrics.",
+      "category": "health",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "idle-city-ages-of-growth": {
+      "description": "A single-file idle city-builder that grows from a Stone Age village into a Fusion Age world-city.",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "kent-repertory-explorer": {
+      "description": "Offline single-file explorer for Kent's Repertory (1897) — 74,667 rubrics, 735,500 graded remedy links, a case builder and grade-weighted repertorisation.",
+      "category": "health",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "lan-kit": {
+      "description": "The shared LAN core: a local room with a real-time channel over Server-Sent Events and POST.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "lexora": {
+      "description": "LEXORA — Layered EXact-text Repository and Adaptive compression architecture: canonicalise text, then compress it with guaranteed byte-exact recovery.",
+      "category": "chce",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "lockhtml": {
+      "description": "PIN-protect or one-time-view any HTML file with AES-256-GCM — a cross-platform CLI plus a browser GUI that runs on any OS.",
+      "category": "desktop",
+      "featured": true,
+      "demo": true,
+      "release": true,
+      "kicker": "",
+      "tag": ""
+    },
+    "MATERIA-MEDICA-BUILDER": {
+      "description": "Build your own materia medica and repertory — offline, private and yours to export.",
+      "category": "health",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "Matneo": {
+      "description": "An AI-powered digital products and automation platform — practical planners, templates, AI resources and offline browser tools.",
+      "category": "business",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "ml-kit": {
+      "description": "The classic algorithms from scratch for offline features: tf-idf, Naive Bayes, k-NN, k-means, PCA, ID3, linear regression and Markov chains — no model, no API key, no network.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "mnemosyne-companion": {
+      "description": "A study companion for Mnemosyne Materia Medica — 100 polycrest remedies as poetic pearls, keynotes and spaced-repetition drills.",
+      "category": "health",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "musicgen": {
+      "description": "A pocket generative composer — an offline-first PWA that writes, synthesises, masters and exports music in the browser, with no server and no samples.",
+      "category": "audio",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "NEO": {
+      "description": "NOVA — a statically typed, compiled systems programming language whose compiler lowers to C, JavaScript, Rust and WebAssembly.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "neon-engine": {
+      "description": "A code-only open-world game engine for the browser — no assets, no dependencies; every texture, mesh and sound is generated at runtime.",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "neon-games": {
+      "description": "Two free open-world browser games on the Neon Engine — Dead Zone (zombie survival) and Neon Police.",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "neon-runner": {
+      "description": "A retro auto-fire side-scrolling shooter in one self-contained HTML file — move, jump and duck; the gun fires itself.",
+      "category": "games",
+      "featured": true,
+      "demo": true,
+      "release": false,
+      "kicker": "Browser game",
+      "tag": "Auto-fire shooter"
+    },
+    "neon-velocity": {
+      "description": "A procedural retro side-scrolling shooter for Godot 4.3 — zero binary assets, every sprite and sound generated at runtime.",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "offline-pdf-toolkit": {
+      "description": "Merge, split, rotate, reorder, watermark, number and compress PDFs entirely in the browser — no upload, no account, no server, works offline.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "open-materia-medica": {
+      "description": "The classical homeopathic materia medica in plain language — 344 remedy portraits, with a free web edition and an offline Android companion.",
+      "category": "health",
+      "featured": true,
+      "demo": true,
+      "release": false,
+      "kicker": "Homeopathy",
+      "tag": "344 remedy portraits"
+    },
+    "optical-kit": {
+      "description": "The shared optical-transfer core: a systematic LT fountain code, self-describing frames and a pluggable codec.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "profile-kit": {
+      "description": "A small reusable kit for a theme-aware, self-updating GitHub profile — hero banner, metrics card and README generator.",
+      "category": "infra",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "read-live-transform-app": {
+      "description": "A companion PWA to Read. Live. Transform.: A Practical Reading of the Qur'an — read the verse, live the practice, keep the change.",
+      "category": "mind",
+      "featured": false,
+      "demo": true,
+      "release": true,
+      "kicker": "",
+      "tag": ""
+    },
+    "remedy-relationship-explorer": {
+      "description": "An offline single-file explorer for homeopathic remedy relationships, built from public-domain materia medicas (Boericke 1927, Clarke 1900, Hering 1879).",
+      "category": "health",
+      "featured": true,
+      "demo": true,
+      "release": false,
+      "kicker": "Homeopathy",
+      "tag": "686 remedies · 7,786 links"
+    },
+    "repertory-kit": {
+      "description": "The homeopathic repertorisation core: rubric grading and grade-weighted remedy scoring.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "retro-strike": {
+      "description": "A complete retro third-person shooter in a single HTML file — a custom software 3D renderer and chiptune audio, no dependencies.",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "saga-vn-engine": {
+      "description": "Saga — a small, dependency-free visual-novel engine for the browser. Plain JavaScript, one stylesheet, no build step.",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "Scrap-and-Gun": {
+      "description": "SCRAP & GUN — a retro pixel-art arena-defence shooter with tactical construction, escalating waves, persistent upgrades, roguelite drafts, bosses and local co-op.",
+      "category": "games",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "seance": {
+      "description": "Strongbox — sealed notes opened once: seal a note with a passphrase and it opens a single time. Offline, no accounts.",
+      "category": "mind",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "search-kit": {
+      "description": "Ranked search over big corpora — an inverted index with prefix and fuzzy matching.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "skills": {
+      "description": "Reusable, machine-consumable skills extracted from every drsamonline project — a categorised, self-updating catalogue.",
+      "category": "infra",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "skin-case-tracker": {
+      "description": "A private, offline skin-case tracker built on the HHMS dashboard — history, habits, mapping and symptoms — with a 90-day pattern engine, from the book The Skin Is a Liar.",
+      "category": "health",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "smartbill-app": {
+      "description": "A fast, serverless single-page GST billing and invoicing app for Indian businesses, with local IndexedDB storage.",
+      "category": "business",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "SmartNotes": {
+      "description": "SmartNote Scheduler — AI-powered notes, reminders and scheduling: write in plain English and it files itself.",
+      "category": "mind",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "srs-kit": {
+      "description": "Spaced repetition (SM-2) for flashcards — scheduling, lapses, due cards and stats.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "the-symphony-companion": {
+      "description": "A pocket PWA companion to The Symphony of the Present — the book's ideas as cards, its practices as a checklist, a breathing timer and a gratitude journal.",
+      "category": "mind",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "The_Browser": {
+      "description": "Aetheris — an experimental C++ browser engine on a Ladybird/SerenityOS-derived codebase, built to learn how rendering works. Not production-ready.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "today-card": {
+      "description": "Today Card — one card for the day: your date, one intention, one task and a streak. Offline, no accounts.",
+      "category": "mind",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "TTB": {
+      "description": "TinyToolBox — 591 tiny utilities bundled into one lightweight, offline-first browser extension for Chrome, Edge, Firefox and Safari.",
+      "category": "desktop",
+      "featured": false,
+      "demo": true,
+      "release": true,
+      "kicker": "",
+      "tag": ""
+    },
+    "ui-kit": {
+      "description": "A reactive UI layer small enough for a single file: signals, computed, reactive effects, hyperscript, a keyed list, events, a hash router and form binding.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "ULTIMATE-WINDOWS-OPTIMIZER": {
+      "description": "A PowerShell and batch toolkit for documented, reversible Windows 10/11 debloat and performance tweaks.",
+      "category": "desktop",
+      "featured": true,
+      "demo": true,
+      "release": true,
+      "kicker": "Windows 10/11",
+      "tag": "Debloat & tune"
+    },
+    "unstoppable-mind-companion": {
+      "description": "An offline companion to The Unstoppable Mind — the book's key points, exercises, a 7-day challenge and flashcards.",
+      "category": "mind",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "web-kit": {
+      "description": "The shared offline-first runtime for drsamonline apps: storage, i18n (EN/HI/GU), CSV, PWA, theme, SEO and accessibility.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "weft8-classroom": {
+      "description": "Weft-8 Classroom — a teacher's pack and exercises for teaching how a computer works, offline, in one file.",
+      "category": "weft",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "weft8-compare": {
+      "description": "Weft-8 beside x86 and ARM — the same algorithm in three machines, so you can see which part is the computer.",
+      "category": "weft",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "weft8-hardware": {
+      "description": "Weft-8 on real silicon — a C port of the Loom's 8-bit machine, an Arduino/ESP32 sketch and a parity harness.",
+      "category": "weft",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "weft8-kit": {
+      "description": "The Loom's Weft-8 as a reusable kit — an auditable, step-limited rule engine you can drop into another app.",
+      "category": "kits",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "whispering-body-first-aid": {
+      "description": "A home homeopathic first-aid companion of 30 remedies with a symptom finder, dosing guidance and emergency signs, in English, Hindi and Gujarati.",
+      "category": "health",
+      "featured": false,
+      "demo": true,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    },
+    "ziptastic": {
+      "description": "The CHCE native engine — a single binary with the codecs embedded.",
+      "category": "chce",
+      "featured": false,
+      "demo": false,
+      "release": false,
+      "kicker": "",
+      "tag": ""
+    }
+  }
+}
