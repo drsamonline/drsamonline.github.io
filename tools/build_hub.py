@@ -73,7 +73,11 @@ def classify(repos: list[dict]) -> tuple[list[dict], dict]:
         key = name.lower()
         private = bool(r.get("private"))
         fork = bool(r.get("fork"))
-        empty = int(r.get("size") or 0) == 0
+        # `size` is GitHub's own KB estimate and is eventually consistent: a repo
+        # pushed minutes ago can read 0 KB while holding real files (app-lantern did,
+        # and was dropped from the hub for it). A repo with commits is not empty, so
+        # the size signal is only trusted when there is nothing pushed at all.
+        empty = int(r.get("size") or 0) == 0 and not r.get("pushed_at")
         archived = bool(r.get("archived"))
         b["private" if private else "public"] += 1
         b["fork" if fork else "source"] += 1
@@ -90,15 +94,33 @@ def classify(repos: list[dict]) -> tuple[list[dict], dict]:
 
 
 CAT_LABEL = {
-    "desktop": "Desktop & System Tools",
+    "desktop": "Desktop, System & Developer Tools",
     "games": "Games & Engines",
     "health": "Health & Medicine",
     "mind": "Mind, Memory & Wellbeing",
     "audio": "Audio & Media",
     "business": "Business & Productivity",
+    "learning": "Learning & Reference",
+    "weft": "Weft-8 & Retrocomputing",
+    "kits": "Libraries & Kits",
+    "chce": "CHCE Compression",
+    "infra": "Meta & Infrastructure",
     "other": "Other / New",
 }
-CAT_ORDER = ["desktop", "games", "health", "mind", "audio", "business", "other"]
+# The hub lists APPS. Kits are libraries and have their own page (/kits/), so
+# "kits" is deliberately absent from the chip order even though the label exists.
+CAT_ORDER = ["desktop", "games", "health", "mind", "audio", "business",
+             "learning", "weft", "chce", "infra", "other"]
+
+# The one canonical catalogue. Written by the profile repo's generator and kept
+# in step here by the refresh workflow, so both surfaces read one set of
+# descriptions and one taxonomy. Absent -> fall back to the CURATED map.
+CATALOGUE_FILE = os.path.join(ROOT, "tools", "catalogue.json")
+
+
+def is_kit(cat: str, key: str) -> bool:
+    """A library, not an app: it belongs on /kits/, never in the project grid."""
+    return cat == "kits" or key.endswith("-kit")
 
 
 # --------------------------------------------------------------------------- #
@@ -159,6 +181,31 @@ def read(path: str) -> str:
 def write(path: str, text: str) -> None:
     with open(path, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(text)
+
+
+def load_catalogue() -> dict:
+    """Read ``tools/catalogue.json`` — the fleet-wide, single source of truth."""
+    if not os.path.exists(CATALOGUE_FILE):
+        return {}
+    with open(CATALOGUE_FILE, encoding="utf-8") as fh:
+        data = json.load(fh)
+    if not isinstance(data, dict):
+        sys.exit("FATAL: tools/catalogue.json must be a JSON object")
+
+    if isinstance(data.get("repos"), dict):
+        # The canonical shape (owned by the profile repo): {repos: {name: {...}}}
+        return {name.lower(): {
+            "cat": e.get("category", "other"),
+            "desc": e.get("description", ""),
+            "feat": bool(e.get("featured")),
+            "demo": bool(e.get("demo")),
+            "rel": bool(e.get("release")),
+            "kicker": e.get("kicker", ""),
+            "tag": e.get("tag", ""),
+        } for name, e in data["repos"].items()}
+
+    # Flat shape, keyed by repo name — also accepted.
+    return {k.lower(): v for k, v in data.items()}
 
 
 def extract_curated(html: str) -> dict:
@@ -239,6 +286,7 @@ def build_records(repos: list[dict], curated: dict) -> list[dict]:
         records.append({
             "name": name,
             "key": key,
+            "kit": is_kit(cat, key),
             "desc": c.get("desc") or (r.get("description") or "").strip() or "A project by Dr. Sohil Momin.",
             "cat": cat,
             "catLabel": CAT_LABEL[cat],
@@ -313,6 +361,61 @@ def build_jsonld(records: list[dict]) -> dict:
     }
 
 
+def replace_js_object(html: str, var: str, obj: dict) -> str:
+    """Rewrite ``var <var> = {...};`` with ``obj``, brace-matched and JSON-safe."""
+    m = re.search(r"var\s+%s\s*=\s*" % re.escape(var), html)
+    if not m:
+        sys.exit("FATAL: could not find `var %s` in index.html" % var)
+    i = m.end()
+    if html[i] != "{":
+        sys.exit("FATAL: `var %s` is not an object literal" % var)
+    depth, in_str, esc = 0, False, False
+    j = i
+    while j < len(html):
+        c = html[j]
+        if in_str:
+            if esc:
+                esc = False
+            elif c == "\\":
+                esc = True
+            elif c == '"':
+                in_str = False
+        elif c == '"':
+            in_str = True
+        elif c == "{":
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                j += 1
+                break
+        j += 1
+    return html[:i] + json_in_html(obj) + html[j:]
+
+
+def sync_js_maps(html: str, catalogue: dict) -> str:
+    """Regenerate CURATED, CAT_LABEL, CAT_ORDER and FEATURED from the catalogue.
+
+    These four literals are the page's offline fallback and its filter chips. Left
+    hand-edited they drift from repos.json — which is exactly how the page came to
+    advertise one number and render another.
+    """
+    html = replace_js_object(html, "CURATED", catalogue)
+    html = replace_js_object(html, "CAT_LABEL", CAT_LABEL)
+
+    order = re.search(r"var\s+CAT_ORDER\s*=\s*\[[^\]]*\];", html)
+    if not order:
+        sys.exit("FATAL: could not find `var CAT_ORDER` in index.html")
+    html = html[:order.start()] + "var CAT_ORDER = " + json.dumps(CAT_ORDER) + ";" + html[order.end():]
+
+    featured = [k for k, v in sorted(catalogue.items()) if v.get("feat") and not is_kit(v.get("cat", ""), k)]
+    feat = re.search(r"var\s+FEATURED\s*=\s*\[[^\]]*\];", html)
+    if not feat:
+        sys.exit("FATAL: could not find `var FEATURED` in index.html")
+    html = html[:feat.start()] + "var FEATURED = " + json.dumps(featured) + ";" + html[feat.end():]
+    return html
+
+
 def sync_counts(html: str, records: list[dict]) -> str:
     """Rewrite the hardcoded count labels so the visible TEXT matches the data.
 
@@ -356,19 +459,30 @@ def main() -> None:
     index_path = os.path.join(ROOT, "index.html")
     html = read(index_path)
     curated = extract_curated(html)
+    catalogue = load_catalogue()
+    if catalogue:
+        # The catalogue wins over the in-page map: it is the one both surfaces read.
+        curated.update(catalogue)
 
     counted, breakdown = classify(fetch_repos())
     records = build_records(counted, curated)
     if not records:
         sys.exit("FATAL: no repositories returned by the GitHub API")
 
+    # What the hub CALLS a project: an app, not a library. Everything below that
+    # states a number counts these, so the hero, the JSON-LD, the sitemap and the
+    # grid can no longer disagree with each other.
+    apps = [r for r in records if not r["kit"]]
+    if not apps:
+        sys.exit("FATAL: no applications after excluding kits")
+
     now = datetime.now(timezone.utc).replace(microsecond=0)
     iso = now.isoformat().replace("+00:00", "Z")
     lastmod = now.date().isoformat()
 
     # 1. repos.json — the page's same-origin data source.
-    payload = {"generated_at": iso, "owner": OWNER, "count": len(records),
-               "counts": breakdown, "repos": records}
+    payload = {"generated_at": iso, "owner": OWNER, "count": len(apps),
+               "kits": len(records) - len(apps), "counts": breakdown, "repos": records}
     write(os.path.join(ROOT, "repos.json"),
           json.dumps(payload, ensure_ascii=False, indent=1) + "\n")
 
@@ -383,11 +497,13 @@ def main() -> None:
     html = replace_block(
         html, "<!--JSONLD_START-->", "<!--JSONLD_END-->",
         "<!--JSONLD_START-->\n"
-        '<script type="application/ld+json">' + json_in_html(build_jsonld(records)) + "</script>\n"
+        '<script type="application/ld+json">' + json_in_html(build_jsonld(apps)) + "</script>\n"
         "<!--JSONLD_END-->")
 
     # 4. the visible count labels (meta description, og/twitter titles, no-JS fallbacks)
-    html = sync_counts(html, records)
+    html = sync_counts(html, apps)
+    if catalogue:
+        html = sync_js_maps(html, catalogue)
     write(index_path, html)
 
     # 5. sitemap.xml
@@ -400,9 +516,13 @@ def main() -> None:
     cats = sorted({r["cat"] for r in records})
     print(f"repos.json: {len(records)} projects, {len(cats)} categories "
           f"({', '.join(cats)}), {sum(1 for r in records if r['demo'])} with a live demo")
+    print("catalogue: %s" % ("tools/catalogue.json" if catalogue else "MISSING - using in-page CURATED"))
+    other = [r["key"] for r in apps if r["cat"] == "other"]
+    if other:
+        print("uncategorised (Other / New):", ", ".join(other))
     missing = [r["key"] for r in records if r["key"] not in curated]
     if missing:
-        print("not in CURATED (placed under Other / New):", ", ".join(missing))
+        print("not in the catalogue (description falls back to GitHub):", ", ".join(missing))
 
 
 if __name__ == "__main__":
