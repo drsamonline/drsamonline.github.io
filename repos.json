@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T07:39:46Z",
+ "generated_at": "2026-10-31T08:00:19Z",
  "owner": "drsamonline",
  "count": 68,
  "kits": 19,
@@ -323,7 +323,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 0,
-   "pushed": "2026-10-31T06:45:54Z",
+   "pushed": "2026-10-31T07:49:53Z",
    "archived": false,
    "topics": [
     "content-server",
@@ -335,8 +335,8 @@
     "offline-first",
     "zero-dependencies"
    ],
-   "hasPages": false,
-   "landing": "",
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/app-lantern/",
    "source": "https://github.com/drsamonline/app-lantern",
    "releases": "https://github.com/drsamonline/app-lantern/releases",
    "shot": "assets/shots/app-lantern.webp"
@@ -1281,7 +1281,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:16:18Z",
+   "pushed": "2026-10-31T07:42:25Z",
    "archived": false,
    "topics": [
     "city-builder",
@@ -1310,7 +1310,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:09:56Z",
+   "pushed": "2026-10-31T07:42:18Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -1394,7 +1394,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:09:59Z",
+   "pushed": "2026-10-31T07:39:52Z",
    "archived": false,
    "topics": [
     "cli",
@@ -1515,7 +1515,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:02Z",
+   "pushed": "2026-10-31T07:39:55Z",
    "archived": false,
    "topics": [
     "education",
@@ -1630,7 +1630,7 @@
    "tag": "",
    "lang": "CSS",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:07Z",
+   "pushed": "2026-10-31T07:39:57Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1659,7 +1659,7 @@
    "tag": "Auto-fire shooter",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:11Z",
+   "pushed": "2026-10-31T07:39:59Z",
    "archived": false,
    "topics": [
     "games",
@@ -1715,7 +1715,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:20Z",
+   "pushed": "2026-10-31T07:44:21Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -1743,7 +1743,7 @@
    "tag": "344 remedy portraits",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:23Z",
+   "pushed": "2026-10-31T07:44:23Z",
    "archived": false,
    "topics": [
     "education",
@@ -1800,7 +1800,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:26Z",
+   "pushed": "2026-10-31T07:44:25Z",
    "archived": false,
    "topics": [
     "education",
@@ -1829,7 +1829,7 @@
    "tag": "686 remedies · 7,786 links",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:30Z",
+   "pushed": "2026-10-31T07:47:16Z",
    "archived": false,
    "topics": [
     "data-visualisation",
@@ -1887,7 +1887,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:17:30Z",
+   "pushed": "2026-10-31T07:46:59Z",
    "archived": false,
    "topics": [
     "games",
@@ -1979,7 +1979,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:37Z",
+   "pushed": "2026-10-31T07:44:32Z",
    "archived": false,
    "topics": [
     "encryption",
@@ -2035,7 +2035,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:41Z",
+   "pushed": "2026-10-31T07:48:51Z",
    "archived": false,
    "topics": [
     "case-management",
@@ -2064,7 +2064,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:45Z",
+   "pushed": "2026-10-31T07:48:54Z",
    "archived": false,
    "topics": [
     "billing",
@@ -2151,7 +2151,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:48Z",
+   "pushed": "2026-10-31T07:48:56Z",
    "archived": false,
    "topics": [
     "github-pages",
@@ -2209,7 +2209,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:52Z",
+   "pushed": "2026-10-31T07:49:01Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -2328,7 +2328,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:55Z",
+   "pushed": "2026-10-31T07:49:04Z",
    "archived": false,
    "topics": [
     "education",
@@ -2498,7 +2498,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:10:58Z",
+   "pushed": "2026-10-31T07:49:07Z",
    "archived": false,
    "topics": [
     "clinical",
