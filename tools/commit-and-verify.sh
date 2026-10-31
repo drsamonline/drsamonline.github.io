@@ -106,7 +106,13 @@ else
     attempt=$((attempt+1))
     [ "$wait" = "0" ] || sleep "$wait"
     git fetch origin "$BR" --quiet 2>/dev/null || true
-    if ! git rebase "origin/$BR" --quiet 2>/dev/null; then
+    # --autostash, because the build leaves regenerated binaries (thumbnails) in
+    # the tree that this script was not asked to commit. A plain rebase then
+    # refuses with "cannot rebase: You have unstaged changes", which is a
+    # PERMANENT condition: the old loop retried it six times, aborted each time
+    # and never pushed. That is how the hub sat two days stale while every run
+    # reported the work as done.
+    if ! git rebase --autostash "origin/$BR" --quiet 2>/dev/null; then
       echo "::warning::rebase onto origin/$BR failed on attempt $attempt"
       git rebase --abort 2>/dev/null || true
       continue
