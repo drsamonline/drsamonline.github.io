@@ -55,6 +55,17 @@ jobs:
       - name: Install Chromium for Playwright
         run: python -m playwright install --with-deps chromium
 
+      - name: Sync the catalogue from the profile repo
+        run: |
+          # One catalogue, two surfaces. The profile repo owns it; this repo reads
+          # it, so a description edited once cannot disagree with itself. A failed
+          # fetch keeps the committed copy rather than failing the refresh.
+          curl -fsSL --max-time 30 \
+            https://raw.githubusercontent.com/drsamonline/drsamonline/main/catalogue.json \
+            -o tools/catalogue.json.new \
+            && mv tools/catalogue.json.new tools/catalogue.json \
+            || echo "::warning::could not fetch catalogue.json - using the committed copy"
+
       - name: Build data (repos.json + embedded snapshot + sitemap + JSON-LD)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -63,6 +74,10 @@ jobs:
       - name: Capture local thumbnails (assets/shots/*.webp)
         env:
           FORCE_CAPTURE: ${{ github.event.inputs.force == 'true' && '1' || '' }}
+        # A screenshot is decoration; the data is the product. Without this a
+        # Chromium hiccup on one page killed the run before the commit step, so a
+        # perfectly good repos.json was thrown away with it.
+        continue-on-error: true
         run: python tools/capture_shots.py
 
       - name: Commit the refreshed hub
@@ -74,5 +89,9 @@ jobs:
           # assets/shots is a DIRECTORY, so it is not passed here: the script hashes
           # regular files and would skip a directory with a warning. The three
           # top-level files are what the page is built from.
+          # The regenerated thumbnails are stage-first: the script verifies the
+          # three files above but commits everything staged, and leaving the shots
+          # unstaged is what made the rebase below fail on every attempt.
+          git add -A assets/shots
           bash tools/commit-and-verify.sh "chore: refresh hub data and screenshots" main -- \
             repos.json index.html sitemap.xml
