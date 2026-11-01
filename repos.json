@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-10-31T08:00:19Z",
+ "generated_at": "2026-11-01T10:46:55Z",
  "owner": "drsamonline",
- "count": 68,
+ "count": 70,
  "kits": 19,
  "counts": {
-  "total": 94,
-  "public": 94,
+  "total": 96,
+  "public": 96,
   "private": 0,
-  "source": 94,
+  "source": 96,
   "fork": 0,
   "empty": 0,
   "archived": 0,
   "excluded": 7,
-  "counted": 87
+  "counted": 89
  },
  "repos": [
   {
@@ -29,7 +29,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:26:11Z",
+   "pushed": "2026-10-31T09:21:01Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -57,7 +57,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-30T18:16:15Z",
+   "pushed": "2026-10-31T09:37:49Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -85,7 +85,7 @@
    "tag": "",
    "lang": "TypeScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:37:06Z",
+   "pushed": "2026-10-31T18:15:22Z",
    "archived": false,
    "topics": [
     "ai",
@@ -112,7 +112,7 @@
    "tag": "403 tools · one file",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-31T01:56:10Z",
+   "pushed": "2026-10-31T08:46:39Z",
    "archived": false,
    "topics": [
     "cli-tool",
@@ -142,7 +142,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:26:13Z",
+   "pushed": "2026-10-31T09:23:55Z",
    "archived": false,
    "topics": [
     "ambient",
@@ -201,7 +201,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:26:16Z",
+   "pushed": "2026-10-31T09:21:13Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -229,7 +229,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:26:18Z",
+   "pushed": "2026-10-31T09:24:01Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -355,7 +355,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:30:40Z",
+   "pushed": "2026-10-31T09:21:20Z",
    "archived": false,
    "topics": [
     "india",
@@ -384,7 +384,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:30:42Z",
+   "pushed": "2026-10-31T09:24:03Z",
    "archived": false,
    "topics": [
     "creative-writing",
@@ -403,6 +403,37 @@
    "source": "https://github.com/drsamonline/app-poets-studio",
    "releases": "https://github.com/drsamonline/app-poets-studio/releases",
    "shot": "assets/shots/app-poets-studio.webp"
+  },
+  {
+   "name": "app-thermals",
+   "key": "app-thermals",
+   "kit": false,
+   "desc": "Homoeopathic remedies by thermal reaction — what each classical source actually says, quoted in its own words with the source named, and where the sources do not say the same thing. Offline, no accounts.",
+   "cat": "health",
+   "catLabel": "Health & Medicine",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Python",
+   "stars": 0,
+   "pushed": "2026-11-01T10:33:19Z",
+   "archived": false,
+   "topics": [
+    "homeopathy",
+    "materia-medica",
+    "offline-first",
+    "pwa",
+    "static-site",
+    "thermal-reaction",
+    "zero-dependencies"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/app-thermals/",
+   "source": "https://github.com/drsamonline/app-thermals",
+   "releases": "https://github.com/drsamonline/app-thermals/releases",
+   "shot": "assets/shots/app-thermals.webp"
   },
   {
    "name": "app-weft-puzzles",
@@ -546,7 +577,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 0,
-   "pushed": "2026-10-31T07:37:45Z",
+   "pushed": "2026-10-31T21:48:12Z",
    "archived": false,
    "topics": [
     "changelog",
@@ -554,8 +585,8 @@
     "github-actions",
     "tooling"
    ],
-   "hasPages": false,
-   "landing": "",
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/audit/",
    "source": "https://github.com/drsamonline/audit",
    "releases": "https://github.com/drsamonline/audit/releases",
    "shot": "assets/shots/audit.webp"
@@ -574,7 +605,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:30:46Z",
+   "pushed": "2026-10-31T09:24:11Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -603,7 +634,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:30:48Z",
+   "pushed": "2026-10-31T09:25:06Z",
    "archived": false,
    "topics": [
     "compression",
@@ -632,7 +663,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:26:06Z",
+   "pushed": "2026-10-31T09:24:46Z",
    "archived": false,
    "topics": [
     "file-transfer",
@@ -660,7 +691,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:30:52Z",
+   "pushed": "2026-10-31T09:24:43Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -690,7 +721,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:30:54Z",
+   "pushed": "2026-10-31T09:24:35Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -747,7 +778,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:35:14Z",
+   "pushed": "2026-10-31T09:29:48Z",
    "archived": false,
    "topics": [
     "lan",
@@ -803,7 +834,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:35:16Z",
+   "pushed": "2026-10-31T09:30:03Z",
    "archived": false,
    "topics": [
     "collaboration",
@@ -914,7 +945,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:35:20Z",
+   "pushed": "2026-10-31T09:29:38Z",
    "archived": false,
    "topics": [
     "habits",
@@ -1000,7 +1031,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:35:22Z",
+   "pushed": "2026-10-31T09:26:53Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1013,6 +1044,43 @@
    "source": "https://github.com/drsamonline/dance-fight",
    "releases": "https://github.com/drsamonline/dance-fight/releases",
    "shot": "assets/shots/dance-fight.webp"
+  },
+  {
+   "name": "eon-commando",
+   "key": "eon-commando",
+   "kit": false,
+   "desc": "EON COMMANDO — a retro run-and-gun platformer in one self-contained HTML file: three eras, five weapons, three bosses, chiptune audio. No dependencies, works offline.",
+   "cat": "games",
+   "catLabel": "Games & Engines",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "HTML",
+   "stars": 0,
+   "pushed": "2026-11-01T10:40:59Z",
+   "archived": false,
+   "topics": [
+    "browser-game",
+    "canvas",
+    "chiptune",
+    "game",
+    "html5-game",
+    "javascript",
+    "no-dependencies",
+    "offline",
+    "pixel-art",
+    "platformer",
+    "retro",
+    "run-and-gun",
+    "single-file"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/eon-commando/",
+   "source": "https://github.com/drsamonline/eon-commando",
+   "releases": "https://github.com/drsamonline/eon-commando/releases",
+   "shot": "assets/shots/eon-commando.webp"
   },
   {
    "name": "export-kit",
@@ -1110,7 +1178,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:35:25Z",
+   "pushed": "2026-10-31T09:30:08Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -1166,7 +1234,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-31T07:37:14Z",
+   "pushed": "2026-11-01T10:38:43Z",
    "archived": false,
    "topics": [
     "chce",
@@ -1194,7 +1262,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:35:27Z",
+   "pushed": "2026-10-31T09:30:04Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -1281,7 +1349,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:42:25Z",
+   "pushed": "2026-10-31T09:30:37Z",
    "archived": false,
    "topics": [
     "city-builder",
@@ -1394,7 +1462,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:39:52Z",
+   "pushed": "2026-10-31T10:04:52Z",
    "archived": false,
    "topics": [
     "cli",
@@ -1423,7 +1491,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:26:09Z",
+   "pushed": "2026-10-31T09:31:05Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -1451,7 +1519,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-30T18:16:17Z",
+   "pushed": "2026-11-01T09:53:38Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -1515,7 +1583,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:39:55Z",
+   "pushed": "2026-10-31T09:30:36Z",
    "archived": false,
    "topics": [
     "education",
@@ -1601,7 +1669,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-30T18:13:55Z",
+   "pushed": "2026-10-31T09:27:18Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -1659,7 +1727,7 @@
    "tag": "Auto-fire shooter",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T07:39:59Z",
+   "pushed": "2026-10-31T09:31:00Z",
    "archived": false,
    "topics": [
     "games",
@@ -1743,7 +1811,7 @@
    "tag": "344 remedy portraits",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:44:23Z",
+   "pushed": "2026-10-31T09:41:22Z",
    "archived": false,
    "topics": [
     "education",
@@ -1800,7 +1868,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:44:25Z",
+   "pushed": "2026-10-31T09:41:32Z",
    "archived": false,
    "topics": [
     "education",
@@ -1887,7 +1955,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:46:59Z",
+   "pushed": "2026-10-31T09:41:36Z",
    "archived": false,
    "topics": [
     "games",
@@ -1917,7 +1985,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-28T09:13:06Z",
+   "pushed": "2026-10-31T09:38:59Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -1945,7 +2013,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T06:24:35Z",
+   "pushed": "2026-10-31T09:39:01Z",
    "archived": false,
    "topics": [
     "arcade",
@@ -1979,7 +2047,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-31T07:44:32Z",
+   "pushed": "2026-10-31T08:57:03Z",
    "archived": false,
    "topics": [
     "encryption",
@@ -2035,7 +2103,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:48:51Z",
+   "pushed": "2026-10-31T09:41:33Z",
    "archived": false,
    "topics": [
     "case-management",
@@ -2064,7 +2132,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:48:54Z",
+   "pushed": "2026-10-31T09:42:04Z",
    "archived": false,
    "topics": [
     "billing",
@@ -2151,7 +2219,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:48:56Z",
+   "pushed": "2026-10-31T09:42:13Z",
    "archived": false,
    "topics": [
     "github-pages",
@@ -2209,7 +2277,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-31T07:49:01Z",
+   "pushed": "2026-10-31T08:57:03Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -2328,7 +2396,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:49:04Z",
+   "pushed": "2026-10-31T09:41:57Z",
    "archived": false,
    "topics": [
     "education",
@@ -2498,7 +2566,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:49:07Z",
+   "pushed": "2026-10-31T09:46:59Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -2527,7 +2595,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-10-31T07:37:17Z",
+   "pushed": "2026-11-01T10:22:25Z",
    "archived": false,
    "topics": [
     "chce",
