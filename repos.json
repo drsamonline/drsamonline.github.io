@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-01T10:46:55Z",
+ "generated_at": "2026-11-02T11:38:52Z",
  "owner": "drsamonline",
- "count": 70,
+ "count": 74,
  "kits": 19,
  "counts": {
-  "total": 96,
-  "public": 96,
+  "total": 100,
+  "public": 100,
   "private": 0,
-  "source": 96,
+  "source": 100,
   "fork": 0,
   "empty": 0,
   "archived": 0,
   "excluded": 7,
-  "counted": 89
+  "counted": 93
  },
  "repos": [
   {
@@ -29,7 +29,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T09:21:01Z",
+   "pushed": "2026-11-02T07:22:33Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -142,7 +142,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T09:23:55Z",
+   "pushed": "2026-11-02T07:22:40Z",
    "archived": false,
    "topics": [
     "ambient",
@@ -227,9 +227,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T09:24:01Z",
+   "pushed": "2026-11-01T18:33:43Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -258,7 +258,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-30T18:13:22Z",
+   "pushed": "2026-11-01T19:01:13Z",
    "archived": false,
    "topics": [
     "app",
@@ -342,6 +342,37 @@
    "shot": "assets/shots/app-lantern.webp"
   },
   {
+   "name": "app-organon-reader",
+   "key": "app-organon-reader",
+   "kit": false,
+   "desc": "An offline reader for the Organon of Medicine, sixth edition, in the 1922 Boericke translation — full-text search, bookmarks and notes, no network.",
+   "cat": "mind",
+   "catLabel": "Mind, Memory & Wellbeing",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Python",
+   "stars": 0,
+   "pushed": "2026-11-02T06:53:34Z",
+   "archived": false,
+   "topics": [
+    "homoeopathy",
+    "no-tracking",
+    "offline-first",
+    "organon",
+    "pwa",
+    "reader",
+    "single-file"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/app-organon-reader/",
+   "source": "https://github.com/drsamonline/app-organon-reader",
+   "releases": "https://github.com/drsamonline/app-organon-reader/releases",
+   "shot": "assets/shots/app-organon-reader.webp"
+  },
+  {
    "name": "app-panchang",
    "key": "app-panchang",
    "kit": false,
@@ -355,7 +386,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T09:21:20Z",
+   "pushed": "2026-11-01T18:58:06Z",
    "archived": false,
    "topics": [
     "india",
@@ -384,7 +415,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T09:24:03Z",
+   "pushed": "2026-11-01T18:38:35Z",
    "archived": false,
    "topics": [
     "creative-writing",
@@ -418,7 +449,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 0,
-   "pushed": "2026-11-01T10:33:19Z",
+   "pushed": "2026-11-01T13:26:16Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -513,7 +544,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-30T18:13:37Z",
+   "pushed": "2026-11-02T07:22:44Z",
    "archived": false,
    "topics": [
     "astronomy",
@@ -541,7 +572,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T02:12:32Z",
+   "pushed": "2026-11-02T03:18:00Z",
    "archived": false,
    "topics": [
     "adsr",
@@ -577,7 +608,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 0,
-   "pushed": "2026-10-31T21:48:12Z",
+   "pushed": "2026-11-02T11:37:26Z",
    "archived": false,
    "topics": [
     "changelog",
@@ -605,7 +636,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T09:24:11Z",
+   "pushed": "2026-11-01T18:24:38Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -691,7 +722,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T09:24:43Z",
+   "pushed": "2026-11-02T07:32:07Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -721,7 +752,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T09:24:35Z",
+   "pushed": "2026-11-01T18:37:34Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -778,7 +809,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T09:29:48Z",
+   "pushed": "2026-11-01T18:39:15Z",
    "archived": false,
    "topics": [
     "lan",
@@ -834,7 +865,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T09:30:03Z",
+   "pushed": "2026-11-01T18:29:41Z",
    "archived": false,
    "topics": [
     "collaboration",
@@ -945,7 +976,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T09:29:38Z",
+   "pushed": "2026-11-01T19:00:28Z",
    "archived": false,
    "topics": [
     "habits",
@@ -988,6 +1019,29 @@
    "source": "https://github.com/drsamonline/control-panel",
    "releases": "https://github.com/drsamonline/control-panel/releases",
    "shot": "assets/shots/control-panel.webp"
+  },
+  {
+   "name": "corefit-md",
+   "key": "corefit-md",
+   "kit": false,
+   "desc": "CoreFit MD — a five-minute video-guided morning core routine. Clip-accurate playback (every set opens at 0:30), six-week progression, streaks, trilingual UI. Static, offline-first, no backend.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Python",
+   "stars": 0,
+   "pushed": "2026-11-02T05:34:00Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/corefit-md/",
+   "source": "https://github.com/drsamonline/corefit-md",
+   "releases": "https://github.com/drsamonline/corefit-md/releases",
+   "shot": "assets/shots/corefit-md.webp"
   },
   {
    "name": "crypto-kit",
@@ -1059,7 +1113,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 0,
-   "pushed": "2026-11-01T10:40:59Z",
+   "pushed": "2026-11-01T13:35:19Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1096,7 +1150,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-30T18:13:51Z",
+   "pushed": "2026-11-02T07:23:02Z",
    "archived": false,
    "topics": [
     "export",
@@ -1149,9 +1203,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "HTML",
+   "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-30T18:13:48Z",
+   "pushed": "2026-11-02T07:23:06Z",
    "archived": false,
    "topics": [
     "games",
@@ -1290,7 +1344,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-30T18:16:02Z",
+   "pushed": "2026-11-02T07:25:26Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -1318,8 +1372,8 @@
    "kicker": "",
    "tag": "",
    "lang": "Python",
-   "stars": 1,
-   "pushed": "2026-10-28T09:38:14Z",
+   "stars": 2,
+   "pushed": "2026-11-02T10:58:21Z",
    "archived": false,
    "topics": [
     "dataset",
@@ -1368,7 +1422,7 @@
    "name": "kent-repertory-explorer",
    "key": "kent-repertory-explorer",
    "kit": false,
-   "desc": "Offline single-file explorer for Kent's Repertory (1897) — 74,667 rubrics, 735,500 graded remedy links, a case builder and grade-weighted repertorisation.",
+   "desc": "Repertorium Publicum (2008), an open Kent-derived repertory, as a searchable ledger — 74,480 rubrics, 735,460 graded remedy links, a case builder and grade-weighted repertorisation. Offline in one HTML file: no server, no account.",
    "cat": "health",
    "catLabel": "Health & Medicine",
    "demo": true,
@@ -1378,7 +1432,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:42:18Z",
+   "pushed": "2026-11-01T19:12:17Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -1406,7 +1460,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-28T08:38:06Z",
+   "pushed": "2026-11-02T07:23:16Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1434,7 +1488,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-10-30T18:23:41Z",
+   "pushed": "2026-11-01T14:25:51Z",
    "archived": false,
    "topics": [
     "codec",
@@ -1462,7 +1516,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T10:04:52Z",
+   "pushed": "2026-11-01T12:50:12Z",
    "archived": false,
    "topics": [
     "cli",
@@ -1476,6 +1530,29 @@
    "source": "https://github.com/drsamonline/lockhtml",
    "releases": "https://github.com/drsamonline/lockhtml/releases",
    "shot": "assets/shots/lockhtml.webp"
+  },
+  {
+   "name": "lumen",
+   "key": "lumen",
+   "kit": false,
+   "desc": "Lumen — a fast, fully offline photo library in the spirit of Google Picasa. Windows, Linux, macOS and Android from one Flutter codebase.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Dart",
+   "stars": 0,
+   "pushed": "2026-11-02T10:43:25Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": false,
+   "landing": "",
+   "source": "https://github.com/drsamonline/lumen",
+   "releases": "https://github.com/drsamonline/lumen/releases",
+   "shot": "assets/shots/lumen.webp"
   },
   {
    "name": "MATERIA-MEDICA-BUILDER",
@@ -1519,7 +1596,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-01T09:53:38Z",
+   "pushed": "2026-11-02T01:23:47Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -1612,14 +1689,18 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 0,
-   "pushed": "2026-10-31T05:33:02Z",
+   "pushed": "2026-11-02T06:54:52Z",
    "archived": false,
    "topics": [
-    "audio",
     "generative-music",
     "music",
+    "no-dependencies",
     "offline-first",
-    "pwa"
+    "pwa",
+    "synthesis",
+    "synthesizer",
+    "vanilla-js",
+    "web-audio"
    ],
    "hasPages": true,
    "landing": "https://drsamonline.github.io/musicgen/",
@@ -1641,7 +1722,7 @@
    "tag": "",
    "lang": "Rust",
    "stars": 1,
-   "pushed": "2026-10-30T18:16:18Z",
+   "pushed": "2026-11-01T12:49:40Z",
    "archived": false,
    "topics": [
     "compiler",
@@ -1669,7 +1750,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-10-31T09:27:18Z",
+   "pushed": "2026-11-02T07:23:21Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -1698,7 +1779,7 @@
    "tag": "",
    "lang": "CSS",
    "stars": 1,
-   "pushed": "2026-10-31T07:39:57Z",
+   "pushed": "2026-11-02T07:23:25Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1783,7 +1864,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-10-31T07:44:21Z",
+   "pushed": "2026-11-02T07:27:19Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -1942,6 +2023,29 @@
    "shot": "assets/shots/repertory-kit.webp"
   },
   {
+   "name": "repertory-reader",
+   "key": "repertory-reader",
+   "kit": false,
+   "desc": "A quiet reading room for seventeen classical homoeopathic repertories — 271,421 rubrics and 744,394 graded remedy links, read straight from the open JSON library. No account, no server, no tracking, no build step.",
+   "cat": "health",
+   "catLabel": "Health & Medicine",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "",
+   "stars": 0,
+   "pushed": "2026-11-02T11:32:05Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/repertory-reader/",
+   "source": "https://github.com/drsamonline/repertory-reader",
+   "releases": "https://github.com/drsamonline/repertory-reader/releases",
+   "shot": "assets/shots/repertory-reader.webp"
+  },
+  {
    "name": "retro-strike",
    "key": "retro-strike",
    "kit": false,
@@ -2047,7 +2151,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-31T08:57:03Z",
+   "pushed": "2026-11-02T07:23:33Z",
    "archived": false,
    "topics": [
     "encryption",
@@ -2277,7 +2381,7 @@
    "tag": "",
    "lang": "",
    "stars": 1,
-   "pushed": "2026-10-31T08:57:03Z",
+   "pushed": "2026-11-02T07:23:36Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -2595,7 +2699,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-01T10:22:25Z",
+   "pushed": "2026-11-02T10:55:36Z",
    "archived": false,
    "topics": [
     "chce",
