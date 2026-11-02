@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T11:40:22Z",
+ "generated_at": "2026-11-02T11:45:27Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -243,10 +243,10 @@
    "status": "placeholder"
   },
   "audit": {
-   "bytes": 9072,
-   "captured": "2026-11-02T11:39:20Z",
+   "bytes": 9126,
+   "captured": "2026-11-02T11:45:22Z",
    "source": "https://drsamonline.github.io/audit/",
-   "source_pushed": "2026-11-02T11:37:26Z",
+   "source_pushed": "2026-11-02T11:39:57Z",
    "status": "ok"
   },
   "backup": {
@@ -423,9 +423,9 @@
   },
   "homoeopathic-materia-medica-repertory-json": {
    "bytes": 13514,
-   "captured": "2026-11-02T11:39:48Z",
+   "captured": "2026-11-02T11:45:24Z",
    "source": "https://drsamonline.github.io/homoeopathic-materia-medica-repertory-json/",
-   "source_pushed": "2026-11-02T10:58:21Z",
+   "source_pushed": "2026-11-02T11:43:34Z",
    "status": "ok"
   },
   "idle-city-ages-of-growth": {
@@ -572,9 +572,9 @@
   },
   "repertory-reader": {
    "bytes": 13876,
-   "captured": "2026-11-02T11:40:17Z",
+   "captured": "2026-11-02T11:45:27Z",
    "source": "https://drsamonline.github.io/repertory-reader/",
-   "source_pushed": "2026-11-02T11:32:05Z",
+   "source_pushed": "2026-11-02T11:43:39Z",
    "status": "ok"
   },
   "retro-strike": {
