@@ -1,13 +1,26 @@
 {
-  "name": "Dr. Sohil Momin — Projects",
+  "name": "Dr. Sohil Momin — nothing here calls home",
   "short_name": "Sohil Momin",
-  "description": "Showcase hub of 40 open-source, offline-first projects by Dr. Sohil Momin.",
+  "description": "70 open-source projects that run with no account, no server and no network. Medicine, games, tools and engines — offline first, all the way down.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#f6f7f9",
-  "theme_color": "#f6f7f9",
+  "background_color": "#0d1015",
+  "theme_color": "#0d1015",
   "icons": [
-    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "id": "/",
+  "lang": "en",
+  "categories": [
+    "developer",
+    "education",
+    "medical",
+    "games"
   ]
 }
