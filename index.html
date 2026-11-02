@@ -598,10 +598,11 @@ function render(){
 
 function buildChips(){
   var counts={}; projects.forEach(function(p){counts[p.cat]=(counts[p.cat]||0)+1;});
-  var h='<button class="chip" type="button" data-filter="all" aria-pressed="true"><span>All</span><b>'+projects.length+'</b></button>';
+  function pr(c){ return state.cat===c?'true':'false'; }
+  var h='<button class="chip" type="button" data-filter="all" aria-pressed="'+pr('all')+'"><span>All</span><b>'+projects.length+'</b></button>';
   CAT_ORDER.forEach(function(c){
     if(!counts[c]) return;
-    h+='<button class="chip" type="button" data-filter="'+c+'" aria-pressed="false"><span>'
+    h+='<button class="chip" type="button" data-filter="'+c+'" aria-pressed="'+pr(c)+'"><span>'
       +esc(CAT_LABEL[c]||c)+'</span><b>'+counts[c]+'</b></button>';
   });
   $('chips').innerHTML=h;
@@ -704,15 +705,16 @@ function initChrome(){
   if(dt) dt.addEventListener('click',function(){
     var on=dt.getAttribute('aria-pressed')!=='true';
     dt.setAttribute('aria-pressed',on?'true':'false');
-    dt.textContent=on?'online?':'offline';
-    dt.title=on?'Network cut in this tab. Everything still works.':'Cut the network and prove the page still works';
+    dt.textContent=on?'offline \u2713':'offline';
+    dt.title=on?'Network is cut in this tab and the page is still working. Click to reconnect.'
+               :'Cut the network and prove the page still works';
     window.fetch=on?function(){return Promise.reject(new Error('offline demo'));}:realFetch;
   });
 
   document.addEventListener('keydown',function(e){
     var q=$('q');
     if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}
-    if(e.key==='Escape'&&document.activeElement===q){
+    if(e.key==='Escape'&&(state.term||state.cat!=='all')){
       q.value='';state.term='';state.cat='all';
       [].slice.call($('chips').children).forEach(function(x){
         x.setAttribute('aria-pressed',x.dataset.filter==='all'?'true':'false');});
