@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-02T11:45:18Z",
+ "generated_at": "2026-11-03T11:16:55Z",
  "owner": "drsamonline",
- "count": 74,
+ "count": 75,
  "kits": 19,
  "counts": {
-  "total": 100,
-  "public": 100,
+  "total": 101,
+  "public": 101,
   "private": 0,
-  "source": 100,
+  "source": 101,
   "fork": 0,
   "empty": 0,
   "archived": 0,
   "excluded": 7,
-  "counted": 93
+  "counted": 94
  },
  "repos": [
   {
@@ -258,7 +258,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-01T19:01:13Z",
+   "pushed": "2026-11-03T11:00:46Z",
    "archived": false,
    "topics": [
     "app",
@@ -323,7 +323,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 0,
-   "pushed": "2026-10-31T07:49:53Z",
+   "pushed": "2026-11-03T07:21:12Z",
    "archived": false,
    "topics": [
     "content-server",
@@ -386,7 +386,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-01T18:58:06Z",
+   "pushed": "2026-11-03T08:59:30Z",
    "archived": false,
    "topics": [
     "india",
@@ -414,7 +414,7 @@
    "kicker": "",
    "tag": "",
    "lang": "JavaScript",
-   "stars": 1,
+   "stars": 2,
    "pushed": "2026-11-01T18:38:35Z",
    "archived": false,
    "topics": [
@@ -449,7 +449,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 0,
-   "pushed": "2026-11-01T13:26:16Z",
+   "pushed": "2026-11-03T07:36:39Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -608,7 +608,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 0,
-   "pushed": "2026-11-02T11:39:57Z",
+   "pushed": "2026-11-03T07:50:52Z",
    "archived": false,
    "topics": [
     "changelog",
@@ -636,7 +636,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-01T18:24:38Z",
+   "pushed": "2026-11-03T07:52:08Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -752,7 +752,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-01T18:37:34Z",
+   "pushed": "2026-11-03T09:02:38Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -809,7 +809,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-01T18:39:15Z",
+   "pushed": "2026-11-03T11:00:20Z",
    "archived": false,
    "topics": [
     "lan",
@@ -865,7 +865,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-01T18:29:41Z",
+   "pushed": "2026-11-03T09:52:20Z",
    "archived": false,
    "topics": [
     "collaboration",
@@ -893,7 +893,7 @@
    "tag": "",
    "lang": "Rust",
    "stars": 1,
-   "pushed": "2026-10-31T05:26:55Z",
+   "pushed": "2026-11-02T19:00:48Z",
    "archived": false,
    "topics": [
     "cli",
@@ -1034,7 +1034,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 0,
-   "pushed": "2026-11-02T05:34:00Z",
+   "pushed": "2026-11-03T10:31:47Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
@@ -1162,6 +1162,29 @@
    "source": "https://github.com/drsamonline/export-kit",
    "releases": "https://github.com/drsamonline/export-kit/releases",
    "shot": "assets/shots/export-kit.webp"
+  },
+  {
+   "name": "feather",
+   "key": "feather",
+   "kit": false,
+   "desc": "A read-only document viewer that opens before you blink — small, portable, cross-platform, summoned by a keystroke.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Rust",
+   "stars": 0,
+   "pushed": "2026-11-03T10:32:16Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": false,
+   "landing": "",
+   "source": "https://github.com/drsamonline/feather",
+   "releases": "https://github.com/drsamonline/feather/releases",
+   "shot": "assets/shots/feather.webp"
   },
   {
    "name": "frame-kit",
@@ -1488,7 +1511,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-01T14:25:51Z",
+   "pushed": "2026-11-03T02:48:50Z",
    "archived": false,
    "topics": [
     "codec",
@@ -1535,7 +1558,7 @@
    "name": "lumen",
    "key": "lumen",
    "kit": false,
-   "desc": "Lumen — a fast, fully offline photo library in the spirit of Google Picasa. Windows, Linux, macOS and Android from one Flutter codebase.",
+   "desc": "Lumen — a fast, fully offline photo library in the spirit of Google Picasa. Windows, Linux and Android from one Flutter codebase.",
    "cat": "other",
    "catLabel": "Other / New",
    "demo": false,
@@ -1544,12 +1567,12 @@
    "kicker": "",
    "tag": "",
    "lang": "Dart",
-   "stars": 0,
-   "pushed": "2026-11-02T10:43:25Z",
+   "stars": 1,
+   "pushed": "2026-11-02T19:08:08Z",
    "archived": false,
    "topics": [],
-   "hasPages": false,
-   "landing": "",
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/lumen/",
    "source": "https://github.com/drsamonline/lumen",
    "releases": "https://github.com/drsamonline/lumen/releases",
    "shot": "assets/shots/lumen.webp"
@@ -1596,7 +1619,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-02T01:23:47Z",
+   "pushed": "2026-11-03T02:49:35Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -1689,7 +1712,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 0,
-   "pushed": "2026-11-02T06:54:52Z",
+   "pushed": "2026-11-02T13:18:21Z",
    "archived": false,
    "topics": [
     "generative-music",
@@ -1750,7 +1773,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-02T07:23:21Z",
+   "pushed": "2026-11-02T12:44:55Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -1864,7 +1887,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-02T07:27:19Z",
+   "pushed": "2026-11-03T07:53:14Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -2699,7 +2722,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-02T10:55:36Z",
+   "pushed": "2026-11-03T11:06:29Z",
    "archived": false,
    "topics": [
     "chce",
