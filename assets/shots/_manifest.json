@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T10:42:15Z",
+ "generated_at": "2026-11-08T10:43:41Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -30,10 +30,10 @@
    "status": "ok"
   },
   "CLDR": {
-   "bytes": 14938,
-   "captured": "2026-11-07T10:39:42Z",
+   "bytes": 14998,
+   "captured": "2026-11-08T10:43:27Z",
    "source": "https://drsamonline.github.io/CLDR/",
-   "source_pushed": "2026-11-06T18:55:56Z",
+   "source_pushed": "2026-11-07T14:43:59Z",
    "status": "ok"
   },
   "HCS": {
@@ -93,24 +93,24 @@
    "status": "ok"
   },
   "TTB": {
-   "bytes": 20226,
-   "captured": "2026-11-07T10:41:49Z",
+   "bytes": 20156,
+   "captured": "2026-11-08T10:43:36Z",
    "source": "https://drsamonline.github.io/TTB/",
-   "source_pushed": "2026-11-06T18:56:02Z",
+   "source_pushed": "2026-11-07T12:46:55Z",
    "status": "ok"
   },
   "The_Browser": {
-   "bytes": 17250,
-   "captured": "2026-11-07T10:41:44Z",
+   "bytes": 17268,
+   "captured": "2026-11-08T10:43:32Z",
    "source": "https://drsamonline.github.io/The_Browser/",
-   "source_pushed": "2026-11-06T18:56:11Z",
+   "source_pushed": "2026-11-08T10:26:00Z",
    "status": "ok"
   },
   "ULTIMATE-WINDOWS-OPTIMIZER": {
-   "bytes": 20504,
-   "captured": "2026-11-07T10:41:54Z",
+   "bytes": 21200,
+   "captured": "2026-11-08T10:43:38Z",
    "source": "https://drsamonline.github.io/ULTIMATE-WINDOWS-OPTIMIZER/",
-   "source_pushed": "2026-11-06T18:56:14Z",
+   "source_pushed": "2026-11-07T17:21:09Z",
    "status": "ok"
   },
   "UniRep": {
@@ -142,10 +142,10 @@
    "status": "ok"
   },
   "ai-bridge": {
-   "bytes": 10828,
-   "captured": "2026-11-07T10:38:36Z",
+   "bytes": 11314,
+   "captured": "2026-11-08T10:43:15Z",
    "source": "https://drsamonline.github.io/ai-bridge/",
-   "source_pushed": "2026-11-07T08:00:15Z",
+   "source_pushed": "2026-11-08T10:22:47Z",
    "status": "ok"
   },
   "ambient-sound-studio": {
@@ -184,10 +184,10 @@
    "status": "ok"
   },
   "app-image-toolkit": {
-   "bytes": 6752,
-   "captured": "2026-11-07T10:38:51Z",
+   "bytes": 6784,
+   "captured": "2026-11-08T10:43:17Z",
    "source": "https://drsamonline.github.io/app-image-toolkit/",
-   "source_pushed": "2026-11-07T08:00:23Z",
+   "source_pushed": "2026-11-07T12:36:17Z",
    "status": "ok"
   },
   "app-jacquard": {
@@ -206,9 +206,9 @@
   },
   "app-organon-reader": {
    "bytes": 7632,
-   "captured": "2026-11-07T10:38:58Z",
+   "captured": "2026-11-08T10:43:20Z",
    "source": "https://drsamonline.github.io/app-organon-reader/",
-   "source_pushed": "2026-11-07T08:00:29Z",
+   "source_pushed": "2026-11-07T12:44:49Z",
    "status": "ok"
   },
   "app-panchang": {
@@ -220,9 +220,9 @@
   },
   "app-poets-studio": {
    "bytes": 15116,
-   "captured": "2026-11-07T10:39:04Z",
+   "captured": "2026-11-08T10:43:22Z",
    "source": "https://drsamonline.github.io/app-poets-studio/",
-   "source_pushed": "2026-11-07T08:00:33Z",
+   "source_pushed": "2026-11-07T12:41:54Z",
    "status": "ok"
   },
   "app-thermals": {
@@ -277,9 +277,9 @@
   },
   "base-bench": {
    "bytes": 7262,
-   "captured": "2026-11-07T10:39:20Z",
+   "captured": "2026-11-08T10:43:25Z",
    "source": "https://drsamonline.github.io/base-bench/play/",
-   "source_pushed": "2026-11-07T08:16:11Z",
+   "source_pushed": "2026-11-07T12:44:08Z",
    "status": "ok"
   },
   "blinkcode-ai": {
@@ -473,9 +473,9 @@
   },
   "lexora": {
    "bytes": 12242,
-   "captured": "2026-11-06T11:27:31Z",
+   "captured": "2026-11-08T10:43:30Z",
    "source": "https://drsamonline.github.io/lexora/",
-   "source_pushed": "2026-11-06T06:15:48Z",
+   "source_pushed": "2026-11-08T09:32:11Z",
    "status": "ok"
   },
   "lockhtml": {
@@ -725,9 +725,9 @@
   },
   "ziptastic": {
    "bytes": 11974,
-   "captured": "2026-11-07T10:42:15Z",
+   "captured": "2026-11-08T10:43:41Z",
    "source": "https://drsamonline.github.io/ziptastic/",
-   "source_pushed": "2026-11-07T09:58:10Z",
+   "source_pushed": "2026-11-08T10:24:10Z",
    "status": "ok"
   }
  }
