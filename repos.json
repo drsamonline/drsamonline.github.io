@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-08T10:43:11Z",
+ "generated_at": "2026-11-09T01:03:32Z",
  "owner": "drsamonline",
- "count": 77,
+ "count": 78,
  "kits": 19,
  "counts": {
-  "total": 103,
-  "public": 103,
+  "total": 104,
+  "public": 104,
   "private": 0,
-  "source": 103,
+  "source": 104,
   "fork": 0,
   "empty": 0,
   "archived": 0,
   "excluded": 7,
-  "counted": 96
+  "counted": 97
  },
  "repos": [
   {
@@ -119,7 +119,7 @@
    "tag": "",
    "lang": "TypeScript",
    "stars": 1,
-   "pushed": "2026-11-08T10:22:47Z",
+   "pushed": "2026-11-08T18:32:07Z",
    "archived": false,
    "topics": [
     "ai",
@@ -642,7 +642,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-07T09:12:59Z",
+   "pushed": "2026-11-09T00:40:32Z",
    "archived": false,
    "topics": [
     "changelog",
@@ -1401,7 +1401,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-06T18:58:45Z",
+   "pushed": "2026-11-09T00:58:57Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -1460,7 +1460,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-07T05:24:36Z",
+   "pushed": "2026-11-09T00:38:46Z",
    "archived": false,
    "topics": [
     "city-builder",
@@ -1474,6 +1474,40 @@
    "source": "https://github.com/drsamonline/idle-city-ages-of-growth",
    "releases": "https://github.com/drsamonline/idle-city-ages-of-growth/releases",
    "shot": "assets/shots/idle-city-ages-of-growth.webp"
+  },
+  {
+   "name": "kitbox",
+   "key": "kitbox",
+   "kit": false,
+   "desc": "Kitbox — every tool, one offline app. 280 tools across 21 categories in a single HTML file: no build step, no dependencies, no network, no account.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "HTML",
+   "stars": 1,
+   "pushed": "2026-11-09T00:59:29Z",
+   "archived": false,
+   "topics": [
+    "no-dependencies",
+    "offline",
+    "offline-first",
+    "productivity",
+    "pwa",
+    "self-hosted",
+    "single-file",
+    "toolbox",
+    "utilities",
+    "vanilla-js"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/kitbox/",
+   "source": "https://github.com/drsamonline/kitbox",
+   "releases": "https://github.com/drsamonline/kitbox/releases",
+   "shot": "assets/shots/kitbox.webp"
   },
   {
    "name": "lan-kit",
@@ -1517,7 +1551,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-08T09:32:11Z",
+   "pushed": "2026-11-08T18:45:30Z",
    "archived": false,
    "topics": [
     "codec",
@@ -2410,7 +2444,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-08T10:26:00Z",
+   "pushed": "2026-11-08T17:19:51Z",
    "archived": false,
    "topics": [
     "browser",
@@ -2465,7 +2499,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-07T12:46:55Z",
+   "pushed": "2026-11-08T18:41:26Z",
    "archived": false,
    "topics": [
     "browser-extension",
@@ -2528,7 +2562,7 @@
    "tag": "Debloat & tune",
    "lang": "PowerShell",
    "stars": 1,
-   "pushed": "2026-11-07T17:21:09Z",
+   "pushed": "2026-11-08T16:32:11Z",
    "archived": false,
    "topics": [
     "debloat",
@@ -2779,7 +2813,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-08T10:24:10Z",
+   "pushed": "2026-11-08T17:07:57Z",
    "archived": false,
    "topics": [
     "chce",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T10:43:41Z",
+ "generated_at": "2026-11-09T01:04:24Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -45,9 +45,9 @@
   },
   "HMS": {
    "bytes": 21934,
-   "captured": "2026-11-07T10:40:23Z",
+   "captured": "2026-11-09T01:03:43Z",
    "source": "https://drsamonline.github.io/HMS/",
-   "source_pushed": "2026-11-06T18:58:45Z",
+   "source_pushed": "2026-11-09T00:58:57Z",
    "status": "ok"
   },
   "MATERIA-MEDICA-BUILDER": {
@@ -93,24 +93,24 @@
    "status": "ok"
   },
   "TTB": {
-   "bytes": 20156,
-   "captured": "2026-11-08T10:43:36Z",
+   "bytes": 20178,
+   "captured": "2026-11-09T01:04:16Z",
    "source": "https://drsamonline.github.io/TTB/",
-   "source_pushed": "2026-11-07T12:46:55Z",
+   "source_pushed": "2026-11-08T18:41:26Z",
    "status": "ok"
   },
   "The_Browser": {
-   "bytes": 17268,
-   "captured": "2026-11-08T10:43:32Z",
+   "bytes": 17240,
+   "captured": "2026-11-09T01:04:03Z",
    "source": "https://drsamonline.github.io/The_Browser/",
-   "source_pushed": "2026-11-08T10:26:00Z",
+   "source_pushed": "2026-11-08T17:19:51Z",
    "status": "ok"
   },
   "ULTIMATE-WINDOWS-OPTIMIZER": {
-   "bytes": 21200,
-   "captured": "2026-11-08T10:43:38Z",
+   "bytes": 21148,
+   "captured": "2026-11-09T01:04:22Z",
    "source": "https://drsamonline.github.io/ULTIMATE-WINDOWS-OPTIMIZER/",
-   "source_pushed": "2026-11-07T17:21:09Z",
+   "source_pushed": "2026-11-08T16:32:11Z",
    "status": "ok"
   },
   "UniRep": {
@@ -142,10 +142,10 @@
    "status": "ok"
   },
   "ai-bridge": {
-   "bytes": 11314,
-   "captured": "2026-11-08T10:43:15Z",
+   "bytes": 10906,
+   "captured": "2026-11-09T01:03:36Z",
    "source": "https://drsamonline.github.io/ai-bridge/",
-   "source_pushed": "2026-11-08T10:22:47Z",
+   "source_pushed": "2026-11-08T18:32:07Z",
    "status": "ok"
   },
   "ambient-sound-studio": {
@@ -261,10 +261,10 @@
    "status": "ok"
   },
   "audit": {
-   "bytes": 8990,
-   "captured": "2026-11-07T10:39:18Z",
+   "bytes": 9422,
+   "captured": "2026-11-09T01:03:38Z",
    "source": "https://drsamonline.github.io/audit/",
-   "source_pushed": "2026-11-07T09:12:59Z",
+   "source_pushed": "2026-11-09T00:40:32Z",
    "status": "ok"
   },
   "backup": {
@@ -451,10 +451,10 @@
    "status": "ok"
   },
   "idle-city-ages-of-growth": {
-   "bytes": 15750,
-   "captured": "2026-11-07T10:40:27Z",
+   "bytes": 15758,
+   "captured": "2026-11-09T01:03:51Z",
    "source": "https://drsamonline.github.io/idle-city-ages-of-growth/",
-   "source_pushed": "2026-11-07T05:24:36Z",
+   "source_pushed": "2026-11-09T00:38:46Z",
    "status": "ok"
   },
   "kent-repertory-explorer": {
@@ -462,6 +462,13 @@
    "captured": "2026-11-02T11:39:51Z",
    "source": "https://drsamonline.github.io/kent-repertory-explorer/",
    "source_pushed": "2026-11-01T19:12:17Z",
+   "status": "ok"
+  },
+  "kitbox": {
+   "bytes": 11110,
+   "captured": "2026-11-09T01:03:53Z",
+   "source": "https://drsamonline.github.io/kitbox/",
+   "source_pushed": "2026-11-09T00:59:29Z",
    "status": "ok"
   },
   "lan-kit": {
@@ -473,9 +480,9 @@
   },
   "lexora": {
    "bytes": 12242,
-   "captured": "2026-11-08T10:43:30Z",
+   "captured": "2026-11-09T01:03:56Z",
    "source": "https://drsamonline.github.io/lexora/",
-   "source_pushed": "2026-11-08T09:32:11Z",
+   "source_pushed": "2026-11-08T18:45:30Z",
    "status": "ok"
   },
   "lockhtml": {
@@ -725,9 +732,9 @@
   },
   "ziptastic": {
    "bytes": 11974,
-   "captured": "2026-11-08T10:43:41Z",
+   "captured": "2026-11-09T01:04:24Z",
    "source": "https://drsamonline.github.io/ziptastic/",
-   "source_pushed": "2026-11-08T10:24:10Z",
+   "source_pushed": "2026-11-08T17:07:57Z",
    "status": "ok"
   }
  }
