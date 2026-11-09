@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T01:04:24Z",
+ "generated_at": "2026-11-09T01:38:54Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -45,9 +45,9 @@
   },
   "HMS": {
    "bytes": 21934,
-   "captured": "2026-11-09T01:03:43Z",
+   "captured": "2026-11-09T01:38:50Z",
    "source": "https://drsamonline.github.io/HMS/",
-   "source_pushed": "2026-11-09T00:58:57Z",
+   "source_pushed": "2026-11-09T01:13:09Z",
    "status": "ok"
   },
   "MATERIA-MEDICA-BUILDER": {
@@ -465,10 +465,10 @@
    "status": "ok"
   },
   "kitbox": {
-   "bytes": 11110,
-   "captured": "2026-11-09T01:03:53Z",
+   "bytes": 11090,
+   "captured": "2026-11-09T01:38:52Z",
    "source": "https://drsamonline.github.io/kitbox/",
-   "source_pushed": "2026-11-09T00:59:29Z",
+   "source_pushed": "2026-11-09T01:38:36Z",
    "status": "ok"
   },
   "lan-kit": {
@@ -651,6 +651,13 @@
    "captured": "2026-11-07T10:41:34Z",
    "source": "https://drsamonline.github.io/smartbill-app/",
    "source_pushed": "2026-11-07T05:23:56Z",
+   "status": "ok"
+  },
+  "smartnote-scheduler": {
+   "bytes": 19666,
+   "captured": "2026-11-09T01:38:54Z",
+   "source": "https://drsamonline.github.io/smartnote-scheduler/",
+   "source_pushed": "2026-11-09T01:37:18Z",
    "status": "ok"
   },
   "srs-kit": {
