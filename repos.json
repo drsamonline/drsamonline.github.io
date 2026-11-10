@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-09T12:02:20Z",
+ "generated_at": "2026-11-10T11:41:33Z",
  "owner": "drsamonline",
- "count": 79,
- "kits": 19,
+ "count": 82,
+ "kits": 25,
  "counts": {
-  "total": 105,
-  "public": 105,
+  "total": 118,
+  "public": 118,
   "private": 0,
-  "source": 105,
-  "fork": 0,
+  "source": 114,
+  "fork": 4,
   "empty": 0,
   "archived": 0,
-  "excluded": 7,
-  "counted": 98
+  "excluded": 11,
+  "counted": 107
  },
  "repos": [
   {
@@ -63,7 +63,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:31Z",
+   "pushed": "2026-11-09T14:01:28Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -119,7 +119,7 @@
    "tag": "",
    "lang": "TypeScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:30Z",
+   "pushed": "2026-11-10T07:05:34Z",
    "archived": false,
    "topics": [
     "ai",
@@ -146,7 +146,7 @@
    "tag": "403 tools · one file",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:23Z",
+   "pushed": "2026-11-10T09:25:35Z",
    "archived": false,
    "topics": [
     "cli-tool",
@@ -176,7 +176,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:30Z",
+   "pushed": "2026-11-09T14:01:45Z",
    "archived": false,
    "topics": [
     "ambient",
@@ -263,7 +263,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T09:18:20Z",
+   "pushed": "2026-11-10T07:04:31Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -279,6 +279,37 @@
    "shot": "assets/shots/app-encrypted-case-log.webp"
   },
   {
+   "name": "app-endpoints",
+   "key": "app-endpoints",
+   "kit": false,
+   "desc": "Endpoints — find the right free API for a job: an offline directory of 2,214 public APIs, filterable by auth, CORS and HTTPS. No account, no server, no network at runtime.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-11-10T00:41:48Z",
+   "archived": false,
+   "topics": [
+    "api",
+    "cors",
+    "developer-tools",
+    "directory",
+    "no-telemetry",
+    "offline-first",
+    "single-file"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/app-endpoints/",
+   "source": "https://github.com/drsamonline/app-endpoints",
+   "releases": "https://github.com/drsamonline/app-endpoints/releases",
+   "shot": "assets/shots/app-endpoints.webp"
+  },
+  {
    "name": "app-image-toolkit",
    "key": "app-image-toolkit",
    "kit": false,
@@ -292,7 +323,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:29Z",
+   "pushed": "2026-11-10T07:03:51Z",
    "archived": false,
    "topics": [
     "app",
@@ -357,7 +388,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:33Z",
+   "pushed": "2026-11-10T10:06:02Z",
    "archived": false,
    "topics": [
     "content-server",
@@ -470,6 +501,37 @@
    "shot": "assets/shots/app-poets-studio.webp"
   },
   {
+   "name": "app-story-engine",
+   "key": "app-story-engine",
+   "kit": false,
+   "desc": "A book the reader moves through: choices, carried state, and a trail of where you have been. Offline, no accounts.",
+   "cat": "games",
+   "catLabel": "Games & Engines",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-11-10T00:37:48Z",
+   "archived": false,
+   "topics": [
+    "github-pages",
+    "interactive-fiction",
+    "local-first",
+    "no-account",
+    "offline",
+    "single-file",
+    "story-engine"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/app-story-engine/",
+   "source": "https://github.com/drsamonline/app-story-engine",
+   "releases": "https://github.com/drsamonline/app-story-engine/releases",
+   "shot": "assets/shots/app-story-engine.webp"
+  },
+  {
    "name": "app-thermals",
    "key": "app-thermals",
    "kit": false,
@@ -483,7 +545,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:32Z",
+   "pushed": "2026-11-10T07:05:16Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -542,7 +604,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:32Z",
+   "pushed": "2026-11-10T07:04:43Z",
    "archived": false,
    "topics": [
     "canvas",
@@ -578,7 +640,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:33Z",
+   "pushed": "2026-11-09T15:51:43Z",
    "archived": false,
    "topics": [
     "astronomy",
@@ -642,7 +704,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-09T12:02:03Z",
+   "pushed": "2026-11-10T07:47:08Z",
    "archived": false,
    "topics": [
     "changelog",
@@ -728,7 +790,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:23Z",
+   "pushed": "2026-11-09T14:00:06Z",
    "archived": false,
    "topics": [
     "file-transfer",
@@ -815,7 +877,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:36Z",
+   "pushed": "2026-11-09T15:51:45Z",
    "archived": false,
    "topics": [
     "education",
@@ -871,7 +933,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T09:18:20Z",
+   "pushed": "2026-11-10T07:04:26Z",
    "archived": false,
    "topics": [
     "case-management",
@@ -927,7 +989,7 @@
    "tag": "",
    "lang": "Rust",
    "stars": 1,
-   "pushed": "2026-11-09T11:59:09Z",
+   "pushed": "2026-11-10T07:03:38Z",
    "archived": false,
    "topics": [
     "cli",
@@ -943,6 +1005,37 @@
    "shot": "assets/shots/CLDR.webp"
   },
   {
+   "name": "code-kit",
+   "key": "code-kit",
+   "kit": true,
+   "desc": "QR encoding (versions 1-40, L/M/Q/H, all eight masks), a small syntax highlighter and copyable snippet blocks — one zero-dependency file.",
+   "cat": "kits",
+   "catLabel": "Libraries & Kits",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-11-10T08:50:34Z",
+   "archived": false,
+   "topics": [
+    "encoder",
+    "kit",
+    "offline-first",
+    "qr-code",
+    "qrcode",
+    "syntax-highlighting",
+    "zero-dependency"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/code-kit/",
+   "source": "https://github.com/drsamonline/code-kit",
+   "releases": "https://github.com/drsamonline/code-kit/releases",
+   "shot": "assets/shots/code-kit.webp"
+  },
+  {
    "name": "compfactory",
    "key": "compfactory",
    "kit": false,
@@ -954,9 +1047,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "PowerShell",
+   "lang": "Shell",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:36Z",
+   "pushed": "2026-11-10T07:04:17Z",
    "archived": false,
    "topics": [
     "chce",
@@ -983,7 +1076,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:37Z",
+   "pushed": "2026-11-09T15:51:52Z",
    "archived": false,
    "topics": [
     "compression",
@@ -1010,7 +1103,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-09T11:13:32Z",
+   "pushed": "2026-11-10T11:07:03Z",
    "archived": false,
    "topics": [
     "habits",
@@ -1091,7 +1184,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:38Z",
+   "pushed": "2026-11-09T15:51:56Z",
    "archived": false,
    "topics": [
     "cryptography",
@@ -1184,7 +1277,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:39Z",
+   "pushed": "2026-11-09T15:51:58Z",
    "archived": false,
    "topics": [
     "export",
@@ -1211,7 +1304,7 @@
    "tag": "",
    "lang": "Rust",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:39Z",
+   "pushed": "2026-11-10T07:03:43Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
@@ -1219,6 +1312,37 @@
    "source": "https://github.com/drsamonline/feather",
    "releases": "https://github.com/drsamonline/feather/releases",
    "shot": "assets/shots/feather.webp"
+  },
+  {
+   "name": "form-kit",
+   "key": "form-kit",
+   "kit": true,
+   "desc": "24 form controls for offline apps — inputs, OTP, select, autocomplete, calendar, upload, checkbox, switch, slider, rate, toggles, colour — with one API and one validation pass.",
+   "cat": "kits",
+   "catLabel": "Libraries & Kits",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-11-10T07:42:49Z",
+   "archived": false,
+   "topics": [
+    "form-controls",
+    "forms",
+    "kit",
+    "offline-first",
+    "ui",
+    "validation",
+    "zero-dependency"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/form-kit/",
+   "source": "https://github.com/drsamonline/form-kit",
+   "releases": "https://github.com/drsamonline/form-kit/releases",
+   "shot": "assets/shots/form-kit.webp"
   },
   {
    "name": "frame-kit",
@@ -1234,7 +1358,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:40Z",
+   "pushed": "2026-11-09T15:52:02Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1262,7 +1386,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:40Z",
+   "pushed": "2026-11-10T07:43:48Z",
    "archived": false,
    "topics": [
     "games",
@@ -1318,7 +1442,7 @@
    "tag": "",
    "lang": "C",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:23Z",
+   "pushed": "2026-11-10T07:04:13Z",
    "archived": false,
    "topics": [
     "chce",
@@ -1343,9 +1467,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "",
+   "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:42Z",
+   "pushed": "2026-11-10T07:04:09Z",
    "archived": false,
    "topics": [
     "chce",
@@ -1401,7 +1525,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-09T11:54:17Z",
+   "pushed": "2026-11-10T10:07:23Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -1479,7 +1603,7 @@
    "name": "kitbox",
    "key": "kitbox",
    "kit": false,
-   "desc": "Kitbox — every tool, one offline app. 280 tools across 21 categories in a single HTML file: no build step, no dependencies, no network, no account.",
+   "desc": "493 tools across 27 categories in one HTML file",
    "cat": "business",
    "catLabel": "Business & Productivity",
    "demo": true,
@@ -1523,7 +1647,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:36Z",
+   "pushed": "2026-11-10T07:07:22Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1551,7 +1675,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:43Z",
+   "pushed": "2026-11-10T07:05:26Z",
    "archived": false,
    "topics": [
     "codec",
@@ -1608,7 +1732,7 @@
    "tag": "",
    "lang": "Dart",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:43Z",
+   "pushed": "2026-11-10T07:03:54Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
@@ -1616,6 +1740,37 @@
    "source": "https://github.com/drsamonline/lumen",
    "releases": "https://github.com/drsamonline/lumen/releases",
    "shot": "assets/shots/lumen.webp"
+  },
+  {
+   "name": "markdown-kit",
+   "key": "markdown-kit",
+   "kit": true,
+   "desc": "Markdown to HTML with a streaming reveal: render what is finished and hold back what could still change, so model output never flashes a broken parse.",
+   "cat": "kits",
+   "catLabel": "Libraries & Kits",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-11-10T07:42:44Z",
+   "archived": false,
+   "topics": [
+    "kit",
+    "llm",
+    "markdown",
+    "offline-first",
+    "parser",
+    "streaming",
+    "zero-dependency"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/markdown-kit/",
+   "source": "https://github.com/drsamonline/markdown-kit",
+   "releases": "https://github.com/drsamonline/markdown-kit/releases",
+   "shot": "assets/shots/markdown-kit.webp"
   },
   {
    "name": "MATERIA-MEDICA-BUILDER",
@@ -1631,7 +1786,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:13:23Z",
+   "pushed": "2026-11-09T14:00:29Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -1659,7 +1814,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:30Z",
+   "pushed": "2026-11-09T14:00:36Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -1687,7 +1842,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:44Z",
+   "pushed": "2026-11-09T15:54:08Z",
    "archived": false,
    "topics": [
     "algorithms",
@@ -1739,6 +1894,37 @@
    "shot": "assets/shots/mnemosyne-companion.webp"
   },
   {
+   "name": "motion-kit",
+   "key": "motion-kit",
+   "kit": true,
+   "desc": "The shared motion core: springs, easings and transition presets as numbers — the Lobe UI motion vocabulary in one zero-dependency file.",
+   "cat": "kits",
+   "catLabel": "Libraries & Kits",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-11-10T07:42:39Z",
+   "archived": false,
+   "topics": [
+    "animation",
+    "easing",
+    "kit",
+    "motion",
+    "offline-first",
+    "spring",
+    "zero-dependency"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/motion-kit/",
+   "source": "https://github.com/drsamonline/motion-kit",
+   "releases": "https://github.com/drsamonline/motion-kit/releases",
+   "shot": "assets/shots/motion-kit.webp"
+  },
+  {
    "name": "musicgen",
    "key": "musicgen",
    "kit": false,
@@ -1785,7 +1971,7 @@
    "tag": "",
    "lang": "Rust",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:23Z",
+   "pushed": "2026-11-10T07:03:59Z",
    "archived": false,
    "topics": [
     "compiler",
@@ -1813,7 +1999,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:38Z",
+   "pushed": "2026-11-10T06:42:51Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -1927,7 +2113,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:38Z",
+   "pushed": "2026-11-10T07:03:47Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -1984,7 +2170,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:47Z",
+   "pushed": "2026-11-09T15:52:11Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1997,6 +2183,37 @@
    "source": "https://github.com/drsamonline/optical-kit",
    "releases": "https://github.com/drsamonline/optical-kit/releases",
    "shot": "assets/shots/optical-kit.webp"
+  },
+  {
+   "name": "raylib-starter",
+   "key": "raylib-starter",
+   "kit": false,
+   "desc": "One C file on raylib: fixed timestep, scenes, CRC-checked save and an ECS — the C answer to game-kit, built for the 10 MB ceiling.",
+   "cat": "games",
+   "catLabel": "Games & Engines",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "C",
+   "stars": 0,
+   "pushed": "2026-11-10T08:51:33Z",
+   "archived": false,
+   "topics": [
+    "c",
+    "ecs",
+    "fixed-timestep",
+    "game-engine",
+    "kit",
+    "offline-first",
+    "raylib"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/raylib-starter/",
+   "source": "https://github.com/drsamonline/raylib-starter",
+   "releases": "https://github.com/drsamonline/raylib-starter/releases",
+   "shot": "assets/shots/raylib-starter.webp"
   },
   {
    "name": "read-live-transform-app",
@@ -2041,7 +2258,7 @@
    "tag": "686 remedies · 7,786 links",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:48Z",
+   "pushed": "2026-11-10T07:08:53Z",
    "archived": false,
    "topics": [
     "data-visualisation",
@@ -2071,7 +2288,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:26Z",
+   "pushed": "2026-11-10T07:05:11Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -2099,7 +2316,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:48Z",
+   "pushed": "2026-11-09T15:52:13Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -2125,9 +2342,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "",
+   "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:39Z",
+   "pushed": "2026-11-10T07:05:03Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
@@ -2208,7 +2425,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:26Z",
+   "pushed": "2026-11-09T14:00:56Z",
    "archived": false,
    "topics": [
     "arcade",
@@ -2271,7 +2488,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:50Z",
+   "pushed": "2026-11-10T07:04:39Z",
    "archived": false,
    "topics": [
     "kit",
@@ -2327,7 +2544,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:51Z",
+   "pushed": "2026-11-10T07:08:08Z",
    "archived": false,
    "topics": [
     "billing",
@@ -2419,7 +2636,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:52Z",
+   "pushed": "2026-11-10T07:04:54Z",
    "archived": false,
    "topics": [
     "education",
@@ -2477,7 +2694,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-09T11:30:31Z",
+   "pushed": "2026-11-10T07:46:50Z",
    "archived": false,
    "topics": [
     "browser",
@@ -2519,6 +2736,37 @@
    "shot": "assets/shots/today-card.webp"
   },
   {
+   "name": "tokens-kit",
+   "key": "tokens-kit",
+   "kit": true,
+   "desc": "The Lobe UI token set as data: 121 colour names, 187 values per mode, sizes and shadows — generated from lobe-mygo, opt-in only.",
+   "cat": "kits",
+   "catLabel": "Libraries & Kits",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-11-10T07:42:42Z",
+   "archived": false,
+   "topics": [
+    "colors",
+    "design-system",
+    "design-tokens",
+    "kit",
+    "offline-first",
+    "theme",
+    "zero-dependency"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/tokens-kit/",
+   "source": "https://github.com/drsamonline/tokens-kit",
+   "releases": "https://github.com/drsamonline/tokens-kit/releases",
+   "shot": "assets/shots/tokens-kit.webp"
+  },
+  {
    "name": "TTB",
    "key": "ttb",
    "kit": false,
@@ -2532,7 +2780,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-08T18:41:26Z",
+   "pushed": "2026-11-10T07:04:03Z",
    "archived": false,
    "topics": [
     "browser-extension",
@@ -2595,7 +2843,7 @@
    "tag": "Debloat & tune",
    "lang": "PowerShell",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:26Z",
+   "pushed": "2026-11-10T07:05:21Z",
    "archived": false,
    "topics": [
     "debloat",
@@ -2676,7 +2924,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:53Z",
+   "pushed": "2026-11-10T07:04:48Z",
    "archived": false,
    "topics": [
     "kit",
@@ -2833,6 +3081,37 @@
    "shot": "assets/shots/whispering-body-first-aid.webp"
   },
   {
+   "name": "widgets-kit",
+   "key": "widgets-kit",
+   "kit": true,
+   "desc": "The component layer for offline apps: buttons, tags, avatars, alerts, progress, modals, drawers, toasts, menus, tabs, accordion, pagination, steps and layout. No CSS ships.",
+   "cat": "kits",
+   "catLabel": "Libraries & Kits",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 0,
+   "pushed": "2026-11-10T07:42:51Z",
+   "archived": false,
+   "topics": [
+    "accessibility",
+    "design-system",
+    "kit",
+    "offline-first",
+    "ui-components",
+    "widgets",
+    "zero-dependency"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/widgets-kit/",
+   "source": "https://github.com/drsamonline/widgets-kit",
+   "releases": "https://github.com/drsamonline/widgets-kit/releases",
+   "shot": "assets/shots/widgets-kit.webp"
+  },
+  {
    "name": "ziptastic",
    "key": "ziptastic",
    "kit": false,
@@ -2846,7 +3125,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-09T11:01:56Z",
+   "pushed": "2026-11-10T07:05:30Z",
    "archived": false,
    "topics": [
     "chce",
