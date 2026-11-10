@@ -14,7 +14,7 @@
  *      wearing a different hat.
  */
 
-const CACHE = 'hub-2026-11-02-1';
+const CACHE = 'hub-2026-11-10-1';
 
 const SHELL = [
   '/',

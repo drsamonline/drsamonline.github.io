@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Music — Dr Sohil Momin</title>
+<meta name="description" content="Albums and tracks by Dr Sohil Momin, streamed from the platforms that host them: SoundCloud, Suno, Flow Music, Newgrounds and Freesound.">
+<meta name="theme-color" content="#0b0d10">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="https://drsamonline.github.io/">
+    <span class="brand-mark" aria-hidden="true">◄</span>
+    <span>Dr Sohil Momin</span>
+  </a>
+  <nav class="site-nav">
+    <a href="#/">Albums</a>
+    <a href="#/licensing">Licensing</a>
+    <a href="https://drsamonline.github.io/">Main site</a>
+  </nav>
+</header>
+
+<main id="app"></main>
+
+<footer class="site-foot">
+  <p>Music by Dr Sohil Momin. Audio is streamed by the platform that hosts it — nothing is copied to this site.</p>
+  <p class="foot-links">
+    <a href="https://drsamonline.github.io/">drsamonline.github.io</a>
+    <span aria-hidden="true">·</span>
+    <a href="#/licensing">Licensing</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://soundcloud.com/drsam">SoundCloud</a>
+    <a href="https://suno.com/@drsam">Suno</a>
+    <a href="https://www.flowmusic.app/DrSohilMomin">Flow Music</a>
+    <a href="https://drsam.newgrounds.com/">Newgrounds</a>
+    <a href="https://freesound.org/people/drsam/">Freesound</a>
+  </p>
+</footer>
+
+<div id="playerbar" class="playerbar" hidden>
+  <div class="pb-meta">
+    <span id="pb-title" class="pb-title"></span>
+    <span id="pb-sub" class="pb-sub"></span>
+  </div>
+  <div class="pb-controls">
+    <button id="pb-prev" type="button" aria-label="Previous track">◀◀</button>
+    <button id="pb-toggle" type="button" aria-label="Play or pause">▶</button>
+    <button id="pb-next" type="button" aria-label="Next track">▶▶</button>
+  </div>
+  <div id="pb-frame" class="pb-frame"></div>
+</div>
+
+<script src="licences.js"></script>
+<script src="ratings.js"></script>
+<script src="embeds.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

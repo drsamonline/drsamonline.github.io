@@ -330,6 +330,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   <a class="mark" href="#top"><i></i>Sohil Momin</a>
   <nav id="nav">
     <a href="#projects">Projects</a>
+    <a href="music/">Music</a>
     <a href="#recent">Recent</a>
     <a href="#updates">Updates</a>
     <a href="#how">How it's built</a>
@@ -469,6 +470,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
       poet and builder. Everything here is free and open source.</p>
       <h4 style="margin-top:20px">Elsewhere</h4>
       <div class="sup">
+        <a href="music/">Music</a>
         <a href="https://github.com/drsamonline" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.amazon.com/stores/author/B08ZT331LY/allbooks?ccs_id=aed72b9f-71d9-41dc-adee-e9368a317acc" target="_blank" rel="noopener noreferrer">Books</a>
         <a href="mailto:sohilmomin2000@gmail.com">Email</a>
@@ -785,7 +787,7 @@ function initChrome(){
     try{localStorage.setItem('hub-theme',n);}catch(e){}
   });
 
-  var bar=$('progress'), links=[].slice.call(document.querySelectorAll('nav a'));
+  var bar=$('progress'), links=[].slice.call(document.querySelectorAll('nav a[href^="#"]'));
   var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
   function onScroll(){
     var h=document.documentElement.scrollHeight-window.innerHeight;
