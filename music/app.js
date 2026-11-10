@@ -40,6 +40,15 @@
     return `background:linear-gradient(150deg,hsl(${a} 52% 26%),hsl(${b} 60% 12%))`;
   }
 
+  /* cover block: real artwork when we have it, generated gradient behind it otherwise */
+  function coverHTML(album, extraClass) {
+    const art = album.cover_url
+      ? `<img class="cover-img" src="${esc(album.cover_url)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`
+      : '';
+    return `<div class="cover ${extraClass || ''}" style="${coverStyle(album.id)}">${art}` +
+           `<span class="cover-count">${album.track_count} tracks</span></div>`;
+  }
+
   /* ---------- grid ---------- */
   function renderGrid() {
     const d = state.data;
@@ -64,9 +73,7 @@
       groups[label].forEach(a => {
         html += `
           <a class="album-card" href="#/a/${esc(a.slug)}">
-            <div class="cover" style="${coverStyle(a.id)}">
-              <span class="cover-count">${a.track_count} tracks</span>
-            </div>
+            ${coverHTML(a)}
             <div class="album-body">
               <p class="album-title">${esc(a.title)}</p>
               <div class="album-meta">
@@ -95,7 +102,7 @@
     let html = `
       <a class="back" href="#/">◄ All albums</a>
       <div class="album-head">
-        <div class="cover" style="${coverStyle(album.id)}"><span class="cover-count">${album.track_count} tracks</span></div>
+        ${coverHTML(album)}
         <div class="album-head-txt">
           <h1>${esc(album.title)}</h1>
           <p>${[
