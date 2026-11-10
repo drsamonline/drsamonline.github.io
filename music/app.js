@@ -269,11 +269,61 @@
     window.scrollTo({ top: 0 });
   }
 
+
+  /* ---------- support ---------- */
+  function renderSupport() {
+    app.innerHTML = `
+      <a class="back" href="#/">◄ All albums</a>
+      <div class="page-intro">
+        <h1>Support</h1>
+        <p>Every track here is free to listen to — no paywall, no account, no ads, no tracking.
+           If the music is worth something to you, these are the ways to say so.</p>
+      </div>
+      <div class="lic-grid two">
+        <div class="lic-card">
+          <h3>UPI</h3>
+          <p>The simplest one, if you are in India.</p>
+          <p class="upi-row"><code id="upi-id">drsohilboi@ybl</code>
+             <button class="copy-btn" type="button" id="copy-upi">copy</button></p>
+        </div>
+        <div class="lic-card">
+          <h3>Ko-fi</h3>
+          <p>A one-off tip, no account needed.</p>
+          <p><a class="ext" href="https://ko-fi.com/matneo" target="_blank" rel="noopener">ko-fi.com/matneo ↗</a></p>
+        </div>
+        <div class="lic-card">
+          <h3>PayPal</h3>
+          <p>From outside India.</p>
+          <p><a class="ext" href="https://paypal.me/drsohilmomin?locale.x=en_GB&amp;country.x=IN" target="_blank" rel="noopener">paypal.me/drsohilmomin ↗</a></p>
+        </div>
+        <div class="lic-card">
+          <h3>Licensing and permissions</h3>
+          <p>Commercial use, sync, remixes, or anything a badge does not cover — ask directly rather than assume.</p>
+          <p><a class="ext" href="mailto:sohilmomin2000@gmail.com?subject=Music%20licensing">sohilmomin2000@gmail.com ↗</a></p>
+        </div>
+      </div>
+      <p class="note">Support is optional and buys nothing extra: the page stays free either way,
+        and no track is ever put behind a payment.</p>`;
+
+    const btn = document.getElementById('copy-upi');
+    if (btn) btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('drsohilboi@ybl');
+        btn.textContent = 'copied';
+        setTimeout(() => (btn.textContent = 'copy'), 1500);
+      } catch (e) {
+        btn.textContent = 'select it';
+      }
+    });
+    window.scrollTo({ top: 0 });
+  }
+
   /* ---------- router ---------- */
   function route() {
     const hash = location.hash.replace(/^#/, '') || '/';
     if (hash.startsWith('/a/')) renderAlbum(decodeURIComponent(hash.slice(3)));
     else if (hash === '/licensing') renderLicensing();
+    else if (hash === '/support') renderSupport();
     else renderGrid();
   }
 
