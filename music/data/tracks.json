@@ -1,6 +1,6 @@
 {
  "schema_version": 2,
- "generated_at": "2026-11-10T16:05:48Z",
+ "generated_at": "2026-11-10T16:08:24Z",
  "hub_url": "https://drsamonline.github.io/",
  "artist": "Dr Sohil Momin",
  "counts": {
@@ -204,7 +204,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/01-betrayal-broken-heart",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2F01-betrayal-broken-heart",
     "source_url": "https://soundcloud.com/drsam/01-betrayal-broken-heart"
    },
    "rights": {
@@ -229,7 +229,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/01-dance-beats-let-it-go",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2F01-dance-beats-let-it-go",
     "source_url": "https://soundcloud.com/drsam/01-dance-beats-let-it-go"
    },
    "rights": {
@@ -254,7 +254,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/01-little-brain-booster",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2F01-little-brain-booster",
     "source_url": "https://soundcloud.com/drsam/01-little-brain-booster"
    },
    "rights": {
@@ -279,7 +279,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/01-sound-of-heart",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2F01-sound-of-heart",
     "source_url": "https://soundcloud.com/drsam/01-sound-of-heart"
    },
    "rights": {
@@ -304,7 +304,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/02-rock-beats-guitar",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2F02-rock-beats-guitar",
     "source_url": "https://soundcloud.com/drsam/02-rock-beats-guitar"
    },
    "rights": {
@@ -329,7 +329,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/02-little-brain-booster-rise",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2F02-little-brain-booster-rise",
     "source_url": "https://soundcloud.com/drsam/02-little-brain-booster-rise"
    },
    "rights": {
@@ -354,7 +354,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/jungle-rain-meditation-music",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fjungle-rain-meditation-music",
     "source_url": "https://soundcloud.com/drsam/jungle-rain-meditation-music"
    },
    "rights": {
@@ -386,7 +386,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/jungle-rain-2-end-meditation",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fjungle-rain-2-end-meditation",
     "source_url": "https://soundcloud.com/drsam/jungle-rain-2-end-meditation"
    },
    "rights": {
@@ -411,7 +411,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/scenic-meditation-music-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fscenic-meditation-music-drsam",
     "source_url": "https://soundcloud.com/drsam/scenic-meditation-music-drsam"
    },
    "rights": {
@@ -443,7 +443,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/silent-beats-beach-night-meditation-music-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fsilent-beats-beach-night-meditation-music-drsam",
     "source_url": "https://soundcloud.com/drsam/silent-beats-beach-night-meditation-music-drsam"
    },
    "rights": {
@@ -468,7 +468,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/zen-wind-wind-and-thunder-meditation-music-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fzen-wind-wind-and-thunder-meditation-music-drsam",
     "source_url": "https://soundcloud.com/drsam/zen-wind-wind-and-thunder-meditation-music-drsam"
    },
    "rights": {
@@ -493,7 +493,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/aroundthewaterfall",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Faroundthewaterfall",
     "source_url": "https://soundcloud.com/drsam/aroundthewaterfall"
    },
    "rights": {
@@ -518,7 +518,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/desire-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fdesire-drsam",
     "source_url": "https://soundcloud.com/drsam/desire-drsam"
    },
    "rights": {
@@ -543,7 +543,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/warning-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fwarning-drsam",
     "source_url": "https://soundcloud.com/drsam/warning-drsam"
    },
    "rights": {
@@ -568,7 +568,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/funk-bass-the-start-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Ffunk-bass-the-start-drsam",
     "source_url": "https://soundcloud.com/drsam/funk-bass-the-start-drsam"
    },
    "rights": {
@@ -593,7 +593,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/funk-bass-the-end-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Ffunk-bass-the-end-drsam",
     "source_url": "https://soundcloud.com/drsam/funk-bass-the-end-drsam"
    },
    "rights": {
@@ -618,7 +618,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/dubstep-chillout-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fdubstep-chillout-drsam",
     "source_url": "https://soundcloud.com/drsam/dubstep-chillout-drsam"
    },
    "rights": {
@@ -643,7 +643,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/funk-drum-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Ffunk-drum-drsam",
     "source_url": "https://soundcloud.com/drsam/funk-drum-drsam"
    },
    "rights": {
@@ -668,7 +668,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/drsam-bass-chill",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fdrsam-bass-chill",
     "source_url": "https://soundcloud.com/drsam/drsam-bass-chill"
    },
    "rights": {
@@ -700,7 +700,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/bass-chill-the-end-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fbass-chill-the-end-drsam",
     "source_url": "https://soundcloud.com/drsam/bass-chill-the-end-drsam"
    },
    "rights": {
@@ -725,7 +725,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/funk-saxo-the-end-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Ffunk-saxo-the-end-drsam",
     "source_url": "https://soundcloud.com/drsam/funk-saxo-the-end-drsam"
    },
    "rights": {
@@ -750,7 +750,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/funk-saxo-the-start-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Ffunk-saxo-the-start-drsam",
     "source_url": "https://soundcloud.com/drsam/funk-saxo-the-start-drsam"
    },
    "rights": {
@@ -775,7 +775,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/hold-me-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fhold-me-drsam",
     "source_url": "https://soundcloud.com/drsam/hold-me-drsam"
    },
    "rights": {
@@ -800,7 +800,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/urban-chillout-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Furban-chillout-drsam",
     "source_url": "https://soundcloud.com/drsam/urban-chillout-drsam"
    },
    "rights": {
@@ -825,7 +825,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/neurofunk-neo-2019-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fneurofunk-neo-2019-drsam",
     "source_url": "https://soundcloud.com/drsam/neurofunk-neo-2019-drsam"
    },
    "rights": {
@@ -850,7 +850,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/chain-reaction-by-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fchain-reaction-by-drsam",
     "source_url": "https://soundcloud.com/drsam/chain-reaction-by-drsam"
    },
    "rights": {
@@ -875,7 +875,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/dark-trap-2019-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fdark-trap-2019-drsam",
     "source_url": "https://soundcloud.com/drsam/dark-trap-2019-drsam"
    },
    "rights": {
@@ -900,7 +900,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/dubstep-indian-2019-drsam",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Fdubstep-indian-2019-drsam",
     "source_url": "https://soundcloud.com/drsam/dubstep-indian-2019-drsam"
    },
    "rights": {
@@ -925,7 +925,7 @@
    "embed": {
     "site": "soundcloud",
     "kind": "iframe",
-    "player_url": "https://w.soundcloud.com/player/?url=https://soundcloud.com/drsam/techno-mortal-kombat-2019",
+    "player_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdrsam%2Ftechno-mortal-kombat-2019",
     "source_url": "https://soundcloud.com/drsam/techno-mortal-kombat-2019"
    },
    "rights": {
