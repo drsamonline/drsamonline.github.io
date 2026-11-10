@@ -22,6 +22,7 @@ description, so a brand-new repo is never silently dropped.
 
 from __future__ import annotations
 
+import html as html_lib
 import json
 import os
 import re
@@ -455,6 +456,90 @@ def build_sitemap(records: list[dict], lastmod: str) -> str:
 
 
 # --------------------------------------------------------------------------- #
+def build_kits_page(records: list[dict], iso: str) -> str:
+    """The kits page: /kits/ — the front door the hub's own comment promised.
+
+    The hub lists apps and says kits "have their own page"; until now that page did
+    not exist, and the estate's own health check reported it as missing. One page,
+    generated from the same records, so a new kit appears here without an edit.
+    """
+    kits = [r for r in records if r["kit"]]
+    kits.sort(key=lambda r: (r["catLabel"], r["key"]))
+    cards = []
+    for r in kits:
+        links = [f'<a href="{r["source"]}">source</a>']
+        if r["landing"]:
+            links.insert(0, f'<a href="{r["landing"]}">docs &amp; demo</a>')
+        if r["rel"]:
+            links.append(f'<a href="{r["releases"]}">releases</a>')
+        topics = "".join(f'<span class="t">{html_lib.escape(t)}</span>' for t in r["topics"][:4])
+        cards.append(f'''
+      <article class="k">
+        <h3><a href="{r["source"]}">{html_lib.escape(r["name"])}</a></h3>
+        <p>{html_lib.escape(r["desc"])}</p>
+        <p class="meta">{" &nbsp;·&nbsp; ".join(links)}</p>
+        <p class="topics">{topics}</p>
+      </article>''')
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The kits — Dr Sohil Momin</title>
+<meta name="description" content="The shared cores every app in this estate is built on: {len(kits)} libraries, each offline, dependency-free and documented. A kit is a library, not an app.">
+<meta name="theme-color" content="#0d1015">
+<link rel="canonical" href="https://drsamonline.github.io/kits/">
+<style>
+  :root{{--paper:#0d1015;--card:#14181f;--line:rgba(234,231,225,.10);--ink:#eae7e1;--dim:#98a1ab;
+        --brass:#d8ac47;--serif:ui-serif,"Iowan Old Style",Palatino,Georgia,serif;
+        --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--w:1100px}}
+  *{{box-sizing:border-box}}
+  body{{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}}
+  a{{color:var(--brass)}}
+  .wrap{{max-width:var(--w);margin:0 auto;padding:0 24px}}
+  header{{padding:56px 0 24px;border-bottom:1px solid var(--line)}}
+  .crumb{{font-size:13px;color:var(--dim);text-decoration:none}}
+  h1{{font:600 clamp(1.9rem,4vw,2.6rem)/1.1 var(--serif);margin:14px 0 10px}}
+  .lede{{color:var(--dim);max-width:64ch;margin:0}}
+  main{{padding:28px 0 60px}}
+  .count{{color:var(--dim);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 18px}}
+  .grid{{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}}
+  .k{{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}}
+  .k h3{{margin:0 0 6px;font:600 1.05rem/1.3 var(--serif)}}
+  .k h3 a{{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(216,172,71,.4)}}
+  .k p{{margin:0 0 10px;color:var(--dim);font-size:14.5px}}
+  .k .meta{{font-size:13px}}
+  .k .topics{{display:flex;gap:6px;flex-wrap:wrap;margin:0}}
+  .t{{font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:1px 8px}}
+  #support{{border-top:1px solid var(--line);margin-top:36px;padding-top:24px;color:var(--dim);font-size:14.5px}}
+  #support a{{margin-right:10px}}
+  footer{{border-top:1px solid var(--line);padding:20px 0 40px;color:var(--dim);font-size:13px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="crumb" href="/">← the estate</a>
+  <h1>The kits</h1>
+  <p class="lede">The shared cores every app here is built on — offline, dependency-free, and each with
+  its own documentation. A kit is a library, not an app: it is never bolted onto an existing app, it is
+  what a new one is built from.</p>
+</div></header>
+<main class="wrap">
+  <p class="count">{len(kits)} kits · generated {iso[:10]}</p>
+  <div class="grid">{"".join(cards)}
+  </div>
+  <section id="support">
+    <p><b>Support the work</b> — one person, no company, no ads, no tracking. Any amount, or none.</p>
+    <p><b>UPI</b> drsohilboi@ybl <a href="https://ko-fi.com/matneo">Ko-fi</a><a href="https://paypal.me/drsohilmomin">PayPal</a><a href="https://drsamonline.github.io/">All projects</a><a href="mailto:sohilmomin2000@gmail.com">Email</a></p>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 Dr Sohil Momin · <a href="/">drsamonline.github.io</a></div></footer>
+</body>
+</html>
+"""
+
+
 def main() -> None:
     index_path = os.path.join(ROOT, "index.html")
     html = read(index_path)
@@ -508,6 +593,23 @@ def main() -> None:
 
     # 5. sitemap.xml
     write(os.path.join(ROOT, "sitemap.xml"), build_sitemap(records, lastmod))
+
+    # 6. /kits/ — the page the hub's own comment said existed. In the sitemap too,
+    #    or it is a page nothing points a crawler at.
+    sm_path = os.path.join(ROOT, "sitemap.xml")
+    sm = read(sm_path)
+    if "/kits/" not in sm:
+        entry = ('  <url><loc>https://drsamonline.github.io/kits/</loc>'
+                 '<lastmod>%s</lastmod><changefreq>weekly</changefreq>'
+                 '<priority>0.6</priority></url>\n' % lastmod)
+        sm = sm.replace("</urlset>", entry + "</urlset>")
+        write(sm_path, sm)
+        print("sitemap: added /kits/")
+
+    kits_dir = os.path.join(ROOT, "kits")
+    os.makedirs(kits_dir, exist_ok=True)
+    write(os.path.join(kits_dir, "index.html"), build_kits_page(records, iso))
+    print("kits/index.html: %d kits" % sum(1 for r in records if r["kit"]))
 
     print("counted %d of %d repos (%d private, %d forks, %d empty, %d excluded; "
           "%d archived)" % (breakdown["counted"], breakdown["total"], breakdown["private"],

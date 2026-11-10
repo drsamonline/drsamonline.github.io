@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The kits — Dr Sohil Momin</title>
+<meta name="description" content="The shared cores every app in this estate is built on: 25 libraries, each offline, dependency-free and documented. A kit is a library, not an app.">
+<meta name="theme-color" content="#0d1015">
+<link rel="canonical" href="https://drsamonline.github.io/kits/">
+<style>
+  :root{--paper:#0d1015;--card:#14181f;--line:rgba(234,231,225,.10);--ink:#eae7e1;--dim:#98a1ab;
+        --brass:#d8ac47;--serif:ui-serif,"Iowan Old Style",Palatino,Georgia,serif;
+        --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--w:1100px}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
+  a{color:var(--brass)}
+  .wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+  header{padding:56px 0 24px;border-bottom:1px solid var(--line)}
+  .crumb{font-size:13px;color:var(--dim);text-decoration:none}
+  h1{font:600 clamp(1.9rem,4vw,2.6rem)/1.1 var(--serif);margin:14px 0 10px}
+  .lede{color:var(--dim);max-width:64ch;margin:0}
+  main{padding:28px 0 60px}
+  .count{color:var(--dim);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 18px}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .k h3{margin:0 0 6px;font:600 1.05rem/1.3 var(--serif)}
+  .k h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(216,172,71,.4)}
+  .k p{margin:0 0 10px;color:var(--dim);font-size:14.5px}
+  .k .meta{font-size:13px}
+  .k .topics{display:flex;gap:6px;flex-wrap:wrap;margin:0}
+  .t{font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+  #support{border-top:1px solid var(--line);margin-top:36px;padding-top:24px;color:var(--dim);font-size:14.5px}
+  #support a{margin-right:10px}
+  footer{border-top:1px solid var(--line);padding:20px 0 40px;color:var(--dim);font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="crumb" href="/">← the estate</a>
+  <h1>The kits</h1>
+  <p class="lede">The shared cores every app here is built on — offline, dependency-free, and each with
+  its own documentation. A kit is a library, not an app: it is never bolted onto an existing app, it is
+  what a new one is built from.</p>
+</div></header>
+<main class="wrap">
+  <p class="count">25 kits · generated 2026-11-10</p>
+  <div class="grid">
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/art-kit">art-kit</a></h3>
+        <p>The art primitives Forge was missing: an indexed palette, a pixel canvas, draw ops, a delta undo stack, dithering, median-cut quantisation and sprite sheets.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/art-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/art-kit">source</a></p>
+        <p class="topics"><span class="t">canvas</span><span class="t">dithering</span><span class="t">generative</span><span class="t">isometric</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/astro-kit">astro-kit</a></h3>
+        <p>The shared astronomy core: sun and moon longitude (Meeus), ayanamsa, sunrise/sunset, and tithi, nakshatra, yoga and karana.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/astro-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/astro-kit">source</a></p>
+        <p class="topics"><span class="t">astronomy</span><span class="t">india</span><span class="t">kit</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/audio-kit">audio-kit</a></h3>
+        <p>Synthesis, theory, patterns and notation for offline apps: ADSR envelopes, oscillator voices, filters, scales, chords, a pattern sequencer and staff layout.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/audio-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/audio-kit">source</a></p>
+        <p class="topics"><span class="t">adsr</span><span class="t">audio</span><span class="t">javascript</span><span class="t">music-theory</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/book-kit">book-kit</a></h3>
+        <p>The companion-app-from-a-book pattern: chapters, key points, practices, flashcards, search and reading progress.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/book-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/book-kit">source</a></p>
+        <p class="topics"><span class="t">education</span><span class="t">kit</span><span class="t">reading</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/case-kit">case-kit</a></h3>
+        <p>Clinical case tracking: sections, dated symptoms, follow-ups, a timeline and a summary.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/case-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/case-kit">source</a></p>
+        <p class="topics"><span class="t">case-management</span><span class="t">clinical</span><span class="t">kit</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/code-kit">code-kit</a></h3>
+        <p>QR encoding (versions 1-40, L/M/Q/H, all eight masks), a small syntax highlighter and copyable snippet blocks — one zero-dependency file.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/code-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/code-kit">source</a></p>
+        <p class="topics"><span class="t">encoder</span><span class="t">kit</span><span class="t">offline-first</span><span class="t">qr-code</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/compress-kit">compress-kit</a></h3>
+        <p>The shared compression core: gzip, deflate and deflate-raw via the platform&#x27;s Compression Streams.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/compress-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/compress-kit">source</a></p>
+        <p class="topics"><span class="t">compression</span><span class="t">kit</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/crypto-kit">crypto-kit</a></h3>
+        <p>The shared crypto core: AES-256-GCM, PBKDF2 passphrase keys, sealed envelopes and one-time view, on Web Crypto.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/crypto-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/crypto-kit">source</a></p>
+        <p class="topics"><span class="t">cryptography</span><span class="t">encryption</span><span class="t">kit</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/export-kit">export-kit</a></h3>
+        <p>Save text, JSON, CSV and binary to the user&#x27;s device, and bundle files into a store-only ZIP.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/export-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/export-kit">source</a></p>
+        <p class="topics"><span class="t">export</span><span class="t">kit</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/form-kit">form-kit</a></h3>
+        <p>24 form controls for offline apps — inputs, OTP, select, autocomplete, calendar, upload, checkbox, switch, slider, rate, toggles, colour — with one API and one validation pass.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/form-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/form-kit">source</a></p>
+        <p class="topics"><span class="t">form-controls</span><span class="t">forms</span><span class="t">kit</span><span class="t">offline-first</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/frame-kit">frame-kit</a></h3>
+        <p>The shared transfer-frame core: a self-describing frame, a rateless collector and byte/checksum utilities.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/frame-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/frame-kit">source</a></p>
+        <p class="topics"><span class="t">kit</span><span class="t">protocol</span><span class="t">transfer</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/game-kit">game-kit</a></h3>
+        <p>The shared game core: a fixed-timestep loop, input, scenes, save/load and maths.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/game-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/game-kit">source</a></p>
+        <p class="topics"><span class="t">games</span><span class="t">kit</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/lan-kit">lan-kit</a></h3>
+        <p>The shared LAN core: a local room with a real-time channel over Server-Sent Events and POST.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/lan-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/lan-kit">source</a></p>
+        <p class="topics"><span class="t">kit</span><span class="t">lan</span><span class="t">offline-first</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/markdown-kit">markdown-kit</a></h3>
+        <p>Markdown to HTML with a streaming reveal: render what is finished and hold back what could still change, so model output never flashes a broken parse.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/markdown-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/markdown-kit">source</a></p>
+        <p class="topics"><span class="t">kit</span><span class="t">llm</span><span class="t">markdown</span><span class="t">offline-first</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/ml-kit">ml-kit</a></h3>
+        <p>The classic algorithms from scratch for offline features: tf-idf, Naive Bayes, k-NN, k-means, PCA, ID3, linear regression and Markov chains — no model, no API key, no network.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/ml-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/ml-kit">source</a></p>
+        <p class="topics"><span class="t">algorithms</span><span class="t">clustering</span><span class="t">grammar</span><span class="t">javascript</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/motion-kit">motion-kit</a></h3>
+        <p>The shared motion core: springs, easings and transition presets as numbers — the Lobe UI motion vocabulary in one zero-dependency file.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/motion-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/motion-kit">source</a></p>
+        <p class="topics"><span class="t">animation</span><span class="t">easing</span><span class="t">kit</span><span class="t">motion</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/optical-kit">optical-kit</a></h3>
+        <p>The shared optical-transfer core: a systematic LT fountain code, self-describing frames and a pluggable codec.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/optical-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/optical-kit">source</a></p>
+        <p class="topics"><span class="t">kit</span><span class="t">optical</span><span class="t">transfer</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/repertory-kit">repertory-kit</a></h3>
+        <p>The homeopathic repertorisation core: rubric grading and grade-weighted remedy scoring.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/repertory-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/repertory-kit">source</a></p>
+        <p class="topics"><span class="t">homeopathy</span><span class="t">kit</span><span class="t">repertory</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/search-kit">search-kit</a></h3>
+        <p>Ranked search over big corpora — an inverted index with prefix and fuzzy matching.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/search-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/search-kit">source</a></p>
+        <p class="topics"><span class="t">kit</span><span class="t">search</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/srs-kit">srs-kit</a></h3>
+        <p>Spaced repetition (SM-2) for flashcards — scheduling, lapses, due cards and stats.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/srs-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/srs-kit">source</a></p>
+        <p class="topics"><span class="t">education</span><span class="t">kit</span><span class="t">spaced-repetition</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/tokens-kit">tokens-kit</a></h3>
+        <p>The Lobe UI token set as data: 121 colour names, 187 values per mode, sizes and shadows — generated from lobe-mygo, opt-in only.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/tokens-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/tokens-kit">source</a></p>
+        <p class="topics"><span class="t">colors</span><span class="t">design-system</span><span class="t">design-tokens</span><span class="t">kit</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/ui-kit">ui-kit</a></h3>
+        <p>A reactive UI layer small enough for a single file: signals, computed, reactive effects, hyperscript, a keyed list, events, a hash router and form binding.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/ui-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/ui-kit">source</a></p>
+        <p class="topics"><span class="t">frontend</span><span class="t">hyperscript</span><span class="t">javascript</span><span class="t">no-build</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/web-kit">web-kit</a></h3>
+        <p>The shared offline-first runtime for drsamonline apps: storage, i18n (EN/HI/GU), CSV, PWA, theme, SEO and accessibility.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/web-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/web-kit">source</a></p>
+        <p class="topics"><span class="t">kit</span><span class="t">offline-first</span><span class="t">pwa</span><span class="t">zero-dependency</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/weft8-kit">weft8-kit</a></h3>
+        <p>The Loom&#x27;s Weft-8 as a reusable kit — an auditable, step-limited rule engine you can drop into another app.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/weft8-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/weft8-kit">source</a></p>
+        <p class="topics"><span class="t">assembly</span><span class="t">education</span><span class="t">kit</span><span class="t">retrocomputing</span></p>
+      </article>
+      <article class="k">
+        <h3><a href="https://github.com/drsamonline/widgets-kit">widgets-kit</a></h3>
+        <p>The component layer for offline apps: buttons, tags, avatars, alerts, progress, modals, drawers, toasts, menus, tabs, accordion, pagination, steps and layout. No CSS ships.</p>
+        <p class="meta"><a href="https://drsamonline.github.io/widgets-kit/">docs &amp; demo</a> &nbsp;·&nbsp; <a href="https://github.com/drsamonline/widgets-kit">source</a></p>
+        <p class="topics"><span class="t">accessibility</span><span class="t">design-system</span><span class="t">kit</span><span class="t">offline-first</span></p>
+      </article>
+  </div>
+  <section id="support">
+    <p><b>Support the work</b> — one person, no company, no ads, no tracking. Any amount, or none.</p>
+    <p><b>UPI</b> drsohilboi@ybl <a href="https://ko-fi.com/matneo">Ko-fi</a><a href="https://paypal.me/drsohilmomin">PayPal</a><a href="https://drsamonline.github.io/">All projects</a><a href="mailto:sohilmomin2000@gmail.com">Email</a></p>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 Dr Sohil Momin · <a href="/">drsamonline.github.io</a></div></footer>
+</body>
+</html>
