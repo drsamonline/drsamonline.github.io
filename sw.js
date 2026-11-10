@@ -14,7 +14,7 @@
  *      wearing a different hat.
  */
 
-const CACHE = 'hub-2026-11-10-1';
+const CACHE = 'hub-2026-11-10-2';
 
 const SHELL = [
   '/',
@@ -60,6 +60,23 @@ self.addEventListener('fetch', (event) => {
         .catch(() =>
           caches.match('/index.html').then((hit) => hit || caches.match('/'))
         )
+    );
+    return;
+  }
+
+  // The music page owns its own freshness and ships its own manifest.
+  // Cache-first here pinned a stale app.js and a stale tracks.json, so a
+  // returning reader kept seeing the pre-artwork page. Network first, cache
+  // only as the offline fallback.
+  if (url.pathname.startsWith('/music/')) {
+    event.respondWith(
+      fetch(req).then((res) => {
+        if (res && res.status === 200 && res.type === 'basic') {
+          const copy = res.clone();
+          caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {});
+        }
+        return res;
+      }).catch(() => caches.match(req))
     );
     return;
   }

@@ -43,7 +43,7 @@
   /* cover block: real artwork when we have it, generated gradient behind it otherwise */
   function coverHTML(album, extraClass) {
     const art = album.cover_url
-      ? `<img class="cover-img" src="${esc(album.cover_url)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">`
+      ? `<img class="cover-img" src="${esc(album.cover_url)}" alt="" decoding="async" onerror="this.remove()">`
       : '';
     return `<div class="cover ${extraClass || ''}" style="${coverStyle(album.id)}">${art}` +
            `<span class="cover-count">${album.track_count} tracks</span></div>`;
