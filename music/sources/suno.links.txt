@@ -1,0 +1,21 @@
+# One link per line. Add new links here; they are picked up on the next crawl.
+https://suno.com/song/8b2581a5-029c-4981-bd6e-6650f2203a53
+https://suno.com/song/43918a14-1bb2-4af2-8523-7deb58ce39af
+https://suno.com/song/65441cd0-260a-447e-b553-d17dbc68e5cc
+https://suno.com/song/3a8bba35-9a51-4c2a-83dc-3915f5dc7970
+https://suno.com/song/63b3cb57-eeae-4567-b7d8-00635f87431b
+https://suno.com/song/a4e5d107-bb6c-4998-90aa-a87ab26fb37a
+https://suno.com/song/8bf4920b-ad5d-42c8-87af-3f1342dd63a5
+https://suno.com/song/40043b0c-8e85-46f9-9291-0b8e60dbf71d
+https://suno.com/song/75fc04f5-7800-4dba-a7d1-49b676fa08e0
+https://suno.com/song/ae77f59e-2b02-4603-a82d-77139117bac4
+https://suno.com/song/fee9ca23-2269-4a53-a100-78ed97bcc1db
+https://suno.com/song/174843d3-6356-4db3-99ad-84678f068f63
+https://suno.com/song/474e7dcf-2d85-4c45-88c1-9934feae7ca5
+https://suno.com/song/bf9b8646-f175-415b-b8a0-b4e66fb20ff7
+https://suno.com/song/032a1f8f-ef22-4136-8cef-b36013fc249b
+https://suno.com/song/1a859d81-1442-403e-afdb-0fea9f174cc7
+https://suno.com/song/40410294-3b32-4fb3-b356-6a454ef93280
+https://suno.com/song/111d4b19-3810-4b82-9133-3b35c7c9b6b1
+https://suno.com/song/5cbd1569-631a-4ce4-bbfb-a3526db265f8
+https://suno.com/song/1e520e59-a428-4e5c-b32c-ff7ea8d9aa3b
