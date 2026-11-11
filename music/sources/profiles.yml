@@ -1,0 +1,36 @@
+# Confirmed profiles, crawled 2026-11-10. Add a platform here before its links file.
+soundcloud:
+  url: https://soundcloud.com/drsam
+  captured: 29
+  total: 29
+  method: public JSON via scraper
+flow_music:
+  url: https://www.flowmusic.app/DrSohilMomin
+  captured: 100
+  total: 149
+  method: headless browser, scroll and wait
+suno:
+  url: https://suno.com/@drsam?page=songs
+  captured: 20
+  total: 69
+  method: headless browser, pages of 20
+newgrounds:
+  url: https://drsam.newgrounds.com/
+  captured: 4
+  total: null
+  method: titles only, site 403s datacenter IPs
+freesound:
+  url: https://freesound.org/people/drsam/
+  captured: 1
+  total: 1
+  method: page fetch
+audiomack:
+  url: https://audiomack.com/sohilmomin2000
+  captured: 0
+  total: 0
+  method: empty account, created 2026-11
+youtube:
+  url: https://www.youtube.com/@drsamonline
+  captured: 0
+  total: 54
+  method: excluded, mixed non-music content
