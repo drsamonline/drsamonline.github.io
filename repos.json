@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T01:41:18Z",
+ "generated_at": "2026-11-12T11:45:31Z",
  "owner": "drsamonline",
  "count": 90,
  "kits": 25,
@@ -63,7 +63,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-12T01:14:50Z",
+   "pushed": "2026-11-12T06:35:37Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -176,7 +176,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-11T18:48:13Z",
+   "pushed": "2026-11-12T06:36:24Z",
    "archived": false,
    "topics": [
     "ambient",
@@ -206,7 +206,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:50:15Z",
+   "pushed": "2026-11-12T06:46:57Z",
    "archived": false,
    "topics": [
     "clipboard",
@@ -235,7 +235,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:59Z",
+   "pushed": "2026-11-12T06:47:06Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -263,7 +263,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:51:21Z",
+   "pushed": "2026-11-12T06:46:14Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -292,7 +292,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 0,
-   "pushed": "2026-11-11T18:51:08Z",
+   "pushed": "2026-11-12T06:46:22Z",
    "archived": false,
    "topics": [
     "api",
@@ -323,7 +323,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T14:57:22Z",
+   "pushed": "2026-11-12T06:44:57Z",
    "archived": false,
    "topics": [
     "app",
@@ -354,7 +354,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-12T01:14:57Z",
+   "pushed": "2026-11-12T06:35:27Z",
    "archived": false,
    "topics": [
     "8-bit",
@@ -411,16 +411,16 @@
    "key": "app-opd-register",
    "kit": false,
    "desc": "A daily OPD register for multi-location clinics — month register, dashboard, day-wise statistics, print and Excel. Offline, no account, no server.",
-   "cat": "other",
-   "catLabel": "Other / New",
-   "demo": false,
+   "cat": "health",
+   "catLabel": "Health & Medicine",
+   "demo": true,
    "feat": false,
    "rel": false,
    "kicker": "",
    "tag": "",
    "lang": "JavaScript",
    "stars": 0,
-   "pushed": "2026-11-11T20:11:55Z",
+   "pushed": "2026-11-12T04:40:44Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -454,7 +454,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-12T01:15:04Z",
+   "pushed": "2026-11-12T06:43:13Z",
    "archived": false,
    "topics": [
     "homoeopathy",
@@ -485,7 +485,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:44:42Z",
+   "pushed": "2026-11-12T06:48:42Z",
    "archived": false,
    "topics": [
     "india",
@@ -514,7 +514,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 2,
-   "pushed": "2026-11-11T15:29:45Z",
+   "pushed": "2026-11-12T06:44:55Z",
    "archived": false,
    "topics": [
     "creative-writing",
@@ -548,7 +548,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 0,
-   "pushed": "2026-11-11T18:51:01Z",
+   "pushed": "2026-11-12T06:46:26Z",
    "archived": false,
    "topics": [
     "github-pages",
@@ -579,7 +579,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:50:54Z",
+   "pushed": "2026-11-12T06:46:31Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -610,7 +610,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-12T01:15:10Z",
+   "pushed": "2026-11-12T06:43:21Z",
    "archived": false,
    "topics": [
     "assembly",
@@ -738,7 +738,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T19:05:42Z",
+   "pushed": "2026-11-12T05:03:30Z",
    "archived": false,
    "topics": [
     "changelog",
@@ -766,7 +766,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-12T01:15:19Z",
+   "pushed": "2026-11-12T06:43:17Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -795,7 +795,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:47:32Z",
+   "pushed": "2026-11-12T06:48:32Z",
    "archived": false,
    "topics": [
     "compression",
@@ -824,7 +824,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:47:26Z",
+   "pushed": "2026-11-12T06:48:37Z",
    "archived": false,
    "topics": [
     "file-transfer",
@@ -852,7 +852,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-11T18:48:06Z",
+   "pushed": "2026-11-12T07:39:54Z",
    "archived": false,
    "topics": [
     "calculator",
@@ -882,7 +882,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:48:39Z",
+   "pushed": "2026-11-12T06:47:58Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -939,7 +939,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:50:06Z",
+   "pushed": "2026-11-12T06:47:01Z",
    "archived": false,
    "topics": [
     "lan",
@@ -995,7 +995,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-12T01:15:25Z",
+   "pushed": "2026-11-12T06:35:41Z",
    "archived": false,
    "topics": [
     "collaboration",
@@ -1137,7 +1137,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-11T18:47:46Z",
+   "pushed": "2026-11-12T06:58:01Z",
    "archived": false,
    "topics": [
     "habits",
@@ -1252,7 +1252,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:48:00Z",
+   "pushed": "2026-11-12T06:48:16Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1278,9 +1278,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "JavaScript",
+   "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-11T18:50:47Z",
+   "pushed": "2026-11-12T06:39:36Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1404,7 +1404,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T19:24:10Z",
+   "pushed": "2026-11-12T01:59:04Z",
    "archived": false,
    "topics": [
     "kit",
@@ -1459,7 +1459,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:13Z",
+   "pushed": "2026-11-12T06:47:41Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -1513,9 +1513,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "Python",
+   "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-12T01:39:43Z",
+   "pushed": "2026-11-12T05:43:23Z",
    "archived": false,
    "topics": [
     "chce",
@@ -1543,7 +1543,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:39Z",
+   "pushed": "2026-11-12T06:47:19Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -1571,7 +1571,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-12T01:10:19Z",
+   "pushed": "2026-11-12T06:40:11Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -1668,7 +1668,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:48:26Z",
+   "pushed": "2026-11-12T06:55:23Z",
    "archived": false,
    "topics": [
     "city-builder",
@@ -1697,7 +1697,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-12T01:15:32Z",
+   "pushed": "2026-11-12T06:43:24Z",
    "archived": false,
    "topics": [
     "no-dependencies",
@@ -1722,16 +1722,16 @@
    "key": "kosh",
    "kit": false,
    "desc": "The CHCE file workbench — split, squeeze, archive, verify and inspect files. CLI plus a local web UI.",
-   "cat": "other",
-   "catLabel": "Other / New",
-   "demo": false,
+   "cat": "chce",
+   "catLabel": "CHCE Compression",
+   "demo": true,
    "feat": false,
    "rel": false,
    "kicker": "",
    "tag": "",
    "lang": "Python",
    "stars": 0,
-   "pushed": "2026-11-11T18:54:43Z",
+   "pushed": "2026-11-12T11:35:35Z",
    "archived": false,
    "topics": [
     "cli",
@@ -1817,7 +1817,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-11T18:48:54Z",
+   "pushed": "2026-11-12T06:49:00Z",
    "archived": false,
    "topics": [
     "cli",
@@ -1942,7 +1942,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:47:40Z",
+   "pushed": "2026-11-12T06:39:24Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -1970,7 +1970,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:31:42Z",
+   "pushed": "2026-11-12T11:29:56Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -2034,7 +2034,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-12T01:15:39Z",
+   "pushed": "2026-11-12T06:39:35Z",
    "archived": false,
    "topics": [
     "education",
@@ -2213,7 +2213,7 @@
    "tag": "",
    "lang": "CSS",
    "stars": 1,
-   "pushed": "2026-11-11T18:47:53Z",
+   "pushed": "2026-11-12T06:48:21Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -2242,7 +2242,7 @@
    "tag": "Auto-fire shooter",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-12T01:15:47Z",
+   "pushed": "2026-11-12T06:35:47Z",
    "archived": false,
    "topics": [
     "games",
@@ -2288,7 +2288,7 @@
    "name": "neonboom",
    "key": "neonboom",
    "kit": false,
-   "desc": "A beat workstation that lives in a browser tab. 27 procedurally synthesised loops, hardware-style pad grid, canvas arrangement, mixer, master FX and WAV export. Offline-first PWA with a 190 KB single-file build. Zero dependencies.",
+   "desc": "A beat workstation that lives in a browser tab. 27 procedurally synthesised loops, hardware-style pad grid, canvas arrangement, mixer with sends, master FX, automation, scenes and WAV/stem export. Offline-first PWA, 192 KB single file, zero dependencies. Feature-frozen at 2.4.0.",
    "cat": "audio",
    "catLabel": "Audio & Media",
    "demo": true,
@@ -2334,7 +2334,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:33Z",
+   "pushed": "2026-11-12T06:47:24Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -2362,7 +2362,7 @@
    "tag": "344 remedy portraits",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-11T18:48:47Z",
+   "pushed": "2026-11-12T06:48:51Z",
    "archived": false,
    "topics": [
     "education",
@@ -2409,7 +2409,7 @@
    "name": "planner-pro",
    "key": "planner-pro",
    "kit": false,
-   "desc": "An offline-first planner for day, week, month and year. Multi-profile, PIN locked, no accounts, no servers. ~120 KB of vanilla JS.",
+   "desc": "An offline-first planner for day, week, month and year. Multi-profile, PIN locked, no accounts, no servers, no networking code. ~210 KB of vanilla JS.",
    "cat": "mind",
    "catLabel": "Mind, Memory & Wellbeing",
    "demo": true,
@@ -2484,7 +2484,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:48:32Z",
+   "pushed": "2026-11-12T06:56:33Z",
    "archived": false,
    "topics": [
     "education",
@@ -2549,7 +2549,7 @@
    "tag": "686 remedies · 7,786 links",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:26Z",
+   "pushed": "2026-11-12T06:47:32Z",
    "archived": false,
    "topics": [
     "data-visualisation",
@@ -2579,7 +2579,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-12T01:15:53Z",
+   "pushed": "2026-11-12T06:35:51Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -2664,7 +2664,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-11T18:51:15Z",
+   "pushed": "2026-11-12T06:55:10Z",
    "archived": false,
    "topics": [
     "games",
@@ -2756,7 +2756,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:52Z",
+   "pushed": "2026-11-12T06:47:10Z",
    "archived": false,
    "topics": [
     "encryption",
@@ -2812,7 +2812,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:00Z",
+   "pushed": "2026-11-12T06:47:50Z",
    "archived": false,
    "topics": [
     "case-management",
@@ -2841,7 +2841,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-12T01:16:00Z",
+   "pushed": "2026-11-12T06:39:16Z",
    "archived": false,
    "topics": [
     "billing",
@@ -2961,7 +2961,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:08Z",
+   "pushed": "2026-11-12T06:55:54Z",
    "archived": false,
    "topics": [
     "github-pages",
@@ -3019,7 +3019,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:46Z",
+   "pushed": "2026-11-12T06:54:42Z",
    "archived": false,
    "topics": [
     "offline-first",
@@ -3198,7 +3198,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:49:20Z",
+   "pushed": "2026-11-12T06:47:36Z",
    "archived": false,
    "topics": [
     "education",
@@ -3255,7 +3255,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:50:34Z",
+   "pushed": "2026-11-12T06:46:39Z",
    "archived": false,
    "topics": [
     "assembly",
@@ -3283,7 +3283,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-11T18:50:41Z",
+   "pushed": "2026-11-12T06:46:35Z",
    "archived": false,
    "topics": [
     "assembly",
@@ -3311,7 +3311,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:50:21Z",
+   "pushed": "2026-11-12T06:46:50Z",
    "archived": false,
    "topics": [
     "arduino",
@@ -3339,7 +3339,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:50:28Z",
+   "pushed": "2026-11-12T06:46:44Z",
    "archived": false,
    "topics": [
     "assembly",
@@ -3368,7 +3368,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-11T18:48:19Z",
+   "pushed": "2026-11-12T06:48:11Z",
    "archived": false,
    "topics": [
     "clinical",
