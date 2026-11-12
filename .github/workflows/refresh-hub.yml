@@ -70,6 +70,35 @@ jobs:
             && mv tools/catalogue.json.new tools/catalogue.json \
             || echo "::warning::could not fetch catalogue.json - using the committed copy"
 
+      - name: Sync the music site from drsamonline/music
+        # THE PUBLISH DIRECTION WAS BACKWARDS. drsamonline/music used to PUSH its files here
+        # from its own workflow, which needs a token with write access to THIS repository -
+        # a secret that was never set, so its publish-check failed on every run and the live
+        # site silently kept old files.
+        #
+        # Pulling is the same result with no secret: this repository can read a public one
+        # with the runner's own token, and the hub is already the thing that publishes.
+        run: |
+          set -uo pipefail
+          SRC=https://github.com/drsamonline/music.git
+          tmp=$(mktemp -d)
+          if ! git clone --depth 1 --quiet "$SRC" "$tmp"; then
+            echo "::warning::could not clone drsamonline/music - keeping the committed copy"
+            exit 0
+          fi
+          # everything the page needs; the repo's own workflows and meta files are not published
+          rsync -a --delete \
+            --exclude '.git' --exclude '.github' --exclude 'tools' --exclude 'tests' \
+            --exclude 'README*' --exclude 'LICENSE*' --exclude 'CHANGELOG*' \
+            "$tmp"/ music/
+          rm -rf "$tmp"
+          git add music/
+          if git diff --cached --quiet -- music/; then
+            echo "music/ is already current"
+          else
+            echo "music/ updated from drsamonline/music"
+          fi
+
       - name: Build data (repos.json + embedded snapshot + sitemap + JSON-LD)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
