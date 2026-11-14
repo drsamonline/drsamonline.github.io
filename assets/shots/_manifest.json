@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T11:29:44Z",
+ "generated_at": "2026-11-14T10:52:44Z",
  "shots": {
   "Aethelgard-Engine": {
    "bytes": 20228,
@@ -17,9 +17,9 @@
   },
   "All4ONE": {
    "bytes": 14444,
-   "captured": "2026-11-12T01:41:33Z",
+   "captured": "2026-11-14T10:52:11Z",
    "source": "https://drsamonline.github.io/All4ONE/",
-   "source_pushed": "2026-11-11T15:04:26Z",
+   "source_pushed": "2026-11-13T18:45:14Z",
    "status": "ok"
   },
   "BLINKTRANSFER": {
@@ -51,10 +51,10 @@
    "status": "ok"
   },
   "KILN": {
-   "bytes": 13744,
-   "captured": "2026-11-13T11:29:28Z",
+   "bytes": 13760,
+   "captured": "2026-11-14T10:52:20Z",
    "source": "https://drsamonline.github.io/KILN/",
-   "source_pushed": "2026-11-13T10:32:31Z",
+   "source_pushed": "2026-11-14T07:08:00Z",
    "status": "ok"
   },
   "MATERIA-MEDICA-BUILDER": {
@@ -65,17 +65,17 @@
    "status": "ok"
   },
   "Matneo": {
-   "bytes": 18868,
-   "captured": "2026-11-12T11:47:05Z",
+   "bytes": 18848,
+   "captured": "2026-11-14T10:52:27Z",
    "source": "https://drsamonline.github.io/Matneo/",
-   "source_pushed": "2026-11-12T11:29:56Z",
+   "source_pushed": "2026-11-14T07:11:54Z",
    "status": "ok"
   },
   "NEO": {
-   "bytes": 12088,
-   "captured": "2026-11-12T01:44:30Z",
+   "bytes": 20238,
+   "captured": "2026-11-14T10:52:30Z",
    "source": "https://drsamonline.github.io/NEO/",
-   "source_pushed": "2026-11-11T18:31:45Z",
+   "source_pushed": "2026-11-14T07:27:50Z",
    "status": "ok"
   },
   "Repertorium-Publicum": {
@@ -143,9 +143,9 @@
   },
   "aethelgard-rpg-engine": {
    "bytes": 14540,
-   "captured": "2026-11-12T01:41:27Z",
+   "captured": "2026-11-14T10:52:08Z",
    "source": "https://drsamonline.github.io/aethelgard-rpg-engine/",
-   "source_pushed": "2026-11-11T18:32:05Z",
+   "source_pushed": "2026-11-14T00:38:58Z",
    "status": "ok"
   },
   "ai-bridge": {
@@ -290,9 +290,9 @@
   },
   "audit": {
    "bytes": 9322,
-   "captured": "2026-11-13T11:29:19Z",
+   "captured": "2026-11-14T10:52:13Z",
    "source": "https://drsamonline.github.io/audit/",
-   "source_pushed": "2026-11-13T03:44:29Z",
+   "source_pushed": "2026-11-14T03:33:49Z",
    "status": "ok"
   },
   "backup": {
@@ -382,9 +382,9 @@
   },
   "conqueror-os": {
    "bytes": 9274,
-   "captured": "2026-11-12T11:46:32Z",
+   "captured": "2026-11-14T10:52:15Z",
    "source": "https://drsamonline.github.io/conqueror-os/",
-   "source_pushed": "2026-11-12T06:58:01Z",
+   "source_pushed": "2026-11-13T12:50:14Z",
    "status": "ok"
   },
   "control-panel": {
@@ -473,9 +473,9 @@
   },
   "heavenzip": {
    "bytes": 12426,
-   "captured": "2026-11-13T11:29:24Z",
+   "captured": "2026-11-14T10:52:17Z",
    "source": "https://drsamonline.github.io/heavenzip/",
-   "source_pushed": "2026-11-12T13:51:22Z",
+   "source_pushed": "2026-11-13T13:14:24Z",
    "status": "ok"
   },
   "helioprism": {
@@ -514,17 +514,17 @@
    "status": "ok"
   },
   "kinemorph": {
-   "bytes": 14002,
-   "captured": "2026-11-13T11:29:31Z",
+   "bytes": 13358,
+   "captured": "2026-11-14T10:52:22Z",
    "source": "https://drsamonline.github.io/kinemorph/",
-   "source_pushed": "2026-11-13T10:45:46Z",
+   "source_pushed": "2026-11-14T07:36:29Z",
    "status": "ok"
   },
   "kinemotif": {
-   "bytes": 14034,
-   "captured": "2026-11-13T11:29:34Z",
+   "bytes": 13994,
+   "captured": "2026-11-14T10:52:24Z",
    "source": "https://drsamonline.github.io/kinemotif/",
-   "source_pushed": "2026-11-13T08:19:04Z",
+   "source_pushed": "2026-11-14T07:22:13Z",
    "status": "ok"
   },
   "kitbox": {
@@ -669,10 +669,10 @@
    "status": "ok"
   },
   "open-materia-medica": {
-   "bytes": 15564,
-   "captured": "2026-11-12T11:47:18Z",
+   "bytes": 15740,
+   "captured": "2026-11-14T10:52:32Z",
    "source": "https://drsamonline.github.io/open-materia-medica/",
-   "source_pushed": "2026-11-12T06:48:51Z",
+   "source_pushed": "2026-11-14T06:39:30Z",
    "status": "ok"
   },
   "optical-kit": {
@@ -680,6 +680,13 @@
    "captured": "2026-11-12T01:44:54Z",
    "source": "https://drsamonline.github.io/optical-kit/",
    "source_pushed": "2026-11-11T19:24:17Z",
+   "status": "ok"
+  },
+  "pico": {
+   "bytes": 15620,
+   "captured": "2026-11-14T10:52:35Z",
+   "source": "https://drsamonline.github.io/pico/",
+   "source_pushed": "2026-11-14T10:10:04Z",
    "status": "ok"
   },
   "planner-pro": {
@@ -801,6 +808,27 @@
    "source_pushed": "2026-11-11T14:59:16Z",
    "status": "ok"
   },
+  "sui": {
+   "bytes": 13844,
+   "captured": "2026-11-14T10:52:37Z",
+   "source": "https://drsamonline.github.io/sui/",
+   "source_pushed": "2026-11-14T10:18:26Z",
+   "status": "ok"
+  },
+  "tessera": {
+   "bytes": 10584,
+   "captured": "2026-11-14T10:52:39Z",
+   "source": "https://drsamonline.github.io/tessera/",
+   "source_pushed": "2026-11-14T09:31:26Z",
+   "status": "ok"
+  },
+  "tessera-app": {
+   "bytes": 15076,
+   "captured": "2026-11-14T10:52:41Z",
+   "source": "https://drsamonline.github.io/tessera-app/",
+   "source_pushed": "2026-11-14T10:10:47Z",
+   "status": "ok"
+  },
   "the-symphony-companion": {
    "bytes": 12146,
    "captured": "2026-11-12T11:47:40Z",
@@ -845,9 +873,9 @@
   },
   "weft8-classroom": {
    "bytes": 14488,
-   "captured": "2026-11-12T11:47:46Z",
+   "captured": "2026-11-14T10:52:44Z",
    "source": "https://drsamonline.github.io/weft8-classroom/",
-   "source_pushed": "2026-11-12T06:46:39Z",
+   "source_pushed": "2026-11-14T10:43:04Z",
    "status": "ok"
   },
   "weft8-compare": {
