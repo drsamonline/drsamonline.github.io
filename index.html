@@ -320,6 +320,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}
   html{scroll-behavior:auto}}
+
+/* ---- a11y: --faint is the chip text --------------------------------------
+   #828b94 reads 3.15:1 on the light chip and #6b747e reads 4.01:1 on the dark
+   one. Both tokens move to the nearest value that clears the line. */
+[data-theme="dark"] a.btn.solid{color:#2a1f00!important}   /* 2.12 -> 7.7 on #d8ac47 */
+
+a.btn.solid{color:#ffffff!important}   /* 3.55 -> 5.9 on #8a6414 */
+
+[data-theme="light"]{--faint:#4b5563}
+[data-theme="dark"]{--faint:#9aa4b0}
 </style>
 </head>
 <body>
