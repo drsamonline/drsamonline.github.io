@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-18T12:10:22Z",
+ "generated_at": "2026-11-20T12:06:11Z",
  "owner": "drsamonline",
- "count": 104,
- "kits": 25,
+ "count": 110,
+ "kits": 26,
  "counts": {
-  "total": 140,
-  "public": 140,
+  "total": 147,
+  "public": 147,
   "private": 0,
-  "source": 136,
+  "source": 143,
   "fork": 4,
   "empty": 0,
   "archived": 3,
   "excluded": 11,
-  "counted": 129
+  "counted": 136
  },
  "repos": [
   {
@@ -91,7 +91,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-17T00:38:12Z",
+   "pushed": "2026-11-19T13:14:46Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -147,7 +147,7 @@
    "tag": "403 tools · one file",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T08:38:35Z",
+   "pushed": "2026-11-19T06:40:55Z",
    "archived": false,
    "topics": [
     "cli-tool",
@@ -264,7 +264,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-18T08:37:30Z",
+   "pushed": "2026-11-18T13:47:00Z",
    "archived": false,
    "topics": [
     "clinical",
@@ -324,7 +324,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T08:58:10Z",
+   "pushed": "2026-11-20T06:54:42Z",
    "archived": false,
    "topics": [
     "app",
@@ -455,7 +455,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-15T09:14:11Z",
+   "pushed": "2026-11-20T11:37:25Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -550,7 +550,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-18T08:39:08Z",
+   "pushed": "2026-11-19T05:32:56Z",
    "archived": false,
    "topics": [
     "github-pages",
@@ -741,7 +741,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T11:50:06Z",
+   "pushed": "2026-11-20T03:42:26Z",
    "archived": false,
    "topics": [
     "changelog",
@@ -1042,6 +1042,29 @@
    "shot": "assets/shots/CLDR.webp"
   },
   {
+   "name": "Cobble",
+   "key": "cobble",
+   "kit": false,
+   "desc": "To cobble is to make a thing from whatever is at hand; a cobble is the stone underfoot on a street laid one stone at a time. Both halves are the app — a city assembled from scraps of noticing, built by accumulation. A city made of small things, with \"your life, taking shape\"",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 1,
+   "pushed": "2026-11-20T09:45:41Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/Cobble/",
+   "source": "https://github.com/drsamonline/Cobble",
+   "releases": "https://github.com/drsamonline/Cobble/releases",
+   "shot": "assets/shots/Cobble.webp"
+  },
+  {
    "name": "code-kit",
    "key": "code-kit",
    "kit": true,
@@ -1140,7 +1163,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-18T08:56:10Z",
+   "pushed": "2026-11-19T00:41:54Z",
    "archived": false,
    "topics": [
     "habits",
@@ -1227,7 +1250,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-16T18:18:46Z",
+   "pushed": "2026-11-18T16:24:47Z",
    "archived": false,
    "topics": [
     "books",
@@ -1333,6 +1356,29 @@
    "shot": "assets/shots/dance-fight.webp"
   },
   {
+   "name": "DayDoc",
+   "key": "daydoc",
+   "kit": false,
+   "desc": "No description yet.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Rust",
+   "stars": 1,
+   "pushed": "2026-11-20T09:37:31Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": false,
+   "landing": "",
+   "source": "https://github.com/drsamonline/DayDoc",
+   "releases": "https://github.com/drsamonline/DayDoc/releases",
+   "shot": "assets/shots/DayDoc.webp"
+  },
+  {
    "name": "eon-commando",
    "key": "eon-commando",
    "kit": false,
@@ -1346,7 +1392,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-15T09:17:18Z",
+   "pushed": "2026-11-19T05:35:51Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1395,6 +1441,29 @@
    "source": "https://github.com/drsamonline/export-kit",
    "releases": "https://github.com/drsamonline/export-kit/releases",
    "shot": "assets/shots/export-kit.webp"
+  },
+  {
+   "name": "faztest-fast-file-forge",
+   "key": "faztest-fast-file-forge",
+   "kit": false,
+   "desc": "A Brotli front end for files you would rather not upload: compress and decompress in the browse",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "TypeScript",
+   "stars": 1,
+   "pushed": "2026-11-19T02:44:40Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/faztest-fast-file-forge/",
+   "source": "https://github.com/drsamonline/faztest-fast-file-forge",
+   "releases": "https://github.com/drsamonline/faztest-fast-file-forge/releases",
+   "shot": "assets/shots/faztest-fast-file-forge.webp"
   },
   {
    "name": "feather",
@@ -1498,7 +1567,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T15:35:18Z",
+   "pushed": "2026-11-19T05:33:08Z",
    "archived": false,
    "topics": [
     "games",
@@ -1554,7 +1623,7 @@
    "tag": "",
    "lang": "C",
    "stars": 1,
-   "pushed": "2026-11-18T08:51:40Z",
+   "pushed": "2026-11-19T07:28:09Z",
    "archived": false,
    "topics": [
     "chce",
@@ -1581,7 +1650,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-17T17:31:39Z",
+   "pushed": "2026-11-18T18:21:34Z",
    "archived": false,
    "topics": [
     "chce",
@@ -1622,6 +1691,29 @@
    "source": "https://github.com/drsamonline/helioprism",
    "releases": "https://github.com/drsamonline/helioprism/releases",
    "shot": "assets/shots/helioprism.webp"
+  },
+  {
+   "name": "Hellgate",
+   "key": "hellgate",
+   "kit": false,
+   "desc": "Description A Doom-style 2.5D arena FPS in the browser — procedural sector maps, three weapons, zero external assets. Built with Three.js.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "JavaScript",
+   "stars": 1,
+   "pushed": "2026-11-20T09:02:46Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/Hellgate/",
+   "source": "https://github.com/drsamonline/Hellgate",
+   "releases": "https://github.com/drsamonline/Hellgate/releases",
+   "shot": "assets/shots/Hellgate.webp"
   },
   {
    "name": "HMS",
@@ -1763,7 +1855,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-17T18:43:03Z",
+   "pushed": "2026-11-19T13:27:35Z",
    "archived": false,
    "topics": [
     "app-builder",
@@ -1897,7 +1989,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T11:47:51Z",
+   "pushed": "2026-11-18T19:02:15Z",
    "archived": false,
    "topics": [
     "cli",
@@ -1941,6 +2033,39 @@
    "shot": "assets/shots/lan-kit.webp"
   },
   {
+   "name": "LARGE_GLOBE",
+   "key": "large_globe",
+   "kit": false,
+   "desc": "A sourced reference library of hidden-world claims — the larger globe, the flat disc, the hollow shell, the ice wall, the inner sun, the sea beneath the sea — plus the giants, dragons, cryptids, aliens and secret societies that are said to live in them.",
+   "cat": "learning",
+   "catLabel": "Learning & Reference",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "HTML",
+   "stars": 1,
+   "pushed": "2026-11-20T09:09:26Z",
+   "archived": false,
+   "topics": [
+    "conspiracies",
+    "cryptids",
+    "earth",
+    "esoteric",
+    "flat",
+    "globe",
+    "large",
+    "unknown",
+    "various"
+   ],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/LARGE_GLOBE/",
+   "source": "https://github.com/drsamonline/LARGE_GLOBE",
+   "releases": "https://github.com/drsamonline/LARGE_GLOBE/releases",
+   "shot": "assets/shots/LARGE_GLOBE.webp"
+  },
+  {
    "name": "lexora",
    "key": "lexora",
    "kit": false,
@@ -1954,7 +2079,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T09:34:42Z",
+   "pushed": "2026-11-18T17:55:08Z",
    "archived": false,
    "topics": [
     "codec",
@@ -1967,6 +2092,29 @@
    "source": "https://github.com/drsamonline/lexora",
    "releases": "https://github.com/drsamonline/lexora/releases",
    "shot": "assets/shots/lexora.webp"
+  },
+  {
+   "name": "lm-kit",
+   "key": "lm-kit",
+   "kit": true,
+   "desc": "No description yet.",
+   "cat": "kits",
+   "catLabel": "Libraries & Kits",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Python",
+   "stars": 1,
+   "pushed": "2026-11-20T09:19:25Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": false,
+   "landing": "",
+   "source": "https://github.com/drsamonline/lm-kit",
+   "releases": "https://github.com/drsamonline/lm-kit/releases",
+   "shot": "assets/shots/lm-kit.webp"
   },
   {
    "name": "lockhtml",
@@ -1982,7 +2130,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-18T08:47:54Z",
+   "pushed": "2026-11-18T13:46:37Z",
    "archived": false,
    "topics": [
     "cli",
@@ -2136,7 +2284,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T06:44:28Z",
+   "pushed": "2026-11-18T15:44:20Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -2368,7 +2516,7 @@
    "tag": "",
    "lang": "Rust",
    "stars": 2,
-   "pushed": "2026-11-18T11:59:37Z",
+   "pushed": "2026-11-18T18:42:06Z",
    "archived": false,
    "topics": [
     "compiler",
@@ -2396,7 +2544,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-16T06:42:30Z",
+   "pushed": "2026-11-19T05:45:17Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -2607,7 +2755,7 @@
    "tag": "344 remedy portraits",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-18T08:40:04Z",
+   "pushed": "2026-11-19T18:37:22Z",
    "archived": false,
    "topics": [
     "education",
@@ -2663,7 +2811,7 @@
    "kicker": "",
    "tag": "",
    "lang": "Python",
-   "stars": 0,
+   "stars": 1,
    "pushed": "2026-11-16T18:35:28Z",
    "archived": false,
    "topics": [
@@ -2947,7 +3095,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-18T08:46:28Z",
+   "pushed": "2026-11-20T06:47:42Z",
    "archived": false,
    "topics": [
     "games",
@@ -2977,7 +3125,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-14T18:05:09Z",
+   "pushed": "2026-11-19T05:32:12Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -3005,7 +3153,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-18T08:38:47Z",
+   "pushed": "2026-11-19T05:32:39Z",
    "archived": false,
    "topics": [
     "arcade",
@@ -3188,7 +3336,7 @@
    "tag": "",
    "lang": "TypeScript",
    "stars": 1,
-   "pushed": "2026-11-17T12:42:44Z",
+   "pushed": "2026-11-20T00:45:08Z",
    "archived": false,
    "topics": [
     "notes",
@@ -3236,6 +3384,29 @@
    "shot": "assets/shots/sorex.webp"
   },
   {
+   "name": "Sorta",
+   "key": "sorta",
+   "kit": false,
+   "desc": "No description yet.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": false,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Rust",
+   "stars": 1,
+   "pushed": "2026-11-20T09:10:29Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": false,
+   "landing": "",
+   "source": "https://github.com/drsamonline/Sorta",
+   "releases": "https://github.com/drsamonline/Sorta/releases",
+   "shot": "assets/shots/Sorta.webp"
+  },
+  {
    "name": "srs-kit",
    "key": "srs-kit",
    "kit": true,
@@ -3277,7 +3448,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-18T12:02:49Z",
+   "pushed": "2026-11-19T12:35:42Z",
    "archived": false,
    "topics": [
     "ai",
@@ -3404,7 +3575,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-18T11:25:44Z",
+   "pushed": "2026-11-18T18:23:25Z",
    "archived": false,
    "topics": [
     "aetheris-family",
@@ -3905,7 +4076,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-18T11:27:11Z",
+   "pushed": "2026-11-19T07:50:30Z",
    "archived": false,
    "topics": [
     "chce",
