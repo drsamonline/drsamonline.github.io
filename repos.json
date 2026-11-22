@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-21T11:40:36Z",
+ "generated_at": "2026-11-22T11:55:14Z",
  "owner": "drsamonline",
- "count": 110,
+ "count": 111,
  "kits": 26,
  "counts": {
-  "total": 147,
-  "public": 147,
+  "total": 148,
+  "public": 148,
   "private": 0,
-  "source": 143,
+  "source": 144,
   "fork": 4,
   "empty": 0,
   "archived": 3,
   "excluded": 11,
-  "counted": 136
+  "counted": 137
  },
  "repos": [
   {
@@ -147,7 +147,7 @@
    "tag": "403 tools · one file",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-19T06:40:55Z",
+   "pushed": "2026-11-21T18:39:31Z",
    "archived": false,
    "topics": [
     "cli-tool",
@@ -207,7 +207,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T08:39:27Z",
+   "pushed": "2026-11-21T15:52:53Z",
    "archived": false,
    "topics": [
     "clipboard",
@@ -455,7 +455,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-20T16:16:13Z",
+   "pushed": "2026-11-22T09:43:01Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -611,7 +611,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-18T08:39:18Z",
+   "pushed": "2026-11-21T18:12:53Z",
    "archived": false,
    "topics": [
     "assembly",
@@ -741,7 +741,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-21T03:35:29Z",
+   "pushed": "2026-11-22T03:39:56Z",
    "archived": false,
    "topics": [
     "changelog",
@@ -1163,7 +1163,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-19T00:41:54Z",
+   "pushed": "2026-11-21T12:38:46Z",
    "archived": false,
    "topics": [
     "habits",
@@ -1706,7 +1706,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-21T11:30:00Z",
+   "pushed": "2026-11-22T11:48:08Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
@@ -1842,6 +1842,29 @@
    "shot": "assets/shots/idle-city-ages-of-growth.webp"
   },
   {
+   "name": "INDIA",
+   "key": "india",
+   "kit": false,
+   "desc": "No description yet.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "HTML",
+   "stars": 1,
+   "pushed": "2026-11-22T10:11:34Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/INDIA/",
+   "source": "https://github.com/drsamonline/INDIA",
+   "releases": "https://github.com/drsamonline/INDIA/releases",
+   "shot": "assets/shots/INDIA.webp"
+  },
+  {
    "name": "KILN",
    "key": "kiln",
    "kit": false,
@@ -1855,7 +1878,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-20T13:07:25Z",
+   "pushed": "2026-11-21T12:48:12Z",
    "archived": false,
    "topics": [
     "app-builder",
@@ -1888,7 +1911,7 @@
    "tag": "",
    "lang": "TypeScript",
    "stars": 2,
-   "pushed": "2026-11-20T15:25:30Z",
+   "pushed": "2026-11-21T18:46:49Z",
    "archived": false,
    "topics": [
     "animation",
@@ -2046,7 +2069,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-21T11:37:49Z",
+   "pushed": "2026-11-22T11:13:20Z",
    "archived": false,
    "topics": [
     "conspiracies",
@@ -2284,7 +2307,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T15:44:20Z",
+   "pushed": "2026-11-21T18:58:10Z",
    "archived": false,
    "topics": [
     "digital-products",
@@ -2755,7 +2778,7 @@
    "tag": "344 remedy portraits",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-19T18:37:22Z",
+   "pushed": "2026-11-22T07:00:48Z",
    "archived": false,
    "topics": [
     "education",
@@ -3336,7 +3359,7 @@
    "tag": "",
    "lang": "TypeScript",
    "stars": 1,
-   "pushed": "2026-11-20T00:45:08Z",
+   "pushed": "2026-11-22T06:57:44Z",
    "archived": false,
    "topics": [
     "notes",
@@ -3448,7 +3471,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-21T10:47:48Z",
+   "pushed": "2026-11-21T11:40:37Z",
    "archived": false,
    "topics": [
     "ai",
