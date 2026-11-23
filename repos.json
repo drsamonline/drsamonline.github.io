@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-22T11:55:14Z",
+ "generated_at": "2026-11-23T13:34:32Z",
  "owner": "drsamonline",
- "count": 111,
+ "count": 112,
  "kits": 26,
  "counts": {
-  "total": 148,
-  "public": 148,
+  "total": 149,
+  "public": 149,
   "private": 0,
-  "source": 144,
+  "source": 145,
   "fork": 4,
   "empty": 0,
   "archived": 3,
   "excluded": 11,
-  "counted": 137
+  "counted": 138
  },
  "repos": [
   {
@@ -455,7 +455,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-22T09:43:01Z",
+   "pushed": "2026-11-22T12:45:28Z",
    "archived": false,
    "topics": [
     "homeopathy",
@@ -550,7 +550,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-19T05:32:56Z",
+   "pushed": "2026-11-23T09:56:53Z",
    "archived": false,
    "topics": [
     "github-pages",
@@ -639,7 +639,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:32:16Z",
+   "pushed": "2026-11-22T13:43:32Z",
    "archived": false,
    "topics": [
     "canvas",
@@ -704,7 +704,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T18:32:18Z",
+   "pushed": "2026-11-22T13:39:05Z",
    "archived": false,
    "topics": [
     "adsr",
@@ -741,7 +741,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-22T03:39:56Z",
+   "pushed": "2026-11-23T13:34:05Z",
    "archived": false,
    "topics": [
     "changelog",
@@ -1250,7 +1250,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T16:24:47Z",
+   "pushed": "2026-11-23T11:59:57Z",
    "archived": false,
    "topics": [
     "books",
@@ -1339,9 +1339,9 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "Python",
+   "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-18T08:38:24Z",
+   "pushed": "2026-11-23T11:13:45Z",
    "archived": false,
    "topics": [
     "browser-game",
@@ -1567,7 +1567,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-21T10:45:07Z",
+   "pushed": "2026-11-22T13:45:32Z",
    "archived": false,
    "topics": [
     "games",
@@ -1650,7 +1650,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-18T18:21:34Z",
+   "pushed": "2026-11-23T04:46:57Z",
    "archived": false,
    "topics": [
     "chce",
@@ -1706,7 +1706,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-22T11:48:08Z",
+   "pushed": "2026-11-23T12:30:35Z",
    "archived": false,
    "topics": [],
    "hasPages": true,
@@ -1826,7 +1826,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-20T18:47:23Z",
+   "pushed": "2026-11-23T00:44:42Z",
    "archived": false,
    "topics": [
     "city-builder",
@@ -1845,7 +1845,7 @@
    "name": "INDIA",
    "key": "india",
    "kit": false,
-   "desc": "No description yet.",
+   "desc": "Twenty-four Indian monuments rebuilt as live 3D miniatures in the browser — every dome and lattice screen generated in code with three.js. No photographs, no downloaded meshes, no build step.",
    "cat": "other",
    "catLabel": "Other / New",
    "demo": true,
@@ -1853,11 +1853,18 @@
    "rel": false,
    "kicker": "",
    "tag": "",
-   "lang": "HTML",
+   "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-22T10:11:34Z",
+   "pushed": "2026-11-23T12:18:45Z",
    "archived": false,
-   "topics": [],
+   "topics": [
+    "3dwebgl",
+    "heritageunesco",
+    "india",
+    "monuments",
+    "procedural-generation",
+    "threeja"
+   ],
    "hasPages": true,
    "landing": "https://drsamonline.github.io/INDIA/",
    "source": "https://github.com/drsamonline/INDIA",
@@ -1878,7 +1885,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-21T12:48:12Z",
+   "pushed": "2026-11-22T12:41:25Z",
    "archived": false,
    "topics": [
     "app-builder",
@@ -2069,7 +2076,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-22T11:13:20Z",
+   "pushed": "2026-11-23T08:01:27Z",
    "archived": false,
    "topics": [
     "conspiracies",
@@ -2102,7 +2109,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-21T00:44:06Z",
+   "pushed": "2026-11-23T12:18:29Z",
    "archived": false,
    "topics": [
     "codec",
@@ -2130,7 +2137,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-21T02:54:28Z",
+   "pushed": "2026-11-22T16:33:52Z",
    "archived": false,
    "topics": [],
    "hasPages": false,
@@ -2538,8 +2545,8 @@
    "kicker": "",
    "tag": "",
    "lang": "Rust",
-   "stars": 2,
-   "pushed": "2026-11-18T18:42:06Z",
+   "stars": 3,
+   "pushed": "2026-11-23T12:29:46Z",
    "archived": false,
    "topics": [
     "compiler",
@@ -2567,7 +2574,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-21T07:01:00Z",
+   "pushed": "2026-11-23T12:48:12Z",
    "archived": false,
    "topics": [
     "game-engine",
@@ -3118,7 +3125,7 @@
    "tag": "",
    "lang": "HTML",
    "stars": 1,
-   "pushed": "2026-11-20T06:47:42Z",
+   "pushed": "2026-11-22T12:38:18Z",
    "archived": false,
    "topics": [
     "games",
@@ -3161,6 +3168,29 @@
    "source": "https://github.com/drsamonline/saga-vn-engine",
    "releases": "https://github.com/drsamonline/saga-vn-engine/releases",
    "shot": "assets/shots/saga-vn-engine.webp"
+  },
+  {
+   "name": "savehorse",
+   "key": "savehorse",
+   "kit": false,
+   "desc": "savehorse is a single Rust workspace that replaces a portfolio of twenty-two small Windows utilities with thirteen modules behind one command line — and, next, one desktop application. Each module keeps the name it had on its own.",
+   "cat": "other",
+   "catLabel": "Other / New",
+   "demo": true,
+   "feat": false,
+   "rel": false,
+   "kicker": "",
+   "tag": "",
+   "lang": "Rust",
+   "stars": 0,
+   "pushed": "2026-11-23T10:46:32Z",
+   "archived": false,
+   "topics": [],
+   "hasPages": true,
+   "landing": "https://drsamonline.github.io/savehorse/",
+   "source": "https://github.com/drsamonline/savehorse",
+   "releases": "https://github.com/drsamonline/savehorse/releases",
+   "shot": "assets/shots/savehorse.webp"
   },
   {
    "name": "Scrap-and-Gun",
@@ -3471,7 +3501,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-21T11:40:37Z",
+   "pushed": "2026-11-23T12:20:10Z",
    "archived": false,
    "topics": [
     "ai",
@@ -3500,7 +3530,7 @@
    "tag": "",
    "lang": "Python",
    "stars": 1,
-   "pushed": "2026-11-18T08:49:46Z",
+   "pushed": "2026-11-22T14:12:46Z",
    "archived": false,
    "topics": [
     "architecture",
@@ -3534,7 +3564,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-16T17:41:30Z",
+   "pushed": "2026-11-22T14:13:24Z",
    "archived": false,
    "topics": [
     "audit-log",
@@ -3598,7 +3628,7 @@
    "tag": "",
    "lang": "C++",
    "stars": 1,
-   "pushed": "2026-11-18T18:23:25Z",
+   "pushed": "2026-11-23T12:46:36Z",
    "archived": false,
    "topics": [
     "aetheris-family",
@@ -3715,7 +3745,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-20T12:42:47Z",
+   "pushed": "2026-11-22T18:40:30Z",
    "archived": false,
    "topics": [
     "browser-extension",
@@ -3866,7 +3896,7 @@
    "tag": "",
    "lang": "C",
    "stars": 1,
-   "pushed": "2026-11-17T06:55:12Z",
+   "pushed": "2026-11-23T04:46:53Z",
    "archived": false,
    "topics": [
     "aetheris-family",
@@ -3898,7 +3928,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-11T15:35:20Z",
+   "pushed": "2026-11-22T13:39:07Z",
    "archived": false,
    "topics": [
     "kit",
@@ -4068,7 +4098,7 @@
    "tag": "",
    "lang": "JavaScript",
    "stars": 1,
-   "pushed": "2026-11-14T15:30:48Z",
+   "pushed": "2026-11-22T13:39:09Z",
    "archived": false,
    "topics": [
     "accessibility",
